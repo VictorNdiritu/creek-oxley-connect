@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -17,16 +18,16 @@ const Hero = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button className="bg-creekoxley hover:bg-creekoxley-medium text-white px-8 py-6 text-lg">
-                Our Services
+                <Link to="/services" className="text-white">Our Services</Link>
               </Button>
               <Button variant="outline" className="border-creekoxley text-creekoxley hover:bg-creekoxley/10 px-8 py-6 text-lg">
-                Contact Us
+                <Link to="/contact" className="text-creekoxley">Contact Us</Link>
               </Button>
             </div>
           </div>
           <div className="relative logo-wave flex justify-center">
             <img 
-              src="/creek-oxley-logo.png" 
+              src="/lovable-uploads/484943ae-2c20-4228-8536-7081b6c91bbd.png" 
               alt="Creek Oxley" 
               className="w-full max-w-md" 
             />

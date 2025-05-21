@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Menu } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,19 +15,19 @@ const Navbar = () => {
     <nav className="bg-white shadow-sm py-4">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
-          <a href="/" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img 
-              src="/creek-oxley-logo.png" 
+              src="/lovable-uploads/484943ae-2c20-4228-8536-7081b6c91bbd.png" 
               alt="Creek Oxley" 
               className="h-10 md:h-12" 
             />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="/" className="text-gray-700 hover:text-creekoxley">Home</a>
-            <a href="#about" className="text-gray-700 hover:text-creekoxley">About</a>
-            <a href="#services" className="text-gray-700 hover:text-creekoxley">Services</a>
+            <Link to="/" className="text-gray-700 hover:text-creekoxley">Home</Link>
+            <Link to="/about" className="text-gray-700 hover:text-creekoxley">About</Link>
+            <Link to="/services" className="text-gray-700 hover:text-creekoxley">Services</Link>
             
             {/* Connected Brands Dropdown */}
             <div className="dropdown relative group">
@@ -35,23 +36,23 @@ const Navbar = () => {
               </button>
               <div className="dropdown-menu hidden absolute z-10 mt-2 w-56 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
                 <div className="py-1 divide-y divide-gray-100">
-                  <a
-                    href="#destination-management"
+                  <Link
+                    to="/destination-management"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-creekoxley hover:text-white"
                   >
                     Destination Management Company
-                  </a>
-                  <a
-                    href="#smart-staffing"
+                  </Link>
+                  <Link
+                    to="/smart-staffing"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-creekoxley hover:text-white"
                   >
                     Smart Staffing
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
             
-            <a href="#contact" className="text-gray-700 hover:text-creekoxley">Contact</a>
+            <Link to="/contact" className="text-gray-700 hover:text-creekoxley">Contact</Link>
             <Button className="bg-creekoxley hover:bg-creekoxley-medium ml-4">Get Started</Button>
           </div>
 
@@ -67,30 +68,30 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 py-2">
             <div className="flex flex-col space-y-3">
-              <a href="/" className="text-gray-700 hover:text-creekoxley px-2">Home</a>
-              <a href="#about" className="text-gray-700 hover:text-creekoxley px-2">About</a>
-              <a href="#services" className="text-gray-700 hover:text-creekoxley px-2">Services</a>
+              <Link to="/" className="text-gray-700 hover:text-creekoxley px-2">Home</Link>
+              <Link to="/about" className="text-gray-700 hover:text-creekoxley px-2">About</Link>
+              <Link to="/services" className="text-gray-700 hover:text-creekoxley px-2">Services</Link>
               
               {/* Connected Brands Mobile */}
               <div>
                 <div className="text-gray-700 font-medium px-2">Connected Brands</div>
                 <div className="ml-4 mt-1 space-y-2">
-                  <a
-                    href="#destination-management"
+                  <Link
+                    to="/destination-management"
                     className="block text-gray-700 hover:text-creekoxley text-sm"
                   >
                     Destination Management Company
-                  </a>
-                  <a
-                    href="#smart-staffing"
+                  </Link>
+                  <Link
+                    to="/smart-staffing"
                     className="block text-gray-700 hover:text-creekoxley text-sm"
                   >
                     Smart Staffing
-                  </a>
+                  </Link>
                 </div>
               </div>
               
-              <a href="#contact" className="text-gray-700 hover:text-creekoxley px-2">Contact</a>
+              <Link to="/contact" className="text-gray-700 hover:text-creekoxley px-2">Contact</Link>
               <Button className="bg-creekoxley hover:bg-creekoxley-medium w-full mt-2">Get Started</Button>
             </div>
           </div>
