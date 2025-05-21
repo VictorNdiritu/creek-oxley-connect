@@ -23,8 +23,8 @@ const Navbar = () => {
             />
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Desktop Navigation - Now Centered */}
+          <div className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
             <Link to="/" className="text-gray-700 hover:text-creekoxley">Home</Link>
             <Link to="/about" className="text-gray-700 hover:text-creekoxley">About</Link>
             <Link to="/services" className="text-gray-700 hover:text-creekoxley">Services</Link>
@@ -53,7 +53,11 @@ const Navbar = () => {
             </div>
             
             <Link to="/contact" className="text-gray-700 hover:text-creekoxley">Contact</Link>
-            <Button className="bg-creekoxley hover:bg-creekoxley-medium ml-4">Get Started</Button>
+          </div>
+
+          {/* Get Started Button - Now Right Aligned */}
+          <div className="hidden md:block">
+            <Button className="bg-creekoxley hover:bg-creekoxley-medium">Get Started</Button>
           </div>
 
           {/* Mobile menu button */}

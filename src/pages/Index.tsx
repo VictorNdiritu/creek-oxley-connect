@@ -22,16 +22,22 @@ const Index = () => {
                 About <span className="text-creekoxley">Creek Oxley</span>
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Creek Oxley is a premier management consulting firm dedicated to helping businesses optimize 
-                their operations, increase profitability, and achieve sustainable growth.
+                Creek Oxley provides practical, custom-made solutions for management problems faced by 
+                business owners and executives. Our focus is on organizational transformation using 
+                a diagnostic approach that incorporates scientific management tools and best practices.
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                With decades of combined experience, our team of expert consultants brings industry-specific knowledge 
-                and innovative solutions to address your most complex business challenges.
+                Our team has expertise in organizational behavior, business management, marketing, 
+                business strategy, supply chain, employee productivity, and systems management and audit.
               </p>
               <p className="text-lg text-gray-600">
-                We partner with organizations of all sizes across various industries, providing strategic guidance 
-                and actionable insights that drive measurable results.
+                <span className="font-semibold">Vision:</span> To build strategic sustainable business ecosystems 
+                that are environmentally friendly.
+              </p>
+              <p className="text-lg text-gray-600">
+                <span className="font-semibold">Mission:</span> Transforming one business at a time to realize the 
+                dream of positively contributing to the economic prosperity of our region by offering 
+                quality service to our clients and community.
               </p>
             </div>
             <div className="relative">

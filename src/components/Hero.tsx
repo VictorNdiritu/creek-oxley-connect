@@ -7,30 +7,21 @@ const Hero = () => {
   return (
     <section className="relative py-20 md:py-32 bg-gradient-to-br from-white via-slate-50 to-creekoxley-silver/20 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="text-left">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6">
-              Expert <span className="text-creekoxley">Management Consulting</span> For Your Business
-            </h1>
-            <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg">
-              Creek Oxley provides innovative management solutions to help your business grow,
-              adapt, and succeed in today's competitive marketplace.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-creekoxley hover:bg-creekoxley-medium text-white px-8 py-6 text-lg">
-                <Link to="/services" className="text-white">Our Services</Link>
-              </Button>
-              <Button variant="outline" className="border-creekoxley text-creekoxley hover:bg-creekoxley/10 px-8 py-6 text-lg">
-                <Link to="/contact" className="text-creekoxley">Contact Us</Link>
-              </Button>
-            </div>
-          </div>
-          <div className="relative logo-wave flex justify-center">
-            <img 
-              src="/lovable-uploads/484943ae-2c20-4228-8536-7081b6c91bbd.png" 
-              alt="Creek Oxley" 
-              className="w-full max-w-md" 
-            />
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6">
+            Expert <span className="text-creekoxley">Management Consulting</span> For Your Business
+          </h1>
+          <p className="text-lg md:text-xl text-gray-600 mb-8 mx-auto">
+            Creek Oxley provides innovative management solutions to help your business grow,
+            adapt, and succeed in today's competitive marketplace.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button className="bg-creekoxley hover:bg-creekoxley-medium text-white px-8 py-6 text-lg">
+              <Link to="/services" className="text-white">Our Services</Link>
+            </Button>
+            <Button variant="outline" className="border-creekoxley text-creekoxley hover:bg-creekoxley/10 px-8 py-6 text-lg">
+              <Link to="/contact" className="text-creekoxley">Contact Us</Link>
+            </Button>
           </div>
         </div>
       </div>
