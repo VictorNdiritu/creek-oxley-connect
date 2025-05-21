@@ -1,4 +1,3 @@
-
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -24,7 +23,7 @@ const DestinationManagementPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="bg-creekoxley hover:bg-creekoxley-medium text-white px-8 py-6 text-lg">
-                <Link to="/contact" className="text-white">Request a Quote</Link>
+                <Link to="/contact" className="text-white">Contact Us</Link>
               </Button>
             </div>
           </div>

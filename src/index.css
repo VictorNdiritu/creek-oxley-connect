@@ -70,6 +70,13 @@
   }
 }
 
+/* Updated dropdown styling for better visibility */
+.dropdown-menu {
+  width: auto !important;
+  min-width: 240px !important;
+  z-index: 100 !important;
+}
+
 .logo-wave {
   position: relative;
   overflow: hidden;

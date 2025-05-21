@@ -3,6 +3,12 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Menu } from "lucide-react";
 import { Link } from "react-router-dom";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,7 +29,7 @@ const Navbar = () => {
             />
           </Link>
 
-          {/* Desktop Navigation - Now Centered */}
+          {/* Desktop Navigation - Centered */}
           <div className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
             <Link to="/" className="text-gray-700 hover:text-creekoxley">Home</Link>
             <Link to="/about" className="text-gray-700 hover:text-creekoxley">About</Link>
@@ -31,24 +37,22 @@ const Navbar = () => {
             
             {/* Connected Brands Dropdown */}
             <div className="dropdown relative group">
-              <button className="flex items-center text-gray-700 hover:text-creekoxley">
+              <span className="flex items-center text-gray-700 cursor-default">
                 Connected Brands <ChevronDown className="ml-1 h-4 w-4" />
-              </button>
-              <div className="dropdown-menu hidden absolute z-10 mt-2 w-56 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
-                <div className="py-1 divide-y divide-gray-100">
-                  <Link
-                    to="/destination-management"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-creekoxley hover:text-white"
-                  >
-                    Destination Management Company
-                  </Link>
-                  <Link
-                    to="/smart-staffing"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-creekoxley hover:text-white"
-                  >
-                    Smart Staffing
-                  </Link>
-                </div>
+              </span>
+              <div className="dropdown-menu hidden absolute z-50 mt-2 w-64 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 py-1">
+                <Link
+                  to="/destination-management"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-creekoxley hover:text-white"
+                >
+                  Destination Management Company
+                </Link>
+                <Link
+                  to="/smart-staffing"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-creekoxley hover:text-white"
+                >
+                  Smart Staffing
+                </Link>
               </div>
             </div>
             
