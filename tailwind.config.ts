@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Creek Oxley custom colors
+				creekoxley: {
+					DEFAULT: '#4b2e83', // deep purple
+					light: '#9d8ac7',   // medium purple
+					medium: '#7e69ab',  // lavender purple
+					silver: '#c0c0c0',  // silver gray
 				}
 			},
 			borderRadius: {
