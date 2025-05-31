@@ -14,24 +14,24 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 267 48% 35%; /* Creek Oxley deep purple */
-    --primary-foreground: 210 40% 98%;
+    --primary: 267 48% 58%; /* Creek Oxley primary purple */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 262 34% 66%; /* Creek Oxley medium purple */
+    --secondary: 0 0% 100%; /* Creek Oxley secondary white */
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 264 25% 54%; /* Creek Oxley lavender purple */
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 267 48% 65%; /* Creek Oxley accent purple */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 267 48% 35%;
+    --ring: 267 48% 58%;
 
     --radius: 0.5rem;
   }
@@ -98,7 +98,7 @@
   right: -20%;
   top: 0;
   height: 100%;
-  background: linear-gradient(90deg, rgba(126, 105, 171, 0.1) 0%, rgba(192, 192, 192, 0.1) 100%);
+  background: linear-gradient(90deg, rgba(124, 58, 237, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
   transform: skewY(-3deg);
   z-index: -1;
 }

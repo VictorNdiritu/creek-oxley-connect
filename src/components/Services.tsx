@@ -4,34 +4,34 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 const services = [
   {
-    title: "Strategic Planning",
-    description: "Develop comprehensive strategic plans to guide your business toward sustainable growth and market leadership.",
-    icon: "📈"
+    title: "Resolving Management Problems",
+    description: "Identify and solve complex management challenges through diagnostic approaches and proven methodologies tailored to your organization's specific needs.",
+    icon: "🔧"
   },
   {
-    title: "Operational Efficiency",
-    description: "Streamline your operations to eliminate waste, reduce costs, and maximize productivity across all departments.",
+    title: "Developing and Reviving Strategies",
+    description: "Create comprehensive strategic plans and revitalize existing strategies to guide your business toward sustainable growth and competitive advantage.",
+    icon: "📋"
+  },
+  {
+    title: "Business Process Optimization",
+    description: "Streamline operations, eliminate inefficiencies, and optimize workflows to maximize productivity and reduce operational costs.",
     icon: "⚙️"
   },
   {
-    title: "Change Management",
-    description: "Navigate organizational change effectively with expert guidance and proven methodologies for smooth transitions.",
-    icon: "🔄"
+    title: "People Management",
+    description: "Enhance organizational behavior, improve employee productivity, and develop effective management practices for better team performance.",
+    icon: "👥"
   },
   {
-    title: "Financial Advisory",
-    description: "Optimize your financial performance with data-driven insights and expert recommendations for fiscal success.",
-    icon: "💰"
+    title: "Management Information Systems",
+    description: "Implement and optimize information systems to support decision-making processes and improve organizational efficiency.",
+    icon: "💻"
   },
   {
-    title: "Leadership Development",
-    description: "Cultivate strong leadership within your organization through tailored training programs and executive coaching.",
-    icon: "🚀"
-  },
-  {
-    title: "Market Analysis",
-    description: "Gain critical insights into market trends, customer behaviors, and competitive landscapes to inform strategic decisions.",
-    icon: "🔍"
+    title: "Marketing",
+    description: "Develop effective marketing strategies and campaigns to enhance brand visibility, reach target audiences, and drive business growth.",
+    icon: "📈"
   }
 ];
 
@@ -41,17 +41,17 @@ const Services = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-            Our <span className="text-creekoxley">Management Consulting</span> Services
+            Our <span className="text-creekoxley">Core Services</span>
           </h2>
           <p className="text-lg text-gray-600">
-            We provide comprehensive management consulting services tailored to meet the unique needs of your business,
-            helping you overcome challenges and achieve your strategic goals.
+            Creek Oxley provides practical, custom-made solutions for management problems faced by 
+            business owners and executives through our comprehensive range of core services.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="border-2 border-gray-100 hover:border-creekoxley-light/50 transition-all duration-300">
+            <Card key={index} className="border-2 border-gray-100 hover:border-creekoxley/50 transition-all duration-300">
               <CardHeader>
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <CardTitle className="text-xl font-bold text-creekoxley">{service.title}</CardTitle>

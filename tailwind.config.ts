@@ -63,12 +63,13 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Creek Oxley custom colors
+				// Creek Oxley brand colors - Purple primary, White secondary
 				creekoxley: {
-					DEFAULT: '#4b2e83', // deep purple
-					light: '#9d8ac7',   // medium purple
-					medium: '#7e69ab',  // lavender purple
-					silver: '#c0c0c0',  // silver gray
+					DEFAULT: '#7c3aed',      // Primary purple
+					light: '#a855f7',        // Light purple
+					medium: '#8b5cf6',       // Medium purple
+					dark: '#6d28d9',         // Dark purple
+					white: '#ffffff',        // Secondary white
 				}
 			},
 			borderRadius: {
