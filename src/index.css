@@ -70,11 +70,11 @@
   }
 }
 
-/* Updated dropdown styling for better visibility */
+/* Updated dropdown styling for better visibility and z-index */
 .dropdown-menu {
   width: auto !important;
   min-width: 240px !important;
-  z-index: 9999 !important;
+  z-index: 99999 !important;
   position: absolute !important;
   background-color: white !important;
   border: 1px solid #e5e7eb !important;
@@ -83,6 +83,13 @@
 
 .dropdown {
   position: relative !important;
+  z-index: 99998 !important;
+}
+
+/* Ensure navbar has proper z-index */
+nav {
+  position: relative !important;
+  z-index: 99997 !important;
 }
 
 .logo-wave {

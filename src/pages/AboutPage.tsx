@@ -21,53 +21,28 @@ const AboutPage = () => {
       {/* About Section */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-                About <span className="text-creekoxley">Creek Oxley</span>
-              </h2>
-              <p className="text-lg text-gray-600 mb-6">
-                Creek Oxley provides practical, custom-made solutions for management problems faced by 
-                business owners and executives. Our focus is on organizational transformation using 
-                a diagnostic approach that incorporates scientific management tools and best practices.
-              </p>
-              <p className="text-lg text-gray-600 mb-6">
-                With decades of combined experience, our team of expert consultants brings industry-specific knowledge 
-                and innovative solutions to address your most complex business challenges.
-              </p>
-              <p className="text-lg text-gray-600">
-                We partner with organizations of all sizes across various industries, providing strategic guidance 
-                and actionable insights that drive measurable results.
-              </p>
-            </div>
-            <div className="relative">
-              <div className="absolute -z-10 top-0 left-0 w-full h-full bg-creekoxley/5 rounded-lg transform -rotate-3"></div>
-              <div className="absolute -z-10 top-0 left-0 w-full h-full bg-creekoxley-medium/5 rounded-lg transform rotate-3"></div>
-              <div className="bg-white p-8 rounded-lg shadow-lg">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="text-center p-6 border border-gray-100 rounded-lg">
-                    <div className="text-4xl font-bold text-creekoxley mb-2">15+</div>
-                    <div className="text-gray-600">Years of Experience</div>
-                  </div>
-                  <div className="text-center p-6 border border-gray-100 rounded-lg">
-                    <div className="text-4xl font-bold text-creekoxley mb-2">200+</div>
-                    <div className="text-gray-600">Satisfied Clients</div>
-                  </div>
-                  <div className="text-center p-6 border border-gray-100 rounded-lg">
-                    <div className="text-4xl font-bold text-creekoxley mb-2">50+</div>
-                    <div className="text-gray-600">Expert Consultants</div>
-                  </div>
-                  <div className="text-center p-6 border border-gray-100 rounded-lg">
-                    <div className="text-4xl font-bold text-creekoxley mb-2">95%</div>
-                    <div className="text-gray-600">Client Retention</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          {/* Main About Content - Centered */}
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+              About <span className="text-creekoxley">Creek Oxley</span>
+            </h2>
+            <p className="text-lg text-gray-600 mb-6">
+              Creek Oxley provides practical, custom-made solutions for management problems faced by 
+              business owners and executives. Our focus is on organizational transformation using 
+              a diagnostic approach that incorporates scientific management tools and best practices.
+            </p>
+            <p className="text-lg text-gray-600 mb-6">
+              With decades of combined experience, our team of expert consultants brings industry-specific knowledge 
+              and innovative solutions to address your most complex business challenges.
+            </p>
+            <p className="text-lg text-gray-600">
+              We partner with organizations of all sizes across various industries, providing strategic guidance 
+              and actionable insights that drive measurable results.
+            </p>
           </div>
           
           {/* Vision and Mission */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
             <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100">
               <h3 className="text-2xl font-bold mb-4 text-creekoxley">Our Vision</h3>
               <p className="text-lg text-gray-600">
