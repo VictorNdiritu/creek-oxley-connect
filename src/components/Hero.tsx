@@ -8,6 +8,11 @@ const Hero = () => {
     <section className="relative py-20 md:py-32 bg-gradient-to-br from-white via-slate-50 to-creekoxley-silver/20 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto text-center">
+          <div className="mb-4">
+            <span className="text-creekoxley font-semibold text-lg tracking-wider">
+              Observation.Innovation.Results
+            </span>
+          </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6">
             Expert <span className="text-creekoxley">Management Consulting</span> For Your Business
           </h1>
