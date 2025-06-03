@@ -56,6 +56,7 @@ const Navbar = () => {
               </div>
             </div>
             
+            <Link to="/blog" className="text-gray-700 hover:text-creekoxley">Blog</Link>
             <Link to="/contact" className="text-gray-700 hover:text-creekoxley">Contact</Link>
           </div>
 
@@ -99,6 +100,7 @@ const Navbar = () => {
                 </div>
               </div>
               
+              <Link to="/blog" className="text-gray-700 hover:text-creekoxley px-2">Blog</Link>
               <Link to="/contact" className="text-gray-700 hover:text-creekoxley px-2">Contact</Link>
               <Button className="bg-creekoxley hover:bg-creekoxley-medium w-full mt-2">Get Started</Button>
             </div>
