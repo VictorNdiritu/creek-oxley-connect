@@ -13,8 +13,8 @@ const Hero = () => {
               Observation.Innovation.Results
             </span>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6">
-            Expert <span className="text-creekoxley">Management Consulting</span> For Your Business
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-creekoxley mb-6">
+            Expert Management Consulting For Your Business
           </h1>
           <p className="text-lg md:text-xl text-gray-600 mb-8 mx-auto">
             Creek Oxley provides innovative management solutions to help your business grow,

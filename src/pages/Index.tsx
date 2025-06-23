@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import ConnectedBrands from "@/components/ConnectedBrands";
+import BlogPreview from "@/components/BlogPreview";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -17,8 +18,8 @@ const Index = () => {
       <section id="about" className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 text-center">
-              About <span className="text-creekoxley">Creek Oxley</span>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-creekoxley text-center">
+              About Creek Oxley
             </h2>
             <p className="text-lg text-gray-600 mb-6">
               Creek Oxley provides practical, custom-made solutions for management problems faced by 
@@ -30,11 +31,11 @@ const Index = () => {
               business strategy, supply chain, employee productivity, and systems management and audit.
             </p>
             <p className="text-lg text-gray-600">
-              <span className="font-semibold">Vision:</span> To build strategic sustainable business ecosystems 
+              <span className="font-semibold text-creekoxley">Vision:</span> To build strategic sustainable business ecosystems 
               that are environmentally friendly.
             </p>
             <p className="text-lg text-gray-600">
-              <span className="font-semibold">Mission:</span> Transforming one business at a time to realize the 
+              <span className="font-semibold text-creekoxley">Mission:</span> Transforming one business at a time to realize the 
               dream of positively contributing to the economic prosperity of our region by offering 
               quality service to our clients and community.
             </p>
@@ -44,6 +45,7 @@ const Index = () => {
       
       <Services />
       <ConnectedBrands />
+      <BlogPreview />
       <Contact />
       <Footer />
     </div>
