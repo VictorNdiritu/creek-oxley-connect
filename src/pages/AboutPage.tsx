@@ -1,3 +1,4 @@
+
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -97,26 +98,26 @@ const AboutPage = () => {
           </div>
           
           {/* Core Values */}
-          <div>
+          <div className="text-creekoxley">
             <h3 className="text-2xl font-bold mb-8 text-center">
-              <span className="text-creekoxley">Our Core Values</span>
+              Our Core Values
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 text-center">
-                <h4 className="font-semibold text-creekoxley mb-2">Commitment to Quality</h4>
-                <p className="text-gray-600">We deliver excellence in every aspect of our work</p>
+                <h4 className="font-semibold mb-2">Commitment to Quality</h4>
+                <p>We deliver excellence in every aspect of our work</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 text-center">
-                <h4 className="font-semibold text-creekoxley mb-2">Innovation & Adaptability</h4>
-                <p className="text-gray-600">We embrace change and pioneer creative solutions</p>
+                <h4 className="font-semibold mb-2">Innovation & Adaptability</h4>
+                <p>We embrace change and pioneer creative solutions</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 text-center">
-                <h4 className="font-semibold text-creekoxley mb-2">Client-Centric Excellence</h4>
-                <p className="text-gray-600">We prioritize our clients' success above all</p>
+                <h4 className="font-semibold mb-2">Client-Centric Excellence</h4>
+                <p>We prioritize our clients' success above all</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 text-center">
-                <h4 className="font-semibold text-creekoxley mb-2">Integrity & Trustworthiness</h4>
-                <p className="text-gray-600">We operate with transparency and ethical standards</p>
+                <h4 className="font-semibold mb-2">Integrity & Trustworthiness</h4>
+                <p>We operate with transparency and ethical standards</p>
               </div>
             </div>
           </div>

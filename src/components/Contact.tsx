@@ -11,7 +11,7 @@ const Contact = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 !text-gray-900">
               Get in <span className="text-creekoxley">Touch</span> With Our Experts
             </h2>
             <p className="text-lg text-gray-600 mb-8">
