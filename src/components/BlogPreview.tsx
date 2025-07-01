@@ -22,7 +22,7 @@ const BlogPreview = () => {
             <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
               <div className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
-                <span>Dec 23, 2024</span>
+                <span>Jan 01, 2025</span>
               </div>
               <div className="flex items-center gap-2">
                 <User className="h-4 w-4" />
@@ -31,25 +31,25 @@ const BlogPreview = () => {
             </div>
             
             <h3 className="text-2xl md:text-3xl font-bold text-creekoxley mb-4">
-              Scaling a Lodge in a Remote Location: Systems Every Safari Property Needs to Survive and Thrive
+              5 Proven Strategies to Transform Hotel & Lodge Management: Beyond Daily Operations
             </h3>
             
             <p className="text-gray-600 mb-6 leading-relaxed">
-              From Samburu to the Serengeti, remote lodges are some of the most captivating destinations in the world. 
-              But behind the scenic views and Instagram-perfect sunsets lies a very different reality: running a hospitality 
-              business in a remote location is operationally brutal. At Creek Oxley, we've worked with safari properties 
-              and remote lodges that were bleeding potential because they had no systems built for scale...
+              Managing a hotel or lodge today is about far more than daily check-ins and housekeeping schedules. 
+              Guests expect seamless service, authentic experiences, and thoughtful touches that go beyond the ordinary — 
+              all while you keep an eye on profitability and sustainability. Here are five practical strategies that can 
+              help transform your property into a preferred destination...
             </p>
             
             <div className="flex flex-wrap gap-2 mb-6">
+              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Hotel Management</span>
               <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Hospitality</span>
               <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Operations</span>
-              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Systems</span>
-              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Safari Lodges</span>
+              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Guest Experience</span>
             </div>
             
             <Button className="bg-creekoxley hover:bg-creekoxley-medium text-white">
-              <Link to="/blog/scaling-safari-lodge" className="flex items-center gap-2 text-white">
+              <Link to="/blog/hotel-management-strategies" className="flex items-center gap-2 text-white">
                 Read Full Article
                 <ArrowRight className="h-4 w-4" />
               </Link>

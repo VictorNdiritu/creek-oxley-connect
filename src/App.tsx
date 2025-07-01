@@ -10,6 +10,7 @@ import ServicesPage from "./pages/ServicesPage";
 import ContactPage from "./pages/ContactPage";
 import BlogPage from "./pages/BlogPage";
 import BlogArticlePage from "./pages/BlogArticlePage";
+import HotelManagementArticlePage from "./pages/HotelManagementArticlePage";
 import DestinationManagementPage from "./pages/DestinationManagementPage";
 import SmartStaffingPage from "./pages/SmartStaffingPage";
 import NotFound from "./pages/NotFound";
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/scaling-safari-lodge" element={<BlogArticlePage />} />
+          <Route path="/blog/hotel-management-strategies" element={<HotelManagementArticlePage />} />
           <Route path="/destination-management" element={<DestinationManagementPage />} />
           <Route path="/smart-staffing" element={<SmartStaffingPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
