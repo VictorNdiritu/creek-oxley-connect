@@ -1,11 +1,50 @@
 
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke('contact-form', {
+        body: formData
+      });
+
+      if (error) {
+        throw error;
+      }
+
+      toast.success("Thank you! Your message has been sent successfully.");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("Error submitting contact form:", error);
+      toast.error("Sorry, there was an error sending your message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.id]: e.target.value
+    });
+  };
+
   return (
     <section id="contact" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 md:px-6">
@@ -54,20 +93,48 @@ const Contact = () => {
           <div>
             <div className="bg-white rounded-lg shadow-lg p-8">
               <h3 className="text-2xl font-semibold mb-6">Send Us a Message</h3>
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                  <Input id="name" placeholder="Your name" className="w-full" />
+                  <Input 
+                    id="name" 
+                    placeholder="Your name" 
+                    className="w-full" 
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                  />
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                  <Input id="email" type="email" placeholder="your@email.com" className="w-full" />
+                  <Input 
+                    id="email" 
+                    type="email" 
+                    placeholder="your@email.com" 
+                    className="w-full" 
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                  />
                 </div>
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                  <Textarea id="message" placeholder="How can we help you?" className="w-full min-h-[120px]" />
+                  <Textarea 
+                    id="message" 
+                    placeholder="How can we help you?" 
+                    className="w-full min-h-[120px]" 
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                  />
                 </div>
-                <Button className="w-full bg-creekoxley hover:bg-creekoxley-medium">Send Message</Button>
+                <Button 
+                  type="submit" 
+                  className="w-full bg-creekoxley hover:bg-creekoxley-medium"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Sending..." : "Send Message"}
+                </Button>
               </form>
             </div>
           </div>
