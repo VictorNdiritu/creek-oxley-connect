@@ -22,7 +22,7 @@ const BlogPreview = () => {
             <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
               <div className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
-                <span>Jan 01, 2025</span>
+                <span>Jul 01, 2025</span>
               </div>
               <div className="flex items-center gap-2">
                 <User className="h-4 w-4" />
@@ -31,25 +31,22 @@ const BlogPreview = () => {
             </div>
             
             <h3 className="text-2xl md:text-3xl font-bold text-creekoxley mb-4">
-              5 Proven Strategies to Transform Hotel & Lodge Management: Beyond Daily Operations
+              Expanding into Kenya? Here's Why Your First Call Should Be to A Local Business Management Consultant
             </h3>
             
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Managing a hotel or lodge today is about far more than daily check-ins and housekeeping schedules. 
-              Guests expect seamless service, authentic experiences, and thoughtful touches that go beyond the ordinary — 
-              all while you keep an eye on profitability and sustainability. Here are five practical strategies that can 
-              help transform your property into a preferred destination...
+              When an international company chooses to expand into Kenya, the stakes are high. Kenya isn't just another stop on the map — it's the business and innovation gateway to East and Central Africa, one of the continent's most vibrant and competitive regions. But landing in the right place, hiring the right people, and building the right presence isn't automatic...
             </p>
             
             <div className="flex flex-wrap gap-2 mb-6">
-              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Hotel Management</span>
-              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Hospitality</span>
-              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Operations</span>
-              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Guest Experience</span>
+              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Kenya Expansion</span>
+              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">East Africa</span>
+              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Market Entry</span>
+              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Business Strategy</span>
             </div>
             
             <Button className="bg-creekoxley hover:bg-creekoxley-medium text-white">
-              <Link to="/blog/hotel-management-strategies" className="flex items-center gap-2 text-white">
+              <Link to="/blog/expanding-into-kenya" className="flex items-center gap-2 text-white">
                 Read Full Article
                 <ArrowRight className="h-4 w-4" />
               </Link>
