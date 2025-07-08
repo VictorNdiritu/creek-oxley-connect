@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -22,7 +21,7 @@ const BlogPreview = () => {
             <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
               <div className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
-                <span>Jan 08, 2025</span>
+                <span>July 08, 2025</span>
               </div>
               <div className="flex items-center gap-2">
                 <User className="h-4 w-4" />

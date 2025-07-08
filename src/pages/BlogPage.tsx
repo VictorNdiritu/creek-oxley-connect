@@ -1,4 +1,3 @@
-
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -35,7 +34,7 @@ const BlogPage = () => {
                 <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
                   <div className="flex items-center gap-2">
                     <Calendar className="h-4 w-4" />
-                    <span>January 08, 2025</span>
+                    <span>July 08, 2025</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <User className="h-4 w-4" />
