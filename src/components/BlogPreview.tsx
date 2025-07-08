@@ -22,7 +22,7 @@ const BlogPreview = () => {
             <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
               <div className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
-                <span>Jul 01, 2025</span>
+                <span>Jan 08, 2025</span>
               </div>
               <div className="flex items-center gap-2">
                 <User className="h-4 w-4" />
@@ -31,22 +31,22 @@ const BlogPreview = () => {
             </div>
             
             <h3 className="text-2xl md:text-3xl font-bold text-creekoxley mb-4">
-              Expanding into Kenya? Here's Why Your First Call Should Be to A Local Business Management Consultant
+              Choosing Between a Business Name, LLP and Company Formation in Kenya
             </h3>
             
             <p className="text-gray-600 mb-6 leading-relaxed">
-              When an international company chooses to expand into Kenya, the stakes are high. Kenya isn't just another stop on the map — it's the business and innovation gateway to East and Central Africa, one of the continent's most vibrant and competitive regions. But landing in the right place, hiring the right people, and building the right presence isn't automatic...
+              Starting a business in Kenya isn't just about the idea or the market — it's also about structure. The choice between registering a Business Name, setting up a Limited Liability Partnership (LLP), or incorporating a Private Limited Company can have lasting consequences on liability, taxes, credibility and growth potential...
             </p>
             
             <div className="flex flex-wrap gap-2 mb-6">
-              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Kenya Expansion</span>
-              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">East Africa</span>
-              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Market Entry</span>
-              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Business Strategy</span>
+              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Business Formation</span>
+              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Kenya Business</span>
+              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Legal Structure</span>
+              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Company Formation</span>
             </div>
             
             <Button className="bg-creekoxley hover:bg-creekoxley-medium text-white">
-              <Link to="/blog/expanding-into-kenya" className="flex items-center gap-2 text-white">
+              <Link to="/blog/business-structure-kenya" className="flex items-center gap-2 text-white">
                 Read Full Article
                 <ArrowRight className="h-4 w-4" />
               </Link>
