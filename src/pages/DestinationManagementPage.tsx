@@ -1,3 +1,4 @@
+
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -14,16 +15,19 @@ const DestinationManagementPage = () => {
       <section className="relative py-20 md:py-32 bg-gradient-to-br from-white via-slate-50 to-creekoxley-silver/20 overflow-hidden">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-4xl mx-auto">
+            <div className="mb-4">
+              <span className="text-sm uppercase tracking-wide text-creekoxley font-medium">Creek Oxley Service Division</span>
+            </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6">
-              Destination <span className="text-creekoxley">Management</span> Company
+              Destination <span className="text-creekoxley">Management</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Creek Oxley DMC is a specialized destination marketing firm dedicated to promoting 
+              Creek Oxley's specialized destination management division dedicated to promoting 
               hospitality businesses on international platforms.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="bg-creekoxley hover:bg-creekoxley-medium text-white px-8 py-6 text-lg">
-                <Link to="/contact" className="text-white">Contact Us</Link>
+                <Link to="/contact" className="text-white">Contact Creek Oxley</Link>
               </Button>
             </div>
           </div>
@@ -38,9 +42,9 @@ const DestinationManagementPage = () => {
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Company Overview</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">About This Division</h2>
             <p className="text-lg text-gray-600">
-              We focus on enhancing the visibility of hotels, camps, and other hospitality properties 
+              Creek Oxley's Destination Management division focuses on enhancing the visibility of hotels, camps, and other hospitality properties 
               through strategic marketing campaigns executed at global trade shows and exhibitions.
             </p>
             <p className="text-lg text-gray-600 mt-4">
@@ -171,13 +175,13 @@ const DestinationManagementPage = () => {
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Contact Information</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Contact Creek Oxley</h2>
             <div className="bg-white p-8 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold mb-2">Paul Mwenda</h3>
               <p className="text-gray-600 mb-1">Managing Partner</p>
-              <p className="text-gray-600 mb-4">Creek Oxley Destination Management Company</p>
+              <p className="text-gray-600 mb-4">Creek Oxley Management Consulting</p>
               <p className="text-gray-600 mb-1">Phone: +254 725 276 757</p>
-              <p className="text-gray-600">Email: dmc@creekoxley.com</p>
+              <p className="text-gray-600">Email: info@creekoxley.com</p>
               <div className="mt-6">
                 <Button className="bg-creekoxley hover:bg-creekoxley-medium">
                   <Link to="/contact" className="text-white">Get in Touch</Link>

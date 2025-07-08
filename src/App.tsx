@@ -9,13 +9,9 @@ import AboutPage from "./pages/AboutPage";
 import ServicesPage from "./pages/ServicesPage";
 import ContactPage from "./pages/ContactPage";
 import BlogPage from "./pages/BlogPage";
-import BlogArticlePage from "./pages/BlogArticlePage";
-import HotelManagementArticlePage from "./pages/HotelManagementArticlePage";
-import KenyaExpansionArticlePage from "./pages/KenyaExpansionArticlePage";
 import BusinessStructureArticlePage from "./pages/BusinessStructureArticlePage";
 import DestinationManagementPage from "./pages/DestinationManagementPage";
 import SmartStaffingPage from "./pages/SmartStaffingPage";
-import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
@@ -31,14 +27,9 @@ const App = () => (
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/blog" element={<BlogPage />} />
-          <Route path="/blog/scaling-safari-lodge" element={<BlogArticlePage />} />
-          <Route path="/blog/hotel-management-strategies" element={<HotelManagementArticlePage />} />
-          <Route path="/blog/expanding-into-kenya" element={<KenyaExpansionArticlePage />} />
           <Route path="/blog/business-structure-kenya" element={<BusinessStructureArticlePage />} />
           <Route path="/destination-management" element={<DestinationManagementPage />} />
           <Route path="/smart-staffing" element={<SmartStaffingPage />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

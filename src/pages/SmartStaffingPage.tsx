@@ -15,15 +15,18 @@ const SmartStaffingPage = () => {
       <section className="relative py-20 md:py-32 bg-gradient-to-br from-white via-slate-50 to-creekoxley-silver/20 overflow-hidden">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-4xl mx-auto">
+            <div className="mb-4">
+              <span className="text-sm uppercase tracking-wide text-creekoxley font-medium">Creek Oxley Service Division</span>
+            </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6">
               Smart <span className="text-creekoxley">Staffing</span> Solutions
             </h1>
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Innovative talent acquisition and workforce management solutions to help your business thrive with the right team.
+              Creek Oxley's innovative talent acquisition and workforce management solutions to help your business thrive with the right team.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="bg-creekoxley hover:bg-creekoxley-medium text-white px-8 py-6 text-lg">
-                <Link to="/contact" className="text-white">Find Talent</Link>
+                <Link to="/contact" className="text-white">Contact Creek Oxley</Link>
               </Button>
             </div>
           </div>

@@ -3,12 +3,6 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Menu } from "lucide-react";
 import { Link } from "react-router-dom";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,17 +29,17 @@ const Navbar = () => {
             <Link to="/about" className="text-gray-700 hover:text-creekoxley">About</Link>
             <Link to="/services" className="text-gray-700 hover:text-creekoxley">Services</Link>
             
-            {/* Connected Brands Dropdown */}
+            {/* Service Divisions Dropdown */}
             <div className="dropdown relative group">
               <span className="flex items-center text-gray-700 cursor-default">
-                Connected Brands <ChevronDown className="ml-1 h-4 w-4" />
+                Service Divisions <ChevronDown className="ml-1 h-4 w-4" />
               </span>
               <div className="dropdown-menu hidden absolute z-50 mt-2 w-64 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 py-1">
                 <Link
                   to="/destination-management"
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-creekoxley hover:text-white"
                 >
-                  Destination Management Company
+                  Destination Management
                 </Link>
                 <Link
                   to="/smart-staffing"
@@ -60,9 +54,11 @@ const Navbar = () => {
             <Link to="/contact" className="text-gray-700 hover:text-creekoxley">Contact</Link>
           </div>
 
-          {/* Get Started Button - Now Right Aligned */}
+          {/* Get Started Button - Right Aligned */}
           <div className="hidden md:block">
-            <Button className="bg-creekoxley hover:bg-creekoxley-medium">Get Started</Button>
+            <Button className="bg-creekoxley hover:bg-creekoxley-medium">
+              <Link to="/contact" className="text-white">Get Started</Link>
+            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -81,15 +77,15 @@ const Navbar = () => {
               <Link to="/about" className="text-gray-700 hover:text-creekoxley px-2">About</Link>
               <Link to="/services" className="text-gray-700 hover:text-creekoxley px-2">Services</Link>
               
-              {/* Connected Brands Mobile */}
+              {/* Service Divisions Mobile */}
               <div>
-                <div className="text-gray-700 font-medium px-2">Connected Brands</div>
+                <div className="text-gray-700 font-medium px-2">Service Divisions</div>
                 <div className="ml-4 mt-1 space-y-2">
                   <Link
                     to="/destination-management"
                     className="block text-gray-700 hover:text-creekoxley text-sm"
                   >
-                    Destination Management Company
+                    Destination Management
                   </Link>
                   <Link
                     to="/smart-staffing"
@@ -102,7 +98,9 @@ const Navbar = () => {
               
               <Link to="/blog" className="text-gray-700 hover:text-creekoxley px-2">Blog</Link>
               <Link to="/contact" className="text-gray-700 hover:text-creekoxley px-2">Contact</Link>
-              <Button className="bg-creekoxley hover:bg-creekoxley-medium w-full mt-2">Get Started</Button>
+              <Button className="bg-creekoxley hover:bg-creekoxley-medium w-full mt-2">
+                <Link to="/contact" className="text-white">Get Started</Link>
+              </Button>
             </div>
           </div>
         )}
