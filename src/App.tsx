@@ -10,6 +10,7 @@ import ServicesPage from "./pages/ServicesPage";
 import ContactPage from "./pages/ContactPage";
 import BlogPage from "./pages/BlogPage";
 import BusinessStructureArticlePage from "./pages/BusinessStructureArticlePage";
+import ManagementProblemsArticlePage from "./pages/ManagementProblemsArticlePage";
 import DestinationManagementPage from "./pages/DestinationManagementPage";
 import SmartStaffingPage from "./pages/SmartStaffingPage";
 
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/business-structure-kenya" element={<BusinessStructureArticlePage />} />
+          <Route path="/blog/management-problems" element={<ManagementProblemsArticlePage />} />
           <Route path="/destination-management" element={<DestinationManagementPage />} />
           <Route path="/smart-staffing" element={<SmartStaffingPage />} />
         </Routes>
