@@ -1,5 +1,5 @@
-
 import React from "react";
+import RSSLink from "./RSSLink";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -13,9 +13,10 @@ const Footer = () => {
             <p className="text-gray-200 mb-4">
               Expert management consulting services to help your business grow, adapt, and succeed.
             </p>
-            <p className="text-sm text-gray-300 italic">
+            <p className="text-sm text-gray-300 italic mb-4">
               Observation.Innovation.Results
             </p>
+            <RSSLink />
           </div>
           
           <div>

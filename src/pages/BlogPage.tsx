@@ -1,7 +1,7 @@
-
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import RSSLink from "@/components/RSSLink";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Calendar, User, ArrowRight } from "lucide-react";
@@ -9,6 +9,16 @@ import { Calendar, User, ArrowRight } from "lucide-react";
 const BlogPage = () => {
   return (
     <div className="min-h-screen bg-white">
+      {/* Add RSS feed auto-discovery meta tag */}
+      <head>
+        <link 
+          rel="alternate" 
+          type="application/rss+xml" 
+          title="Creek Oxley Management Insights" 
+          href="/rss.xml" 
+        />
+      </head>
+      
       <Navbar />
       
       {/* Hero Section */}
@@ -18,9 +28,12 @@ const BlogPage = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-creekoxley mb-6">
               Management Insights & Expertise
             </h1>
-            <p className="text-lg md:text-xl text-gray-600">
+            <p className="text-lg md:text-xl text-gray-600 mb-6">
               Strategic insights, operational excellence, and industry expertise from Creek Oxley's consulting team.
             </p>
+            <div className="flex justify-center">
+              <RSSLink />
+            </div>
           </div>
         </div>
       </section>
