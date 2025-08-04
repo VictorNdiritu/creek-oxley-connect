@@ -15,7 +15,7 @@ const blogPosts: BlogPost[] = [
     title: "Resolving Management Problems: Why Leadership Conflicts Can Break — or Build — Your Business",
     description: "At some point in nearly every company's journey, complex management problems emerge. Conflicting visions, leadership deadlocks, or operational growing pains can threaten even the strongest founding teams.",
     url: "https://creekoxley.com/blog/management-problems",
-    pubDate: "Mon, 15 Jul 2025 18:05:12 +0000",
+    pubDate: "Mon, 15 Jul 2024 18:05:12 +0000",
     author: "Creek Oxley Team",
     category: "Leadership"
   },
@@ -23,7 +23,7 @@ const blogPosts: BlogPost[] = [
     title: "Choosing Between a Business Name, LLP and Company Formation in Kenya",
     description: "Starting a business in Kenya isn't just about the idea or the market — it's also about structure. The choice between registering a Business Name, setting up a Limited Liability Partnership (LLP), or incorporating a Private Limited Company can have lasting consequences.",
     url: "https://creekoxley.com/blog/business-structure-kenya",
-    pubDate: "Mon, 08 Jul 2025 18:05:12 +0000",
+    pubDate: "Mon, 08 Jul 2024 18:05:12 +0000",
     author: "Creek Oxley Team",
     category: "Business Formation"
   }

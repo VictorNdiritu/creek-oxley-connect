@@ -13,7 +13,7 @@ import BusinessStructureArticlePage from "./pages/BusinessStructureArticlePage";
 import ManagementProblemsArticlePage from "./pages/ManagementProblemsArticlePage";
 import DestinationManagementPage from "./pages/DestinationManagementPage";
 import SmartStaffingPage from "./pages/SmartStaffingPage";
-import RSSPage from "./pages/RSSPage";
+
 
 const queryClient = new QueryClient();
 
@@ -33,7 +33,7 @@ const App = () => (
           <Route path="/blog/management-problems" element={<ManagementProblemsArticlePage />} />
           <Route path="/destination-management" element={<DestinationManagementPage />} />
           <Route path="/smart-staffing" element={<SmartStaffingPage />} />
-          <Route path="/rss.xml" element={<RSSPage />} />
+          
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
