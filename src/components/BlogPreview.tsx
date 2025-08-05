@@ -22,7 +22,7 @@ const BlogPreview = () => {
             <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
               <div className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
-                <span>July 15, 2025</span>
+                <span>July 22, 2024</span>
               </div>
               <div className="flex items-center gap-2">
                 <User className="h-4 w-4" />
@@ -31,22 +31,22 @@ const BlogPreview = () => {
             </div>
             
             <h3 className="text-2xl md:text-3xl font-bold text-creekoxley mb-4">
-              Resolving Management Problems: Why Leadership Conflicts Can Break — or Build — Your Business
+              The Remarkable Turnaround of Adidas: A Management Masterclass
             </h3>
             
             <p className="text-gray-600 mb-6 leading-relaxed">
-              At some point in nearly every company's journey, complex management problems emerge. Conflicting visions, leadership deadlocks, or operational growing pains can threaten even the strongest founding teams. At Creek Oxley, we help organizations navigate these moments by identifying root causes and applying diagnostic, evidence-based methodologies...
+              In 2022, Adidas was dragged into its biggest crisis in decades through no fault of its own. Learn how decisive management actions turned a €58 million loss into a €1.34 billion profit and a 48% stock price increase, without selling off assets, taking bailouts, or implementing mass layoffs...
             </p>
             
             <div className="flex flex-wrap gap-2 mb-6">
+              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Crisis Management</span>
               <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Leadership</span>
-              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Management</span>
-              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Conflict Resolution</span>
-              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Business Strategy</span>
+              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Business Turnaround</span>
+              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Corporate Strategy</span>
             </div>
             
             <Button className="bg-creekoxley hover:bg-creekoxley-medium text-white">
-              <Link to="/blog/management-problems" className="flex items-center gap-2 text-white">
+              <Link to="/blog/adidas-turnaround" className="flex items-center gap-2 text-white">
                 Read Full Article
                 <ArrowRight className="h-4 w-4" />
               </Link>

@@ -12,6 +12,14 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    title: "The Remarkable Turnaround of Adidas: A Management Masterclass",
+    description: "In 2022, Adidas was dragged into its biggest crisis in decades through no fault of its own. Learn how decisive management actions turned a €58 million loss into a €1.34 billion profit and a 48% stock price increase.",
+    url: "https://creekoxley.com/blog/adidas-turnaround",
+    pubDate: "Mon, 22 Jul 2024 18:05:12 +0000",
+    author: "Creek Oxley Team",
+    category: "Crisis Management"
+  },
+  {
     title: "Resolving Management Problems: Why Leadership Conflicts Can Break — or Build — Your Business",
     description: "At some point in nearly every company's journey, complex management problems emerge. Conflicting visions, leadership deadlocks, or operational growing pains can threaten even the strongest founding teams.",
     url: "https://creekoxley.com/blog/management-problems",
