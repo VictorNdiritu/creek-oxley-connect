@@ -12,6 +12,14 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    title: "Stop Missing Out: The Cost of Ignoring Global Exhibitions",
+    description: "Don't let logistics fears hold you back from global exhibitions. Learn how DMCs can transform your international trade show strategy and why your competitors are already there.",
+    url: "https://creekoxley.com/blog/global-exhibitions",
+    pubDate: "Tue, 08 Jul 2025 18:05:12 +0000",
+    author: "Creek Oxley Team",
+    category: "Business Strategy"
+  },
+  {
     title: "The Remarkable Turnaround of Adidas: A Management Masterclass",
     description: "In 2022, Adidas was dragged into its biggest crisis in decades through no fault of its own. Learn how decisive management actions turned a €58 million loss into a €1.34 billion profit and a 48% stock price increase.",
     url: "https://creekoxley.com/blog/adidas-turnaround",

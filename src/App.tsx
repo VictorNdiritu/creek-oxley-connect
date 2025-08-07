@@ -12,6 +12,7 @@ import BlogPage from "./pages/BlogPage";
 import BusinessStructureArticlePage from "./pages/BusinessStructureArticlePage";
 import ManagementProblemsArticlePage from "./pages/ManagementProblemsArticlePage";
 import AdidasTurnaroundArticlePage from "./pages/AdidasTurnaroundArticlePage";
+import GlobalExhibitionsArticlePage from "./pages/GlobalExhibitionsArticlePage";
 import DestinationManagementPage from "./pages/DestinationManagementPage";
 import SmartStaffingPage from "./pages/SmartStaffingPage";
 
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/blog/business-structure-kenya" element={<BusinessStructureArticlePage />} />
           <Route path="/blog/management-problems" element={<ManagementProblemsArticlePage />} />
           <Route path="/blog/adidas-turnaround" element={<AdidasTurnaroundArticlePage />} />
+          <Route path="/blog/global-exhibitions" element={<GlobalExhibitionsArticlePage />} />
           <Route path="/destination-management" element={<DestinationManagementPage />} />
           <Route path="/smart-staffing" element={<SmartStaffingPage />} />
           
