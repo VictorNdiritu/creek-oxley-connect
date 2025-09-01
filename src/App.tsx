@@ -15,6 +15,7 @@ import AdidasTurnaroundArticlePage from "./pages/AdidasTurnaroundArticlePage";
 import GlobalExhibitionsArticlePage from "./pages/GlobalExhibitionsArticlePage";
 import DestinationManagementPage from "./pages/DestinationManagementPage";
 import SmartStaffingPage from "./pages/SmartStaffingPage";
+import NotFound from "./pages/NotFound";
 
 
 const queryClient = new QueryClient();
@@ -37,7 +38,7 @@ const App = () => (
           <Route path="/blog/global-exhibitions" element={<GlobalExhibitionsArticlePage />} />
           <Route path="/destination-management" element={<DestinationManagementPage />} />
           <Route path="/smart-staffing" element={<SmartStaffingPage />} />
-          
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import RSSLink from "./RSSLink";
 
 const Footer = () => {
@@ -32,8 +33,8 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Connected Brands</h3>
             <ul className="space-y-2">
-              <li><a href="/destination-management" className="text-gray-200 hover:text-white transition-colors">Destination Management</a></li>
-              <li><a href="/smart-staffing" className="text-gray-200 hover:text-white transition-colors">Smart Staffing</a></li>
+              <li><Link to="/destination-management" className="text-gray-200 hover:text-white transition-colors">Destination Management</Link></li>
+              <li><Link to="/smart-staffing" className="text-gray-200 hover:text-white transition-colors">Smart Staffing</Link></li>
             </ul>
           </div>
           
