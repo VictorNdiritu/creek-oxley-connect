@@ -1,0 +1,20 @@
+# Netlify redirects file
+
+# SPA fallback - serve index.html for client-side routes
+/*    /index.html   200
+
+# Legacy blog redirects (if needed in future)
+# /old-blog-post    /blog/new-post    301
+# /services/old     /services         301
+
+# Redirect common old URLs to new structure
+/home             /                 301
+/services.html    /services         301
+/about.html       /about            301
+/contact.html     /contact          301
+/blog.html        /blog             301
+
+# Security redirects - block admin paths
+/admin            /                 301
+/wp-admin         /                 301
+/administrator    /                 301
