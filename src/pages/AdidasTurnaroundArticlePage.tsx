@@ -1,4 +1,5 @@
 import React from "react";
+import SEOHead from "@/components/SEOHead";
 import { Calendar, User, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -7,8 +8,19 @@ import Footer from "@/components/Footer";
 
 const AdidasTurnaroundArticlePage = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
+    <>
+      <SEOHead
+        title="The Remarkable Turnaround of Adidas: A Management Masterclass | Creek Oxley"
+        description="How Adidas recovered from a €1.3 billion crisis through strategic management decisions. Learn key lessons in crisis management, leadership, and business turnaround from this remarkable case study."
+        canonical="https://creekoxley.com/blog/adidas-turnaround"
+        article={{
+          publishedTime: "2024-07-22T00:00:00Z",
+          author: "Creek Oxley Team",
+          tags: ["Crisis Management", "Leadership", "Business Turnaround"]
+        }}
+      />
+      <div className="min-h-screen bg-white">
+        <Navbar />
       
       <article className="pt-24 pb-16">
         <div className="container mx-auto px-4 md:px-6">
@@ -142,8 +154,9 @@ const AdidasTurnaroundArticlePage = () => {
         </div>
       </article>
       
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 

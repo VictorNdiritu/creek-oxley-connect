@@ -1,5 +1,5 @@
-
 import React from "react";
+import SEOHead from "@/components/SEOHead";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -8,8 +8,14 @@ import { MapPin, Calendar, Users, Building } from "lucide-react";
 
 const DestinationManagementPage = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
+    <>
+      <SEOHead
+        title="Destination Management Services | Creek Oxley Global Exhibition Experts"
+        description="Creek Oxley's specialized destination management division promotes hospitality businesses on international platforms. Expert exhibition booth design, networking, and global trade show representation."
+        canonical="https://creekoxley.com/destination-management"
+      />
+      <div className="min-h-screen bg-white">
+        <Navbar />
       
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 bg-gradient-to-br from-white via-slate-50 to-creekoxley-silver/20 overflow-hidden">
@@ -192,8 +198,9 @@ const DestinationManagementPage = () => {
         </div>
       </section>
       
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 

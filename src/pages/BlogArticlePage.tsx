@@ -1,5 +1,5 @@
-
 import React from "react";
+import SEOHead from "@/components/SEOHead";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -8,8 +8,19 @@ import { Calendar, User, ArrowLeft } from "lucide-react";
 
 const BlogArticlePage = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
+    <>
+      <SEOHead
+        title="Strategic Business Consulting Insights | Creek Oxley Blog"
+        description="Expert insights and proven strategies for business management, operational excellence, and organizational transformation from Creek Oxley's consulting team."
+        canonical="https://creekoxley.com/blog/article"
+        article={{
+          publishedTime: "2024-09-01T00:00:00Z",
+          author: "Creek Oxley Team",
+          tags: ["Business Strategy", "Management", "Consulting"]
+        }}
+      />
+      <div className="min-h-screen bg-white">
+        <Navbar />
       
       <article className="py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
@@ -144,8 +155,9 @@ const BlogArticlePage = () => {
         </div>
       </article>
       
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 

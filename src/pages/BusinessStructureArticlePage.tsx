@@ -1,4 +1,5 @@
 import React from "react";
+import SEOHead from "@/components/SEOHead";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -7,8 +8,19 @@ import { Calendar, User, ArrowLeft } from "lucide-react";
 
 const BusinessStructureArticlePage = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
+    <>
+      <SEOHead
+        title="Choosing Between Business Name, LLP and Company Formation in Kenya | Creek Oxley"
+        description="Starting a business in Kenya? Learn the differences between Business Name registration, Limited Liability Partnership (LLP), and Private Limited Company formation with expert guidance from Creek Oxley."
+        canonical="https://creekoxley.com/blog/business-structure-kenya"
+        article={{
+          publishedTime: "2025-07-08T00:00:00Z",
+          author: "Creek Oxley Team",
+          tags: ["Business Formation", "Kenya Business", "Legal Structure"]
+        }}
+      />
+      <div className="min-h-screen bg-white">
+        <Navbar />
       
       <article className="py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
@@ -113,8 +125,9 @@ const BusinessStructureArticlePage = () => {
         </div>
       </article>
       
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 

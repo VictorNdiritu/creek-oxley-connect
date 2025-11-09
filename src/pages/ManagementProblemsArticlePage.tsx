@@ -1,5 +1,5 @@
-
 import React from "react";
+import SEOHead from "@/components/SEOHead";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -8,8 +8,19 @@ import { Calendar, User, ArrowLeft } from "lucide-react";
 
 const ManagementProblemsArticlePage = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
+    <>
+      <SEOHead
+        title="Resolving Management Problems: Leadership Conflicts in Business | Creek Oxley"
+        description="Complex management problems and leadership conflicts can threaten even the strongest teams. Learn how strategic consulting can help resolve deadlocks and build stronger businesses."
+        canonical="https://creekoxley.com/blog/management-problems"
+        article={{
+          publishedTime: "2024-07-15T00:00:00Z",
+          author: "Creek Oxley Team",
+          tags: ["Leadership", "Management", "Conflict Resolution"]
+        }}
+      />
+      <div className="min-h-screen bg-white">
+        <Navbar />
       
       <article className="py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
@@ -138,8 +149,9 @@ const ManagementProblemsArticlePage = () => {
         </div>
       </article>
       
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 

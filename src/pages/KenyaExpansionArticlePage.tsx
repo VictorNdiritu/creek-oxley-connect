@@ -1,5 +1,5 @@
-
 import React from "react";
+import SEOHead from "@/components/SEOHead";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -8,8 +8,19 @@ import { Calendar, User, ArrowLeft } from "lucide-react";
 
 const KenyaExpansionArticlePage = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
+    <>
+      <SEOHead
+        title="Expanding Your Business Into Kenya: Strategic Market Entry Guide | Creek Oxley"
+        description="Everything you need to know about expanding your business into Kenya. Learn about market opportunities, regulatory requirements, cultural considerations, and strategic entry approaches."
+        canonical="https://creekoxley.com/blog/kenya-expansion"
+        article={{
+          publishedTime: "2024-08-01T00:00:00Z",
+          author: "Creek Oxley Team",
+          tags: ["Kenya Business", "Market Entry", "Business Expansion"]
+        }}
+      />
+      <div className="min-h-screen bg-white">
+        <Navbar />
       
       <article className="py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
@@ -125,8 +136,9 @@ const KenyaExpansionArticlePage = () => {
         </div>
       </article>
       
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 

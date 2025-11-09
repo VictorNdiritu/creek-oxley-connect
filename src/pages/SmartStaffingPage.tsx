@@ -1,5 +1,5 @@
-
 import React from "react";
+import SEOHead from "@/components/SEOHead";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -8,8 +8,14 @@ import { UserCheck, BarChart, Briefcase, Target } from "lucide-react";
 
 const SmartStaffingPage = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
+    <>
+      <SEOHead
+        title="Smart Staffing Solutions | Creek Oxley Talent Acquisition Services"
+        description="Creek Oxley's innovative staffing solutions including talent acquisition, contract staffing, workforce analytics, and executive search to help your business thrive with the right team."
+        canonical="https://creekoxley.com/smart-staffing"
+      />
+      <div className="min-h-screen bg-white">
+        <Navbar />
       
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 bg-gradient-to-br from-white via-slate-50 to-creekoxley-silver/20 overflow-hidden">
@@ -78,8 +84,9 @@ const SmartStaffingPage = () => {
         </div>
       </section>
       
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 

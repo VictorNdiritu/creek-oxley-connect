@@ -1,5 +1,5 @@
-
 import React from "react";
+import SEOHead from "@/components/SEOHead";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -8,8 +8,19 @@ import { Calendar, User, ArrowLeft } from "lucide-react";
 
 const HotelManagementArticlePage = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
+    <>
+      <SEOHead
+        title="Essential Hotel Management Strategies for Success | Creek Oxley"
+        description="Discover proven hotel management strategies to maximize guest satisfaction, optimize operations, and drive profitability. Expert insights on revenue management, staff training, and technology integration."
+        canonical="https://creekoxley.com/blog/hotel-management"
+        article={{
+          publishedTime: "2024-08-15T00:00:00Z",
+          author: "Creek Oxley Team",
+          tags: ["Hotel Management", "Hospitality", "Operations"]
+        }}
+      />
+      <div className="min-h-screen bg-white">
+        <Navbar />
       
       <article className="py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
@@ -178,8 +189,9 @@ const HotelManagementArticlePage = () => {
         </div>
       </article>
       
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 
