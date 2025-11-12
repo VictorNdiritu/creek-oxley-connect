@@ -12,6 +12,14 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    title: "From Nairobi to Kigali: 5 Management Consulting Pillars for Mastering Cross-Border Operations in the EAC",
+    description: "Learn the five essential management consulting pillars for successful cross-border operations across East Africa. From strategic alignment to data-driven growth, master regional expansion in the EAC.",
+    url: "https://creekoxley.com/blog/eac-cross-border-operations",
+    pubDate: "Wed, 11 Dec 2025 18:05:12 +0000",
+    author: "Creek Oxley Team",
+    category: "Regional Business"
+  },
+  {
     title: "Stop Missing Out: The Cost of Ignoring Global Exhibitions",
     description: "Don't let logistics fears hold you back from global exhibitions. Learn how DMCs can transform your international trade show strategy and why your competitors are already there.",
     url: "https://creekoxley.com/blog/global-exhibitions",

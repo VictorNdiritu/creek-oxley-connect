@@ -19,10 +19,10 @@ const BlogPreview = () => {
           </div>
           
           <div className="bg-gray-50 rounded-lg p-8 md:p-12">
-            <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
+              <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
               <div className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
-                <span>July 8, 2025</span>
+                <span>December 11, 2025</span>
               </div>
               <div className="flex items-center gap-2">
                 <User className="h-4 w-4" />
@@ -31,22 +31,22 @@ const BlogPreview = () => {
             </div>
             
             <h3 className="text-2xl md:text-3xl font-bold text-creekoxley mb-4">
-              Stop Missing Out: The Cost of Ignoring Global Exhibitions
+              From Nairobi to Kigali: 5 Management Consulting Pillars for Mastering Cross-Border Operations in the EAC
             </h3>
             
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Don't let logistics fears hold you back from global exhibitions. Learn how DMCs can transform your international trade show strategy and why your competitors are already there. International exhibitions are where industries connect, where trends are born, and where partnerships are forged...
+              Expanding operations across East Africa is an exciting but complex journey. The EAC has made regional trade more seamless, but succeeding across borders demands structure, insight, and strategy. Learn the five core management consulting pillars for scaling from Nairobi to Kigali...
             </p>
             
             <div className="flex flex-wrap gap-2 mb-6">
-              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Business Strategy</span>
-              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Global Exhibitions</span>
-              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">DMC</span>
-              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Trade Shows</span>
+              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Regional Business</span>
+              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">EAC</span>
+              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Cross-Border Operations</span>
+              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">East Africa</span>
             </div>
             
             <Button className="bg-creekoxley hover:bg-creekoxley-medium text-white">
-              <Link to="/blog/global-exhibitions" className="flex items-center gap-2 text-white">
+              <Link to="/blog/eac-cross-border-operations" className="flex items-center gap-2 text-white">
                 Read Full Article
                 <ArrowRight className="h-4 w-4" />
               </Link>

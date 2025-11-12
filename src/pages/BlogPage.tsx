@@ -59,6 +59,41 @@ const BlogPage = () => {
               </div>
               
               <div className="grid md:grid-cols-2 gap-8">
+                {/* EAC Cross-Border Operations Article */}
+                <article className="bg-gray-50 rounded-lg p-8">
+                  <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
+                    <div className="flex items-center gap-2">
+                      <Calendar className="h-4 w-4" />
+                      <span>December 11, 2025</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <User className="h-4 w-4" />
+                      <span>Creek Oxley Team</span>
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-xl md:text-2xl font-bold text-creekoxley mb-4">
+                    From Nairobi to Kigali: 5 Management Consulting Pillars for Mastering Cross-Border Operations in the EAC
+                  </h3>
+                  
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    Expanding operations across East Africa is an exciting but complex journey. The EAC has made regional trade more seamless, but succeeding across borders demands structure, insight, and strategy...
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Regional Business</span>
+                    <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">EAC</span>
+                    <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Cross-Border Operations</span>
+                  </div>
+                  
+                  <Button className="bg-creekoxley hover:bg-creekoxley-medium text-white">
+                    <Link to="/blog/eac-cross-border-operations" className="flex items-center gap-2 text-white">
+                      Read Full Article
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  </Button>
+                </article>
+
                 {/* Global Exhibitions Article */}
                 <article className="bg-gray-50 rounded-lg p-8">
                   <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">

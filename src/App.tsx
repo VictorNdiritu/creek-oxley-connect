@@ -14,6 +14,7 @@ import BusinessStructureArticlePage from "./pages/BusinessStructureArticlePage";
 import ManagementProblemsArticlePage from "./pages/ManagementProblemsArticlePage";
 import AdidasTurnaroundArticlePage from "./pages/AdidasTurnaroundArticlePage";
 import GlobalExhibitionsArticlePage from "./pages/GlobalExhibitionsArticlePage";
+import EACArticlePage from "./pages/EACArticlePage";
 import DestinationManagementPage from "./pages/DestinationManagementPage";
 import SmartStaffingPage from "./pages/SmartStaffingPage";
 import PrivacyPage from "./pages/PrivacyPage";
@@ -40,6 +41,7 @@ const App = () => (
             <Route path="/blog/management-problems" element={<ManagementProblemsArticlePage />} />
             <Route path="/blog/adidas-turnaround" element={<AdidasTurnaroundArticlePage />} />
             <Route path="/blog/global-exhibitions" element={<GlobalExhibitionsArticlePage />} />
+            <Route path="/blog/eac-cross-border-operations" element={<EACArticlePage />} />
             <Route path="/destination-management" element={<DestinationManagementPage />} />
             <Route path="/smart-staffing" element={<SmartStaffingPage />} />
             <Route path="/privacy" element={<PrivacyPage />} />

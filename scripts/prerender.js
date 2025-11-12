@@ -23,6 +23,7 @@ const routes = [
   '/blog/management-problems',
   '/blog/adidas-turnaround',
   '/blog/global-exhibitions',
+  '/blog/eac-cross-border-operations',
 ];
 
 async function prerender() {
