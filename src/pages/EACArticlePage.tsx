@@ -99,7 +99,7 @@ const EACArticlePage = () => {
                 />
               </div>
               
-              <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold text-creekoxley mb-6 leading-tight">
                 From Nairobi to Kigali: 5 Management Consulting Pillars for Mastering Cross-Border Operations in the EAC
               </h1>
               
@@ -116,7 +116,7 @@ const EACArticlePage = () => {
                 Expanding operations across East Africa is an exciting but complex journey for any business. The East African Community (EAC) has made regional trade and cooperation more seamless, but succeeding across borders still demands more than ambition. It requires structure, insight, and strategy. At Creek Oxley, we believe the secret lies in mastering five core management consulting pillars that help organizations scale smoothly from Nairobi to Kigali and beyond.
               </p>
 
-              <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-creekoxley mt-12 mb-6">
                 1. Strategic Alignment Across Borders
               </h2>
 
@@ -124,7 +124,7 @@ const EACArticlePage = () => {
                 Before a business can thrive regionally, its vision and strategy must align across all markets. This means translating the company's purpose into country-specific action plans that consider market dynamics, consumer behavior, and regulatory nuances. A well-aligned strategy ensures teams in Nairobi, Kigali, and other EAC capitals are working toward one unified goal, even when local conditions differ.
               </p>
 
-              <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-creekoxley mt-12 mb-6">
                 2. Regulatory and Compliance Intelligence
               </h2>
 
@@ -132,7 +132,7 @@ const EACArticlePage = () => {
                 Each EAC country operates under its own legal and tax frameworks. Missteps in compliance can slow down operations or lead to financial losses. Businesses need a proactive approach that includes real-time monitoring of changing regulations, effective stakeholder engagement, and compliance audits. Our consulting framework emphasizes building an internal compliance culture that prevents issues before they occur.
               </p>
 
-              <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-creekoxley mt-12 mb-6">
                 3. Financial and Operational Integration
               </h2>
 
@@ -140,7 +140,7 @@ const EACArticlePage = () => {
                 Cross-border success depends on efficient integration of finance, logistics, and operations. Fragmented systems cause inefficiencies, while harmonized processes enhance agility and profitability. This is where management consulting drives value through ERP optimization, digital transformation, and data-driven decision-making. At Creek Oxley, we help organizations adopt scalable systems that support consistent performance across markets.
               </p>
 
-              <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-creekoxley mt-12 mb-6">
                 4. Talent and Leadership Development
               </h2>
 
@@ -148,7 +148,7 @@ const EACArticlePage = () => {
                 A company's ability to adapt across regions depends on its people. Empowering local teams with leadership training, cultural intelligence, and regional collaboration tools builds resilience. Effective management consultants focus on identifying talent gaps and developing programs that blend local expertise with global best practices. Leadership continuity across borders ensures the company remains agile even as markets evolve.
               </p>
 
-              <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-creekoxley mt-12 mb-6">
                 5. Data-Driven Growth and Innovation
               </h2>
 
@@ -156,7 +156,7 @@ const EACArticlePage = () => {
                 In a rapidly evolving EAC landscape, data is the backbone of sustainable growth. Businesses that use analytics to understand market trends, predict consumer behavior, and optimize pricing strategies gain a competitive edge. Creek Oxley's consulting approach encourages clients to move from intuition-based decision-making to evidence-driven strategies that promote innovation and measurable results.
               </p>
 
-              <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-creekoxley mt-12 mb-6">
                 Conclusion
               </h2>
 
@@ -165,7 +165,7 @@ const EACArticlePage = () => {
               </p>
 
               <div className="bg-muted/50 border border-border rounded-lg p-8 mt-12">
-                <h3 className="text-2xl font-bold text-foreground mb-4">
+                <h3 className="text-2xl font-bold text-creekoxley mb-4">
                   Ready to Expand Across East Africa?
                 </h3>
                 <p className="text-muted-foreground mb-4">
