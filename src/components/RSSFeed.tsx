@@ -15,7 +15,7 @@ const blogPosts: BlogPost[] = [
     title: "From Nairobi to Kigali: 5 Management Consulting Pillars for Mastering Cross-Border Operations in the EAC",
     description: "Learn the five essential management consulting pillars for successful cross-border operations across East Africa. From strategic alignment to data-driven growth, master regional expansion in the EAC.",
     url: "https://creekoxley.com/blog/eac-cross-border-operations",
-    pubDate: "Wed, 11 Dec 2025 18:05:12 +0000",
+    pubDate: "Tue, 12 Nov 2025 18:05:12 +0000",
     author: "Creek Oxley Team",
     category: "Regional Business"
   },

@@ -22,7 +22,7 @@ const EACArticlePage = () => {
         <meta property="og:url" content="https://creekoxley.com/blog/eac-cross-border-operations" />
         <meta property="og:type" content="article" />
         <meta property="og:image" content={`https://creekoxley.com${eacFlag}`} />
-        <meta property="article:published_time" content="2025-12-11T18:05:12+00:00" />
+        <meta property="article:published_time" content="2025-11-12T18:05:12+00:00" />
         <meta property="article:author" content="Creek Oxley Team" />
         <meta property="article:section" content="Regional Business" />
         <meta property="article:tag" content="EAC" />
@@ -55,8 +55,8 @@ const EACArticlePage = () => {
                 "url": "https://creekoxley.com/lovable-uploads/484943ae-2c20-4228-8536-7081b6c91bbd.png"
               }
             },
-            "datePublished": "2025-12-11T18:05:12+00:00",
-            "dateModified": "2025-12-11T18:05:12+00:00",
+            "datePublished": "2025-11-12T18:05:12+00:00",
+            "dateModified": "2025-11-12T18:05:12+00:00",
             "mainEntityOfPage": {
               "@type": "WebPage",
               "@id": "https://creekoxley.com/blog/eac-cross-border-operations"
@@ -82,7 +82,7 @@ const EACArticlePage = () => {
               <div className="flex items-center gap-4 mb-6 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <Calendar className="h-4 w-4" />
-                  <span>December 11, 2025</span>
+                  <span>November 12, 2025</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <User className="h-4 w-4" />
