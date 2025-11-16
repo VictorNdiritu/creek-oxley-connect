@@ -12,6 +12,7 @@ const execAsync = promisify(exec);
 const routes = [
   '/',
   '/about',
+  '/about-us',
   '/services',
   '/blog',
   '/contact',
