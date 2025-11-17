@@ -12,6 +12,14 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    title: "Checklist: What You Should Have Ready Before Handing Over Management",
+    description: "A comprehensive checklist for smooth management transitions. Learn what documentation, systems, and information you need ready before handing over business leadership.",
+    url: "https://creekoxley.com/blog/handover-management-checklist",
+    pubDate: "Sun, 17 Nov 2025 00:00:00 GMT",
+    author: "Creek Oxley Team",
+    category: "Management Transition"
+  },
+  {
     title: "From Nairobi to Kigali: 5 Management Consulting Pillars for Mastering Cross-Border Operations in the EAC",
     description: "Learn the five essential management consulting pillars for successful cross-border operations across East Africa. From strategic alignment to data-driven growth, master regional expansion in the EAC.",
     url: "https://creekoxley.com/blog/eac-cross-border-operations",
