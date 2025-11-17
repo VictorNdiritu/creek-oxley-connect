@@ -25,6 +25,7 @@ const routes = [
   '/blog/adidas-turnaround',
   '/blog/global-exhibitions',
   '/blog/eac-cross-border-operations',
+  '/blog/handover-management-checklist',
 ];
 
 async function prerender() {
