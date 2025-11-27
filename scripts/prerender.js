@@ -26,6 +26,7 @@ const routes = [
   '/blog/global-exhibitions',
   '/blog/eac-cross-border-operations',
   '/blog/handover-management-checklist',
+  '/blog/samburu-elephant-lodge-opening',
 ];
 
 async function prerender() {

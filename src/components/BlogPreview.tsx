@@ -22,7 +22,7 @@ const BlogPreview = () => {
               <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
               <div className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
-                <span>November 17, 2025</span>
+                <span>November 27, 2025</span>
               </div>
               <div className="flex items-center gap-2">
                 <User className="h-4 w-4" />
@@ -31,22 +31,22 @@ const BlogPreview = () => {
             </div>
             
             <h3 className="text-2xl md:text-3xl font-bold text-creekoxley mb-4">
-              Checklist: What You Should Have Ready Before Handing Over Management
+              Samburu Elephant Lodge Grand Opening: Where Conservation Meets Hospitality
             </h3>
             
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Handing over management is one of those moments in business that feels a bit like giving someone your car keys. A smooth handover is not luck—it is preparation. Discover the essential checklist that ensures seamless management transitions without the chaos...
+              The launch of Samburu Elephant Lodge set a new standard in Kenya's hospitality sector. Discover how Creek Oxley's management consulting expertise helped create a sustainable, well-managed eco-tourism venture in one of Kenya's most remarkable ecosystems...
             </p>
             
             <div className="flex flex-wrap gap-2 mb-6">
-              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Management Transition</span>
-              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Business Continuity</span>
-              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Leadership</span>
-              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Operations</span>
+              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Portfolio Projects</span>
+              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Hospitality Management</span>
+              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Kenya Tourism</span>
+              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Eco-Tourism</span>
             </div>
             
             <Button className="bg-creekoxley hover:bg-creekoxley-medium text-white">
-              <Link to="/blog/handover-management-checklist" className="flex items-center gap-2 text-white">
+              <Link to="/blog/samburu-elephant-lodge-opening" className="flex items-center gap-2 text-white">
                 Read Full Article
                 <ArrowRight className="h-4 w-4" />
               </Link>

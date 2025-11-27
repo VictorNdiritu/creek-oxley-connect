@@ -12,6 +12,14 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    title: "Samburu Elephant Lodge Grand Opening: Where Conservation Meets Hospitality",
+    description: "The launch of Samburu Elephant Lodge set a new standard in Kenya's hospitality sector. Discover how Creek Oxley's management consulting expertise helped create a sustainable, well-managed eco-tourism venture in one of Kenya's most remarkable ecosystems.",
+    url: "https://creekoxley.com/blog/samburu-elephant-lodge-opening",
+    pubDate: "Wed, 27 Nov 2025 00:00:00 GMT",
+    author: "Creek Oxley Team",
+    category: "Portfolio Projects"
+  },
+  {
     title: "Checklist: What You Should Have Ready Before Handing Over Management",
     description: "A comprehensive checklist for smooth management transitions. Learn what documentation, systems, and information you need ready before handing over business leadership.",
     url: "https://creekoxley.com/blog/handover-management-checklist",

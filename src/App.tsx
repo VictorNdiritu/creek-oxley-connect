@@ -16,6 +16,7 @@ import AdidasTurnaroundArticlePage from "./pages/AdidasTurnaroundArticlePage";
 import GlobalExhibitionsArticlePage from "./pages/GlobalExhibitionsArticlePage";
 import EACArticlePage from "./pages/EACArticlePage";
 import HandoverChecklistArticlePage from "./pages/HandoverChecklistArticlePage";
+import SamburuLodgeArticlePage from "./pages/SamburuLodgeArticlePage";
 import DestinationManagementPage from "./pages/DestinationManagementPage";
 import SmartStaffingPage from "./pages/SmartStaffingPage";
 import PrivacyPage from "./pages/PrivacyPage";
@@ -45,6 +46,7 @@ const App = () => (
             <Route path="/blog/global-exhibitions" element={<GlobalExhibitionsArticlePage />} />
             <Route path="/blog/eac-cross-border-operations" element={<EACArticlePage />} />
             <Route path="/blog/handover-management-checklist" element={<HandoverChecklistArticlePage />} />
+            <Route path="/blog/samburu-elephant-lodge-opening" element={<SamburuLodgeArticlePage />} />
             <Route path="/destination-management" element={<DestinationManagementPage />} />
             <Route path="/smart-staffing" element={<SmartStaffingPage />} />
             <Route path="/privacy" element={<PrivacyPage />} />
