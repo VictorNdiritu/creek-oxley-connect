@@ -17,6 +17,7 @@ import GlobalExhibitionsArticlePage from "./pages/GlobalExhibitionsArticlePage";
 import EACArticlePage from "./pages/EACArticlePage";
 import HandoverChecklistArticlePage from "./pages/HandoverChecklistArticlePage";
 import SamburuLodgeArticlePage from "./pages/SamburuLodgeArticlePage";
+import Hospitality2026ArticlePage from "./pages/Hospitality2026ArticlePage";
 import DestinationManagementPage from "./pages/DestinationManagementPage";
 import SmartStaffingPage from "./pages/SmartStaffingPage";
 import PrivacyPage from "./pages/PrivacyPage";
@@ -47,6 +48,7 @@ const App = () => (
             <Route path="/blog/eac-cross-border-operations" element={<EACArticlePage />} />
             <Route path="/blog/handover-management-checklist" element={<HandoverChecklistArticlePage />} />
             <Route path="/blog/samburu-elephant-lodge-opening" element={<SamburuLodgeArticlePage />} />
+            <Route path="/blog/hospitality-2026-strategy" element={<Hospitality2026ArticlePage />} />
             <Route path="/destination-management" element={<DestinationManagementPage />} />
             <Route path="/smart-staffing" element={<SmartStaffingPage />} />
             <Route path="/privacy" element={<PrivacyPage />} />
