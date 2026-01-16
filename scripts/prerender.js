@@ -1,13 +1,31 @@
 #!/usr/bin/env node
 
 /**
- * Pre-rendering script to generate static HTML for each route
- * This ensures search engines get actual HTML content, not empty shells
+ * Pre-rendering documentation script
+ * 
+ * Note: react-snap has been removed due to critical security vulnerabilities.
+ * 
+ * For SEO on SPAs deployed to Netlify, consider these alternatives:
+ * 
+ * 1. Netlify's Built-in Pre-rendering (Recommended for paid plans):
+ *    Add to netlify.toml:
+ *    [[plugins]]
+ *      package = "@netlify/plugin-prerender"
+ * 
+ * 2. Use a crawler-friendly meta tag approach (already implemented):
+ *    - react-helmet-async for dynamic meta tags
+ *    - Proper Open Graph and Twitter Card tags
+ *    - JSON-LD structured data
+ * 
+ * 3. Consider migrating to a framework with SSR/SSG support:
+ *    - Next.js, Remix, or Astro for static generation
+ * 
+ * Current SEO implementation relies on:
+ * - Dynamic meta tags via react-helmet-async
+ * - Proper sitemap.xml
+ * - robots.txt configuration
+ * - Structured data (JSON-LD) on all pages
  */
-
-const { exec } = require('child_process');
-const { promisify } = require('util');
-const execAsync = promisify(exec);
 
 const routes = [
   '/',
@@ -30,19 +48,8 @@ const routes = [
   '/blog/hospitality-2026-strategy',
 ];
 
-async function prerender() {
-  console.log('Starting pre-rendering...');
-  
-  try {
-    // Run react-snap to pre-render all routes
-    await execAsync('npx react-snap');
-    console.log('✓ Pre-rendering completed successfully');
-    console.log(`✓ Generated static HTML for ${routes.length} routes`);
-  } catch (error) {
-    console.error('Pre-rendering failed:', error.message);
-    // Don't fail the build if pre-rendering fails
-    process.exit(0);
-  }
-}
-
-prerender();
+console.log('Pre-rendering script (documentation only)');
+console.log(`Configured routes: ${routes.length}`);
+console.log('');
+console.log('Note: react-snap removed due to security vulnerabilities.');
+console.log('SEO is handled via react-helmet-async and structured data.');
