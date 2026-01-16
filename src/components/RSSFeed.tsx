@@ -12,6 +12,14 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    title: "2026 Is the Year That Will Carry Your Hospitality Business Through the Next Three",
+    description: "2026 is the strongest year Kenya's hospitality industry will have for the next three years. Learn why smart operators should prepare now before the 2027 election cycle brings uncertainty.",
+    url: "https://creekoxley.com/blog/hospitality-2026-strategy",
+    pubDate: "Thu, 16 Jan 2026 00:00:00 GMT",
+    author: "Creek Oxley",
+    category: "Hospitality Strategy"
+  },
+  {
     title: "Samburu Elephant Lodge Grand Opening: Where Conservation Meets Hospitality",
     description: "The launch of Samburu Elephant Lodge set a new standard in Kenya's hospitality sector. Discover how Creek Oxley's management consulting expertise helped create a sustainable, well-managed eco-tourism venture in one of Kenya's most remarkable ecosystems.",
     url: "https://creekoxley.com/blog/samburu-elephant-lodge-opening",
