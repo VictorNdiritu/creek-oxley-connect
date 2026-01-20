@@ -22,7 +22,7 @@ const BlogPreview = () => {
             <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
               <div className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
-                <span>January 16, 2026</span>
+                <span>January 20, 2026</span>
               </div>
               <div className="flex items-center gap-2">
                 <User className="h-4 w-4" />
@@ -31,22 +31,22 @@ const BlogPreview = () => {
             </div>
             
             <h3 className="text-2xl md:text-3xl font-bold text-creekoxley mb-4">
-              2026 Is the Year That Will Carry Your Hospitality Business Through the Next Three
+              Busy Is Not a Strategy: Why Kenyan Hospitality Businesses Must Be Managed Like Companies, Not Properties
             </h3>
             
             <p className="text-gray-600 mb-6 leading-relaxed">
-              2026 is the strongest year Kenya's hospitality industry will have for the next three years. Learn why smart operators should prepare now before the 2027 election cycle brings uncertainty...
+              Activity without structure creates noise, not progress. Learn why Kenyan hospitality businesses need proper business management to survive election cycles and economic uncertainty...
             </p>
             
             <div className="flex flex-wrap gap-2 mb-6">
+              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Business Management</span>
               <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Hospitality</span>
               <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Kenya</span>
-              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Strategic Planning</span>
-              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Business Strategy</span>
+              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Strategy</span>
             </div>
             
             <Button className="bg-creekoxley hover:bg-creekoxley-medium text-white">
-              <Link to="/blog/hospitality-2026-strategy" className="flex items-center gap-2 text-white">
+              <Link to="/blog/busy-not-strategy" className="flex items-center gap-2 text-white">
                 Read Full Article
                 <ArrowRight className="h-4 w-4" />
               </Link>

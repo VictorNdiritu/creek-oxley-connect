@@ -12,6 +12,14 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    title: "Busy Is Not a Strategy: Why Kenyan Hospitality Businesses Must Be Managed Like Companies, Not Properties",
+    description: "Activity without structure creates noise, not progress. Learn why Kenyan hospitality businesses need proper business management to survive election cycles and economic uncertainty.",
+    url: "https://creekoxley.com/blog/busy-not-strategy",
+    pubDate: "Mon, 20 Jan 2026 00:00:00 GMT",
+    author: "Creek Oxley",
+    category: "Business Management"
+  },
+  {
     title: "2026 Is the Year That Will Carry Your Hospitality Business Through the Next Three",
     description: "2026 is the strongest year Kenya's hospitality industry will have for the next three years. Learn why smart operators should prepare now before the 2027 election cycle brings uncertainty.",
     url: "https://creekoxley.com/blog/hospitality-2026-strategy",
