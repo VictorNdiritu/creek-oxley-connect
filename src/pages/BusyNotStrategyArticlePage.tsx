@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Calendar, User, ArrowLeft, Building2, TrendingUp, Shield } from "lucide-react";
+import busyNotStrategyCover from "@/assets/busy-not-strategy-cover.png";
 
 const BusyNotStrategyArticlePage = () => {
   return (
@@ -19,10 +20,12 @@ const BusyNotStrategyArticlePage = () => {
         <meta property="og:description" content="Activity without structure creates noise, not progress. Learn why Kenyan hospitality businesses need proper business management." />
         <meta property="og:url" content="https://creekoxley.com/blog/busy-not-strategy" />
         <meta property="og:type" content="article" />
+        <meta property="og:image" content="https://creekoxley.com/busy-not-strategy-cover.png" />
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Busy Is Not a Strategy: Why Kenyan Hospitality Businesses Must Be Managed Like Companies" />
         <meta name="twitter:description" content="Activity without structure creates noise, not progress. Learn why Kenyan hospitality businesses need proper business management." />
+        <meta name="twitter:image" content="https://creekoxley.com/busy-not-strategy-cover.png" />
         
         <script type="application/ld+json">
           {JSON.stringify({
@@ -30,6 +33,7 @@ const BusyNotStrategyArticlePage = () => {
             "@type": "Article",
             "headline": "Busy Is Not a Strategy: Why Kenyan Hospitality Businesses Must Be Managed Like Companies, Not Properties",
             "description": "Activity without structure creates noise, not progress. Learn why Kenyan hospitality businesses need proper business management to survive election cycles and economic uncertainty.",
+            "image": "https://creekoxley.com/busy-not-strategy-cover.png",
             "author": {
               "@type": "Organization",
               "name": "Creek Oxley"
@@ -62,29 +66,38 @@ const BusyNotStrategyArticlePage = () => {
             Back to All Articles
           </Link>
           
-          {/* Hero Section */}
-          <div className="bg-gradient-to-br from-creekoxley via-creekoxley-medium to-creekoxley-dark rounded-2xl p-8 md:p-12 mb-8 text-white">
-            <div className="flex items-center gap-4 mb-6 text-white/80 text-sm">
-              <div className="flex items-center gap-2">
-                <Calendar className="h-4 w-4" />
-                <span>January 20, 2026</span>
+          {/* Hero Image */}
+          <div className="relative rounded-2xl overflow-hidden mb-8">
+            <img 
+              src={busyNotStrategyCover} 
+              alt="Hotel lobby with busy guests and staff - illustrating the importance of management over mere activity" 
+              className="w-full h-64 md:h-96 object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 text-white">
+              <div className="flex items-center gap-4 mb-4 text-white/80 text-sm">
+                <div className="flex items-center gap-2">
+                  <Calendar className="h-4 w-4" />
+                  <span>January 20, 2026</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <User className="h-4 w-4" />
+                  <span>Creek Oxley</span>
+                </div>
               </div>
-              <div className="flex items-center gap-2">
-                <User className="h-4 w-4" />
-                <span>Creek Oxley</span>
-              </div>
+              
+              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
+                Busy Is Not a Strategy: Why Kenyan Hospitality Businesses Must Be Managed Like Companies, Not Properties
+              </h1>
             </div>
-            
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-              Busy Is Not a Strategy: Why Kenyan Hospitality Businesses Must Be Managed Like Companies, Not Properties
-            </h1>
-            
-            <div className="flex flex-wrap gap-2">
-              <span className="bg-white/20 px-3 py-1 rounded-full text-sm">Business Management</span>
-              <span className="bg-white/20 px-3 py-1 rounded-full text-sm">Hospitality</span>
-              <span className="bg-white/20 px-3 py-1 rounded-full text-sm">Kenya</span>
-              <span className="bg-white/20 px-3 py-1 rounded-full text-sm">Strategy</span>
-            </div>
+          </div>
+          
+          {/* Tags */}
+          <div className="flex flex-wrap gap-2 mb-8">
+            <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm font-medium">Business Management</span>
+            <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm font-medium">Hospitality</span>
+            <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm font-medium">Kenya</span>
+            <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm font-medium">Strategy</span>
           </div>
           
           {/* Article Content */}
