@@ -46,6 +46,7 @@ const routes = [
   '/blog/handover-management-checklist',
   '/blog/samburu-elephant-lodge-opening',
   '/blog/hospitality-2026-strategy',
+  '/blog/busy-not-strategy',
 ];
 
 console.log('Pre-rendering script (documentation only)');
