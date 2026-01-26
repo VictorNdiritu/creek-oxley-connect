@@ -12,6 +12,14 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    title: "Owning or Franchising a Hospitality Brand? The Real Tradeoffs",
+    description: "Explore the real tradeoffs in control, cost, and power when deciding between owning your hospitality brand or franchising an existing one.",
+    url: "https://creekoxley.com/blog/owning-vs-franchising",
+    pubDate: "Mon, 26 Jan 2026 00:00:00 GMT",
+    author: "Creek Oxley",
+    category: "Business Strategy"
+  },
+  {
     title: "Busy Is Not a Strategy: Why Kenyan Hospitality Businesses Must Be Managed Like Companies, Not Properties",
     description: "Activity without structure creates noise, not progress. Learn why Kenyan hospitality businesses need proper business management to survive election cycles and economic uncertainty.",
     url: "https://creekoxley.com/blog/busy-not-strategy",
