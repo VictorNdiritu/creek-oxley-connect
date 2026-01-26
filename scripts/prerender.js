@@ -47,6 +47,7 @@ const routes = [
   '/blog/samburu-elephant-lodge-opening',
   '/blog/hospitality-2026-strategy',
   '/blog/busy-not-strategy',
+  '/blog/owning-vs-franchising',
 ];
 
 console.log('Pre-rendering script (documentation only)');

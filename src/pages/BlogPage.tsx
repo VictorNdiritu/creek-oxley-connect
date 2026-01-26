@@ -59,6 +59,41 @@ const BlogPage = () => {
               </div>
               
               <div className="grid md:grid-cols-2 gap-8">
+                {/* Owning vs Franchising Article */}
+                <article className="bg-gray-50 rounded-lg p-8">
+                  <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
+                    <div className="flex items-center gap-2">
+                      <Calendar className="h-4 w-4" />
+                      <span>January 26, 2026</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <User className="h-4 w-4" />
+                      <span>Creek Oxley</span>
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-xl md:text-2xl font-bold text-creekoxley mb-4">
+                    Owning or Franchising a Hospitality Brand? The Real Tradeoffs
+                  </h3>
+                  
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    Explore the real tradeoffs in control, cost, and power when deciding between owning your hospitality brand or franchising an existing one...
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Franchising</span>
+                    <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Brand Ownership</span>
+                    <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Investment</span>
+                  </div>
+                  
+                  <Button className="bg-creekoxley hover:bg-creekoxley-medium text-white">
+                    <Link to="/blog/owning-vs-franchising" className="flex items-center gap-2 text-white">
+                      Read Full Article
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  </Button>
+                </article>
+
                 {/* Busy Is Not a Strategy Article */}
                 <article className="bg-gray-50 rounded-lg p-8">
                   <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
