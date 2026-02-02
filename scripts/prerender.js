@@ -48,6 +48,7 @@ const routes = [
   '/blog/hospitality-2026-strategy',
   '/blog/busy-not-strategy',
   '/blog/owning-vs-franchising',
+  '/blog/firefighter-manager',
 ];
 
 console.log('Pre-rendering script (documentation only)');

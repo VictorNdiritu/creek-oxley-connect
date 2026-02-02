@@ -22,7 +22,7 @@ const BlogPreview = () => {
             <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
               <div className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
-                <span>January 26, 2026</span>
+                <span>February 2, 2026</span>
               </div>
               <div className="flex items-center gap-2">
                 <User className="h-4 w-4" />
@@ -31,22 +31,22 @@ const BlogPreview = () => {
             </div>
             
             <h3 className="text-2xl md:text-3xl font-bold text-creekoxley mb-4">
-              Owning or Franchising a Hospitality Brand? The Real Tradeoffs
+              The "Firefighter" Manager: When Being Busy is the Biggest Barrier to Growth
             </h3>
             
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Explore the real tradeoffs in control, cost, and power when deciding between owning your hospitality brand or franchising an existing one...
+              Discover why constantly fighting fires keeps managers from strategic work. Learn how to break the cycle of operational overwhelm...
             </p>
             
             <div className="flex flex-wrap gap-2 mb-6">
-              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Franchising</span>
-              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Brand Ownership</span>
-              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Hospitality</span>
-              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Investment</span>
+              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Management</span>
+              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Leadership</span>
+              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Productivity</span>
+              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Strategy</span>
             </div>
             
             <Button className="bg-creekoxley hover:bg-creekoxley-medium text-white">
-              <Link to="/blog/owning-vs-franchising" className="flex items-center gap-2 text-white">
+              <Link to="/blog/firefighter-manager" className="flex items-center gap-2 text-white">
                 Read Full Article
                 <ArrowRight className="h-4 w-4" />
               </Link>

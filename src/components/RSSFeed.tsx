@@ -12,6 +12,14 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    title: "The 'Firefighter' Manager: When Being Busy is the Biggest Barrier to Growth",
+    description: "Discover why constantly fighting fires keeps managers from strategic work. Learn how to break the cycle of operational overwhelm and build systems that prevent future crises.",
+    url: "https://creekoxley.com/blog/firefighter-manager",
+    pubDate: "Mon, 02 Feb 2026 00:00:00 GMT",
+    author: "Creek Oxley",
+    category: "Leadership"
+  },
+  {
     title: "Owning or Franchising a Hospitality Brand? The Real Tradeoffs",
     description: "Explore the real tradeoffs in control, cost, and power when deciding between owning your hospitality brand or franchising an existing one.",
     url: "https://creekoxley.com/blog/owning-vs-franchising",
