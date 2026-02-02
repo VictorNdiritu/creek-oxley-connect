@@ -20,6 +20,7 @@ import SamburuLodgeArticlePage from "./pages/SamburuLodgeArticlePage";
 import Hospitality2026ArticlePage from "./pages/Hospitality2026ArticlePage";
 import BusyNotStrategyArticlePage from "./pages/BusyNotStrategyArticlePage";
 import OwningFranchisingArticlePage from "./pages/OwningFranchisingArticlePage";
+import FirefighterManagerArticlePage from "./pages/FirefighterManagerArticlePage";
 import DestinationManagementPage from "./pages/DestinationManagementPage";
 import SmartStaffingPage from "./pages/SmartStaffingPage";
 import PrivacyPage from "./pages/PrivacyPage";
@@ -53,6 +54,7 @@ const App = () => (
             <Route path="/blog/hospitality-2026-strategy" element={<Hospitality2026ArticlePage />} />
             <Route path="/blog/busy-not-strategy" element={<BusyNotStrategyArticlePage />} />
             <Route path="/blog/owning-vs-franchising" element={<OwningFranchisingArticlePage />} />
+            <Route path="/blog/firefighter-manager" element={<FirefighterManagerArticlePage />} />
             <Route path="/destination-management" element={<DestinationManagementPage />} />
             <Route path="/smart-staffing" element={<SmartStaffingPage />} />
             <Route path="/privacy" element={<PrivacyPage />} />

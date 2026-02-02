@@ -59,6 +59,41 @@ const BlogPage = () => {
               </div>
               
               <div className="grid md:grid-cols-2 gap-8">
+                {/* Firefighter Manager Article */}
+                <article className="bg-gray-50 rounded-lg p-8">
+                  <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
+                    <div className="flex items-center gap-2">
+                      <Calendar className="h-4 w-4" />
+                      <span>February 2, 2026</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <User className="h-4 w-4" />
+                      <span>Creek Oxley</span>
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-xl md:text-2xl font-bold text-creekoxley mb-4">
+                    The "Firefighter" Manager: When Being Busy is the Biggest Barrier to Growth
+                  </h3>
+                  
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    Discover why constantly fighting fires keeps managers from strategic work. Learn how to break the cycle of operational overwhelm...
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Management</span>
+                    <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Leadership</span>
+                    <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Productivity</span>
+                  </div>
+                  
+                  <Button className="bg-creekoxley hover:bg-creekoxley-medium text-white">
+                    <Link to="/blog/firefighter-manager" className="flex items-center gap-2 text-white">
+                      Read Full Article
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  </Button>
+                </article>
+
                 {/* Owning vs Franchising Article */}
                 <article className="bg-gray-50 rounded-lg p-8">
                   <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
