@@ -94,8 +94,8 @@ const WatamuVillaPage = () => {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto">
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
-                Experience the ultimate coastal retreat at Kilulu Luxury Island Villa, a rare treasure nestled within the 
-                Watamu Marine National Park. This 372 m² luxury sanctuary offers exclusive privacy for those seeking 
+                 Experience the ultimate coastal retreat at Kilulu Luxury Island Villa, a rare treasure nestled in 
+                Watamu. This 372 m² luxury sanctuary offers exclusive privacy for those seeking 
                 tranquility, stillness, and a deep connection with nature.
               </p>
 
