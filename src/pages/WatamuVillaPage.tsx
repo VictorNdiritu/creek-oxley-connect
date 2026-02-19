@@ -339,12 +339,12 @@ const WatamuVillaPage = () => {
               </p>
               <div className="bg-white p-8 rounded-lg shadow-md">
                 <div className="flex items-center justify-center gap-2 mb-4">
-                  <Phone className="h-5 w-5 text-creekoxley" />
-                  <a href="tel:+254725276757" className="text-lg font-semibold text-gray-900 hover:text-creekoxley transition-colors">
-                    +254 725 276 757
-                  </a>
-                </div>
-                <p className="text-gray-600 mb-6">Email: info@creekoxley.com</p>
+                   <Phone className="h-5 w-5 text-teal-700" />
+                   <a href="tel:+254110463062" className="text-lg font-semibold text-gray-900 hover:text-teal-700 transition-colors">
+                     +254 110 463 062
+                   </a>
+                 </div>
+                 <p className="text-gray-600 mb-6">Email: dmc@creekoxley.com</p>
                 <Button className="bg-creekoxley hover:bg-creekoxley-medium text-white px-8 py-6 text-lg">
                   <Link to="/contact" className="text-white">Enquire Now</Link>
                 </Button>
