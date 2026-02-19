@@ -345,7 +345,7 @@ const WatamuVillaPage = () => {
                    </a>
                  </div>
                  <p className="text-gray-600 mb-6">Email: dmc@creekoxley.com</p>
-                <Button className="bg-creekoxley hover:bg-creekoxley-medium text-white px-8 py-6 text-lg">
+                <Button className="bg-teal-700 hover:bg-teal-800 text-white px-8 py-6 text-lg">
                   <Link to="/contact" className="text-white">Enquire Now</Link>
                 </Button>
               </div>
