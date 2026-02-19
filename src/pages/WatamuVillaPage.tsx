@@ -146,7 +146,7 @@ const WatamuVillaPage = () => {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-4 text-creekoxley">Living Features</h3>
+                  <h3 className="text-xl font-semibold mb-4 text-teal-700">Living Features</h3>
                   <ul className="space-y-3 text-gray-600">
                     <li>High-end interiors with tile and marble floors</li>
                     <li>Soundproofed rooms for ultimate comfort</li>
