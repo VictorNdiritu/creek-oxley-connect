@@ -52,7 +52,7 @@ const WatamuVillaPage = () => {
     <>
       <SEOHead
         title="Kilulu Luxury Island Villa, Watamu | Creek Oxley DMC"
-        description="Experience Kilulu Luxury Island Villa — a 372 m² coastal retreat in Watamu Marine National Park. 4 bedrooms, private pool, beach access. Managed by Creek Oxley DMC."
+        description="Experience Kilulu Luxury Island Villa — a 372 m² coastal retreat in Watamu. 4 bedrooms, private pool, beach access. Managed by Creek Oxley DMC."
         canonical="https://creekoxley.com/dmc/watamu"
       />
       <div className="min-h-screen bg-white">
