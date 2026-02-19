@@ -4,14 +4,17 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { MapPin, Calendar, Users, Building } from "lucide-react";
+import { MapPin, Calendar, Users, Building, ArrowRight } from "lucide-react";
+
+// Import hero image for Watamu card
+import poolImage from "@/assets/new dmc watamu images/WhatsApp Image 2026-02-14 at 18.41.32 (3).jpeg";
 
 const DestinationManagementPage = () => {
   return (
     <>
       <SEOHead
-        title="Destination Management Services | Creek Oxley Global Exhibition Experts"
-        description="Creek Oxley's specialized destination management division promotes hospitality businesses on international platforms. Expert exhibition booth design, networking, and global trade show representation."
+        title="DMC – Destination Management | Creek Oxley"
+        description="Creek Oxley's Destination Management division promotes hospitality businesses on international platforms. Expert exhibition booth design, networking, and global trade show representation."
         canonical="https://creekoxley.com/destination-management"
       />
       <div className="min-h-screen bg-white">
@@ -60,9 +63,41 @@ const DestinationManagementPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Properties Section */}
+      <section className="py-16 md:py-20">
+        <div className="container mx-auto px-4 md:px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Our Properties</h2>
+          <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+            Explore the exclusive hospitality destinations managed and promoted by Creek Oxley DMC.
+          </p>
+          
+          <div className="max-w-lg mx-auto">
+            <Link to="/dmc/watamu" className="group block bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
+              <div className="aspect-video overflow-hidden">
+                <img 
+                  src={poolImage} 
+                  alt="Kilulu Luxury Island Villa pool overlooking the Indian Ocean in Watamu" 
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-creekoxley transition-colors">
+                  Kilulu Luxury Island Villa
+                </h3>
+                <p className="text-gray-600 mb-4">Watamu, Kenya — A 372 m² luxury sanctuary nestled within the Watamu Marine National Park.</p>
+                <span className="inline-flex items-center text-creekoxley font-medium">
+                  Explore <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </span>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
       
       {/* Core Competencies */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Core Competencies</h2>
           
@@ -96,7 +131,7 @@ const DestinationManagementPage = () => {
       </section>
       
       {/* Services */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Our Services</h2>
           
@@ -140,39 +175,6 @@ const DestinationManagementPage = () => {
               <h3 className="text-xl font-semibold mb-3">Follow-Up Marketing Campaigns</h3>
               <p className="text-gray-600">Targeted communications to engage leads post-event, ensuring continued interest and conversions.</p>
             </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* Key Exhibitions */}
-      <section className="py-16 md:py-20">
-        <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Key Upcoming Exhibitions</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 transition-all hover:shadow-lg text-center">
-              <h3 className="text-xl font-semibold mb-3 text-creekoxley">Adriaticon Management Command</h3>
-              <p className="text-gray-600">Holiday World Region World</p>
-              <p className="text-gray-600 font-medium mt-2">March 14–16, 2025</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 transition-all hover:shadow-lg text-center">
-              <h3 className="text-xl font-semibold mb-3 text-creekoxley">ITE Hong Kong</h3>
-              <p className="text-gray-600">International Travel Expo</p>
-              <p className="text-gray-600 font-medium mt-2">June 12–15, 2025</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 transition-all hover:shadow-lg text-center">
-              <h3 className="text-xl font-semibold mb-3 text-creekoxley">Arabian Travel Market</h3>
-              <p className="text-gray-600">Dubai</p>
-              <p className="text-gray-600 font-medium mt-2">Date TBA</p>
-            </div>
-          </div>
-          
-          <div className="text-center mt-8">
-            <p className="text-lg text-gray-600">
-              These platforms offer excellent opportunities to showcase client properties and network with global travel and hospitality professionals.
-            </p>
           </div>
         </div>
       </section>
