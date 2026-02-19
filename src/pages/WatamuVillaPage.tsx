@@ -285,7 +285,7 @@ const WatamuVillaPage = () => {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <Wifi className="h-6 w-6 text-creekoxley mt-1 flex-shrink-0" />
+                  <Wifi className="h-6 w-6 text-teal-700 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-gray-900">Connectivity</h3>
                     <p className="text-gray-600">Free high-speed WiFi throughout the property</p>
