@@ -245,8 +245,8 @@ const WatamuVillaPage = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="text-center">
-                  <div className="h-14 w-14 bg-creekoxley/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Waves className="h-7 w-7 text-creekoxley" />
+                   <div className="h-14 w-14 bg-teal-700/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                     <Waves className="h-7 w-7 text-teal-700" />
                   </div>
                   <h3 className="font-semibold text-lg mb-3">Marine Adventure</h3>
                   <p className="text-gray-600">Dolphin watching, snorkeling, scuba diving, and kite surfing</p>
