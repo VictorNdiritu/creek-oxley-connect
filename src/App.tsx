@@ -22,6 +22,7 @@ import BusyNotStrategyArticlePage from "./pages/BusyNotStrategyArticlePage";
 import OwningFranchisingArticlePage from "./pages/OwningFranchisingArticlePage";
 import FirefighterManagerArticlePage from "./pages/FirefighterManagerArticlePage";
 import DestinationManagementPage from "./pages/DestinationManagementPage";
+import WatamuVillaPage from "./pages/WatamuVillaPage";
 import SmartStaffingPage from "./pages/SmartStaffingPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import TermsPage from "./pages/TermsPage";
