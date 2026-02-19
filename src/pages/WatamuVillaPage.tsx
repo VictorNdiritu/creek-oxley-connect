@@ -109,7 +109,7 @@ const WatamuVillaPage = () => {
                   <p className="font-semibold text-gray-900">5 Bathrooms</p>
                 </div>
                 <div className="text-center p-4 bg-gray-50 rounded-lg">
-                  <MapPin className="h-6 w-6 text-creekoxley mx-auto mb-2" />
+                  <MapPin className="h-6 w-6 text-teal-700 mx-auto mb-2" />
                   <p className="font-semibold text-gray-900">372 m²</p>
                 </div>
                 <div className="text-center p-4 bg-gray-50 rounded-lg">
