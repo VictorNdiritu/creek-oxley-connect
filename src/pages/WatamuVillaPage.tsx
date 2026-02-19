@@ -52,7 +52,7 @@ const WatamuVillaPage = () => {
     <>
       <SEOHead
         title="Kilulu Luxury Island Villa, Watamu | Creek Oxley DMC"
-        description="Experience Kilulu Luxury Island Villa — a 372 m² coastal retreat in Watamu Marine National Park. 4 bedrooms, private pool, beach access. Managed by Creek Oxley DMC."
+        description="Experience Kilulu Luxury Island Villa — a 372 m² coastal retreat in Watamu. 4 bedrooms, private pool, beach access. Managed by Creek Oxley DMC."
         canonical="https://creekoxley.com/dmc/watamu"
       />
       <div className="min-h-screen bg-white">
@@ -81,8 +81,8 @@ const WatamuVillaPage = () => {
                   Where Hospitality Meets Paradise
                 </p>
                 <div className="flex items-center gap-2 mt-4 text-white/80">
-                  <MapPin className="h-5 w-5" />
-                  <span>Watamu Marine National Park, Kilifi County, Kenya</span>
+                   <MapPin className="h-5 w-5" />
+                   <span>Watamu, Kilifi County, Kenya</span>
                 </div>
               </div>
             </div>
@@ -94,26 +94,26 @@ const WatamuVillaPage = () => {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto">
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
-                Experience the ultimate coastal retreat at Kilulu Luxury Island Villa, a rare treasure nestled within the 
-                Watamu Marine National Park. This 372 m² luxury sanctuary offers exclusive privacy for those seeking 
+                 Experience the ultimate coastal retreat at Kilulu Luxury Island Villa, a rare treasure nestled in 
+                Watamu. This 372 m² luxury sanctuary offers exclusive privacy for those seeking 
                 tranquility, stillness, and a deep connection with nature.
               </p>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
                 <div className="text-center p-4 bg-gray-50 rounded-lg">
-                  <Bed className="h-6 w-6 text-creekoxley mx-auto mb-2" />
+                  <Bed className="h-6 w-6 text-teal-700 mx-auto mb-2" />
                   <p className="font-semibold text-gray-900">4 Bedrooms</p>
                 </div>
                 <div className="text-center p-4 bg-gray-50 rounded-lg">
-                  <Bath className="h-6 w-6 text-creekoxley mx-auto mb-2" />
+                  <Bath className="h-6 w-6 text-teal-700 mx-auto mb-2" />
                   <p className="font-semibold text-gray-900">5 Bathrooms</p>
                 </div>
                 <div className="text-center p-4 bg-gray-50 rounded-lg">
-                  <MapPin className="h-6 w-6 text-creekoxley mx-auto mb-2" />
+                  <MapPin className="h-6 w-6 text-teal-700 mx-auto mb-2" />
                   <p className="font-semibold text-gray-900">372 m²</p>
                 </div>
                 <div className="text-center p-4 bg-gray-50 rounded-lg">
-                  <Wifi className="h-6 w-6 text-creekoxley mx-auto mb-2" />
+                  <Wifi className="h-6 w-6 text-teal-700 mx-auto mb-2" />
                   <p className="font-semibold text-gray-900">Free WiFi</p>
                 </div>
               </div>
@@ -132,7 +132,7 @@ const WatamuVillaPage = () => {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                 <div>
-                  <h3 className="text-xl font-semibold mb-4 text-creekoxley">Sleeping Arrangements</h3>
+                  <h3 className="text-xl font-semibold mb-4 text-teal-700">Sleeping Arrangements</h3>
                   <ul className="space-y-3 text-gray-600">
                     <li className="flex items-start gap-2">
                       <span className="font-medium text-gray-900">Master Suites:</span> Three bedrooms with large double beds
@@ -146,7 +146,7 @@ const WatamuVillaPage = () => {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-4 text-creekoxley">Living Features</h3>
+                  <h3 className="text-xl font-semibold mb-4 text-teal-700">Living Features</h3>
                   <ul className="space-y-3 text-gray-600">
                     <li>High-end interiors with tile and marble floors</li>
                     <li>Soundproofed rooms for ultimate comfort</li>
@@ -245,22 +245,22 @@ const WatamuVillaPage = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="text-center">
-                  <div className="h-14 w-14 bg-creekoxley/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Waves className="h-7 w-7 text-creekoxley" />
+                   <div className="h-14 w-14 bg-teal-700/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                     <Waves className="h-7 w-7 text-teal-700" />
                   </div>
                   <h3 className="font-semibold text-lg mb-3">Marine Adventure</h3>
                   <p className="text-gray-600">Dolphin watching, snorkeling, scuba diving, and kite surfing</p>
                 </div>
                 <div className="text-center">
-                  <div className="h-14 w-14 bg-creekoxley/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <TreePine className="h-7 w-7 text-creekoxley" />
+                   <div className="h-14 w-14 bg-teal-700/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                     <TreePine className="h-7 w-7 text-teal-700" />
                   </div>
                   <h3 className="font-semibold text-lg mb-3">Nature Exploration</h3>
                   <p className="text-gray-600">Boat trips through Mida Creek mangroves and game drives</p>
                 </div>
                 <div className="text-center">
-                  <div className="h-14 w-14 bg-creekoxley/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Palette className="h-7 w-7 text-creekoxley" />
+                   <div className="h-14 w-14 bg-teal-700/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                     <Palette className="h-7 w-7 text-teal-700" />
                   </div>
                   <h3 className="font-semibold text-lg mb-3">Culture</h3>
                   <p className="text-gray-600">Local culture tours, walking tours, and temporary art galleries</p>
@@ -278,28 +278,28 @@ const WatamuVillaPage = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex items-start gap-4">
-                  <Clock className="h-6 w-6 text-creekoxley mt-1 flex-shrink-0" />
+                   <Clock className="h-6 w-6 text-teal-700 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-gray-900">Check-in / Check-out</h3>
                     <p className="text-gray-600">Check-in: 09:00 – 12:00 | Check-out: 10:00 – 12:00</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <Wifi className="h-6 w-6 text-creekoxley mt-1 flex-shrink-0" />
+                  <Wifi className="h-6 w-6 text-teal-700 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-gray-900">Connectivity</h3>
                     <p className="text-gray-600">Free high-speed WiFi throughout the property</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <Globe className="h-6 w-6 text-creekoxley mt-1 flex-shrink-0" />
+                  <Globe className="h-6 w-6 text-teal-700 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-gray-900">Languages</h3>
                     <p className="text-gray-600">English, Italian, and German</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <Clock className="h-6 w-6 text-creekoxley mt-1 flex-shrink-0" />
+                  <Clock className="h-6 w-6 text-teal-700 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-gray-900">Quiet Hours</h3>
                     <p className="text-gray-600">22:00 to 08:00 for your serenity</p>
@@ -339,13 +339,13 @@ const WatamuVillaPage = () => {
               </p>
               <div className="bg-white p-8 rounded-lg shadow-md">
                 <div className="flex items-center justify-center gap-2 mb-4">
-                  <Phone className="h-5 w-5 text-creekoxley" />
-                  <a href="tel:+254725276757" className="text-lg font-semibold text-gray-900 hover:text-creekoxley transition-colors">
-                    +254 725 276 757
-                  </a>
-                </div>
-                <p className="text-gray-600 mb-6">Email: info@creekoxley.com</p>
-                <Button className="bg-creekoxley hover:bg-creekoxley-medium text-white px-8 py-6 text-lg">
+                   <Phone className="h-5 w-5 text-teal-700" />
+                   <a href="tel:+254110463062" className="text-lg font-semibold text-gray-900 hover:text-teal-700 transition-colors">
+                     +254 110 463 062
+                   </a>
+                 </div>
+                 <p className="text-gray-600 mb-6">Email: dmc@creekoxley.com</p>
+                <Button className="bg-teal-700 hover:bg-teal-800 text-white px-8 py-6 text-lg">
                   <Link to="/contact" className="text-white">Enquire Now</Link>
                 </Button>
               </div>

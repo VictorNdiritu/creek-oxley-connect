@@ -86,7 +86,7 @@ const DestinationManagementPage = () => {
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-creekoxley transition-colors">
                   Kilulu Luxury Island Villa
                 </h3>
-                <p className="text-gray-600 mb-4">Watamu, Kenya — A 372 m² luxury sanctuary nestled within the Watamu Marine National Park.</p>
+                <p className="text-gray-600 mb-4">Watamu, Kenya — A 372 m² luxury sanctuary on the Kenyan coast.</p>
                 <span className="inline-flex items-center text-creekoxley font-medium">
                   Explore <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </span>
