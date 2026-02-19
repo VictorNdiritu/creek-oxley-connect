@@ -292,7 +292,7 @@ const WatamuVillaPage = () => {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <Globe className="h-6 w-6 text-creekoxley mt-1 flex-shrink-0" />
+                  <Globe className="h-6 w-6 text-teal-700 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-gray-900">Languages</h3>
                     <p className="text-gray-600">English, Italian, and German</p>
