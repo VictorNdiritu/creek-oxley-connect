@@ -299,7 +299,7 @@ const WatamuVillaPage = () => {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <Clock className="h-6 w-6 text-creekoxley mt-1 flex-shrink-0" />
+                  <Clock className="h-6 w-6 text-teal-700 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-gray-900">Quiet Hours</h3>
                     <p className="text-gray-600">22:00 to 08:00 for your serenity</p>
