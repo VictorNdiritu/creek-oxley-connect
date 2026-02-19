@@ -58,6 +58,7 @@ const App = () => (
             <Route path="/blog/firefighter-manager" element={<FirefighterManagerArticlePage />} />
             <Route path="/destination-management" element={<DestinationManagementPage />} />
             <Route path="/dmc" element={<DestinationManagementPage />} />
+            <Route path="/dmc/watamu" element={<WatamuVillaPage />} />
             <Route path="/smart-staffing" element={<SmartStaffingPage />} />
             <Route path="/privacy" element={<PrivacyPage />} />
             <Route path="/terms" element={<TermsPage />} />

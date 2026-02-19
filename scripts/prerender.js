@@ -37,6 +37,7 @@ const routes = [
   '/privacy',
   '/terms',
   '/destination-management',
+  '/dmc/watamu',
   '/smart-staffing',
   '/blog/business-structure-kenya',
   '/blog/management-problems',
