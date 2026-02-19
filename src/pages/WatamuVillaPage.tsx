@@ -101,7 +101,7 @@ const WatamuVillaPage = () => {
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
                 <div className="text-center p-4 bg-gray-50 rounded-lg">
-                  <Bed className="h-6 w-6 text-creekoxley mx-auto mb-2" />
+                  <Bed className="h-6 w-6 text-teal-700 mx-auto mb-2" />
                   <p className="font-semibold text-gray-900">4 Bedrooms</p>
                 </div>
                 <div className="text-center p-4 bg-gray-50 rounded-lg">
