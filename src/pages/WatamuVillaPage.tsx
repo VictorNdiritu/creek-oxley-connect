@@ -278,7 +278,7 @@ const WatamuVillaPage = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex items-start gap-4">
-                  <Clock className="h-6 w-6 text-creekoxley mt-1 flex-shrink-0" />
+                   <Clock className="h-6 w-6 text-teal-700 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-gray-900">Check-in / Check-out</h3>
                     <p className="text-gray-600">Check-in: 09:00 – 12:00 | Check-out: 10:00 – 12:00</p>
