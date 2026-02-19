@@ -252,8 +252,8 @@ const WatamuVillaPage = () => {
                   <p className="text-gray-600">Dolphin watching, snorkeling, scuba diving, and kite surfing</p>
                 </div>
                 <div className="text-center">
-                  <div className="h-14 w-14 bg-creekoxley/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <TreePine className="h-7 w-7 text-creekoxley" />
+                   <div className="h-14 w-14 bg-teal-700/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                     <TreePine className="h-7 w-7 text-teal-700" />
                   </div>
                   <h3 className="font-semibold text-lg mb-3">Nature Exploration</h3>
                   <p className="text-gray-600">Boat trips through Mida Creek mangroves and game drives</p>
