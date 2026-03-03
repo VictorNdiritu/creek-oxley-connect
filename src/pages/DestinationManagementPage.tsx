@@ -6,8 +6,10 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { MapPin, Calendar, Users, Building, ArrowRight } from "lucide-react";
 
+
 // Import hero image for Watamu card
 import poolImage from "@/assets/new dmc watamu images/WhatsApp Image 2026-02-14 at 18.41.32 (3).jpeg";
+import samburuImage from "@/assets/samburu-ribbon-cutting.jpg";
 
 const DestinationManagementPage = () => {
   return (
@@ -72,24 +74,64 @@ const DestinationManagementPage = () => {
             Explore the exclusive hospitality destinations managed and promoted by Creek Oxley DMC.
           </p>
           
-          <div className="max-w-lg mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Kilulu Villa - Watamu */}
             <Link to="/dmc/watamu" className="group block bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
               <div className="aspect-video overflow-hidden">
-                <img 
-                  src={poolImage} 
-                  alt="Kilulu Luxury Island Villa pool overlooking the Indian Ocean in Watamu" 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                />
+                <img src={poolImage} alt="Kilulu Luxury Island Villa pool overlooking the Indian Ocean in Watamu" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-creekoxley transition-colors">
-                  Kilulu Luxury Island Villa
-                </h3>
+                <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">Kilulu Luxury Island Villa</h3>
                 <p className="text-gray-600 mb-4">Watamu, Kenya — A 372 m² luxury sanctuary on the Kenyan coast.</p>
-                <span className="inline-flex items-center text-creekoxley font-medium">
-                  Explore <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </span>
+                <span className="inline-flex items-center text-teal-700 font-medium">Explore <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
+              </div>
+            </Link>
+
+            {/* Samburu Elephant Lodge */}
+            <Link to="/dmc/samburu" className="group block bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
+              <div className="aspect-video overflow-hidden">
+                <img src={samburuImage} alt="Samburu Elephant Lodge opening ceremony" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">Samburu Elephant Lodge</h3>
+                <p className="text-gray-600 mb-4">Samburu, Kenya — An exclusive wildlife lodge experience.</p>
+                <span className="inline-flex items-center text-teal-700 font-medium">Explore <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
+              </div>
+            </Link>
+
+            {/* Luxora Hotel - Lodwar */}
+            <Link to="/dmc/lodwar" className="group block bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
+              <div className="aspect-video overflow-hidden bg-gradient-to-br from-teal-700 to-teal-900 flex items-center justify-center">
+                <Building className="h-16 w-16 text-white/30" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">Luxora Hotel</h3>
+                <p className="text-gray-600 mb-4">Lodwar, Kenya — A premier hospitality destination.</p>
+                <span className="inline-flex items-center text-teal-700 font-medium">Explore <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
+              </div>
+            </Link>
+
+            {/* Warwick Hotel - Nanyuki */}
+            <Link to="/dmc/nanyuki" className="group block bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
+              <div className="aspect-video overflow-hidden bg-gradient-to-br from-teal-700 to-teal-900 flex items-center justify-center">
+                <Building className="h-16 w-16 text-white/30" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">Warwick Hotel</h3>
+                <p className="text-gray-600 mb-4">Nanyuki, Kenya — A distinguished highland property.</p>
+                <span className="inline-flex items-center text-teal-700 font-medium">Explore <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
+              </div>
+            </Link>
+
+            {/* TradeMark Hotel - Nairobi */}
+            <Link to="/dmc/nairobi" className="group block bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
+              <div className="aspect-video overflow-hidden bg-gradient-to-br from-teal-700 to-teal-900 flex items-center justify-center">
+                <Building className="h-16 w-16 text-white/30" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">TradeMark Hotel</h3>
+                <p className="text-gray-600 mb-4">Nairobi, Kenya — A premier city hospitality experience.</p>
+                <span className="inline-flex items-center text-teal-700 font-medium">Explore <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
               </div>
             </Link>
           </div>
