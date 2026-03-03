@@ -23,6 +23,10 @@ import OwningFranchisingArticlePage from "./pages/OwningFranchisingArticlePage";
 import FirefighterManagerArticlePage from "./pages/FirefighterManagerArticlePage";
 import DestinationManagementPage from "./pages/DestinationManagementPage";
 import WatamuVillaPage from "./pages/WatamuVillaPage";
+import SamburuLodgeDmcPage from "./pages/SamburuLodgeDmcPage";
+import LuxoraHotelPage from "./pages/LuxoraHotelPage";
+import WarwickHotelPage from "./pages/WarwickHotelPage";
+import TradeMarkHotelPage from "./pages/TradeMarkHotelPage";
 import SmartStaffingPage from "./pages/SmartStaffingPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import TermsPage from "./pages/TermsPage";
@@ -59,6 +63,10 @@ const App = () => (
             <Route path="/destination-management" element={<DestinationManagementPage />} />
             <Route path="/dmc" element={<DestinationManagementPage />} />
             <Route path="/dmc/watamu" element={<WatamuVillaPage />} />
+            <Route path="/dmc/samburu" element={<SamburuLodgeDmcPage />} />
+            <Route path="/dmc/lodwar" element={<LuxoraHotelPage />} />
+            <Route path="/dmc/nanyuki" element={<WarwickHotelPage />} />
+            <Route path="/dmc/nairobi" element={<TradeMarkHotelPage />} />
             <Route path="/smart-staffing" element={<SmartStaffingPage />} />
             <Route path="/privacy" element={<PrivacyPage />} />
             <Route path="/terms" element={<TermsPage />} />
