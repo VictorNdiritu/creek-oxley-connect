@@ -21,6 +21,7 @@
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://creekoxley.com/" />
     <link rel="icon" href="/lovable-uploads/484943ae-2c20-4228-8536-7081b6c91bbd.png" type="image/png">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Creek Oxley Management Consultants | Expert Business Consulting Services" />
@@ -53,7 +54,23 @@
         "https://x.com/creekoxley"
       ],
       "serviceType": "Management Consulting",
-      "areaServed": "Kenya",
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": "-1.2921",
+          "longitude": "36.8219"
+        },
+        "geoRadius": "2000"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Riverside Close, Riverside Drive",
+        "addressLocality": "Nairobi",
+        "addressCountry": "KE"
+      },
+      "telephone": "+254725276757",
+      "email": "info@creekoxley.com",
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Management Consulting Services",
@@ -78,11 +95,34 @@
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Systems Management",
-              "description": "Implement efficient systems and processes for your business"
+              "name": "Destination Management",
+              "description": "DMC services promoting hospitality businesses on international platforms"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Smart Staffing",
+              "description": "Talent acquisition and workforce management solutions"
             }
           }
         ]
+      }
+    }
+    </script>
+
+    <!-- SiteNavigationElement for search engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Creek Oxley",
+      "url": "https://creekoxley.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://creekoxley.com/blog?q={search_term_string}",
+        "query-input": "required name=search_term_string"
       }
     }
     </script>
@@ -90,6 +130,37 @@
 
   <body>
     <div id="root"></div>
+    <noscript>
+      <div style="padding: 2rem; max-width: 800px; margin: 0 auto; font-family: system-ui, sans-serif;">
+        <h1>Creek Oxley Management Consultants</h1>
+        <p>Creek Oxley provides expert management consulting services including organizational transformation, business strategy, destination management, and smart staffing solutions across East Africa.</p>
+        <h2>Our Services</h2>
+        <ul>
+          <li>Resolving Management Problems</li>
+          <li>Developing and Reviving Strategies</li>
+          <li>Business Process Optimization</li>
+          <li>People Management</li>
+          <li>Marketing Strategy</li>
+        </ul>
+        <h2>Service Divisions</h2>
+        <ul>
+          <li><a href="/destination-management">Destination Management (DMC)</a></li>
+          <li><a href="/smart-staffing">Smart Staffing</a></li>
+        </ul>
+        <h2>DMC Properties</h2>
+        <ul>
+          <li><a href="/dmc/watamu">Kilulu Luxury Island Villa, Watamu</a></li>
+          <li><a href="/dmc/samburu">Samburu Elephant Lodge</a></li>
+          <li><a href="/dmc/lodwar">Luxora Hotel, Lodwar</a></li>
+          <li><a href="/dmc/nanyuki">Warwick Hotel, Nanyuki</a></li>
+          <li><a href="/dmc/nairobi">TradeMark Hotel, Nairobi</a></li>
+        </ul>
+        <h2>Contact</h2>
+        <p>Phone: +254 725 276 757 | Email: info@creekoxley.com</p>
+        <p>Riverside Close, Riverside Drive, Nairobi, Kenya</p>
+        <p><a href="/about">About Us</a> | <a href="/services">Services</a> | <a href="/blog">Blog</a> | <a href="/contact">Contact</a></p>
+      </div>
+    </noscript>
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
