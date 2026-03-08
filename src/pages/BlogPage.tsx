@@ -16,15 +16,6 @@ const BlogPage = () => {
         canonical="https://creekoxley.com/blog"
       />
       <div className="min-h-screen bg-white">
-        {/* Add RSS feed auto-discovery meta tag */}
-        <head>
-          <link 
-            rel="alternate" 
-            type="application/rss+xml" 
-            title="Creek Oxley Management Insights" 
-            href="/rss.xml" 
-          />
-        </head>
         
         <Navbar />
         
