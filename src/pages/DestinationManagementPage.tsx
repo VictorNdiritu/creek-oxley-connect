@@ -101,8 +101,8 @@ const DestinationManagementPage = () => {
 
             {/* Luxora Hotel - Lodwar */}
             <Link to="/dmc/lodwar" className="group block bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
-              <div className="aspect-video overflow-hidden bg-gradient-to-br from-teal-700 to-teal-900 flex items-center justify-center">
-                <Building className="h-16 w-16 text-white/30" />
+              <div className="aspect-video overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1200&q=80&auto=format&fit=crop" alt="Luxora Hotel in Lodwar, northern Kenya" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">Luxora Hotel</h3>
@@ -113,8 +113,8 @@ const DestinationManagementPage = () => {
 
             {/* Warwick Hotel - Nanyuki */}
             <Link to="/dmc/nanyuki" className="group block bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
-              <div className="aspect-video overflow-hidden bg-gradient-to-br from-teal-700 to-teal-900 flex items-center justify-center">
-                <Building className="h-16 w-16 text-white/30" />
+              <div className="aspect-video overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=1200&q=80&auto=format&fit=crop" alt="Warwick Hotel in Nanyuki at the foothills of Mount Kenya" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">Warwick Hotel</h3>
@@ -125,8 +125,8 @@ const DestinationManagementPage = () => {
 
             {/* TradeMark Hotel - Nairobi */}
             <Link to="/dmc/nairobi" className="group block bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
-              <div className="aspect-video overflow-hidden bg-gradient-to-br from-teal-700 to-teal-900 flex items-center justify-center">
-                <Building className="h-16 w-16 text-white/30" />
+              <div className="aspect-video overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80&auto=format&fit=crop" alt="TradeMark Hotel in Nairobi, modern city hospitality" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">TradeMark Hotel</h3>
