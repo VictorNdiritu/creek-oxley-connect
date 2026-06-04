@@ -46,10 +46,13 @@ const LuxoraHotelPage = () => {
 
         {/* Hero */}
         <section className="relative">
-          <div className="h-[60vh] md:h-[70vh] relative overflow-hidden bg-gradient-to-br from-teal-800 to-teal-950">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <Building className="h-32 w-32 text-white/20" />
-            </div>
+          <div className="h-[60vh] md:h-[70vh] relative overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1920&q=80&auto=format&fit=crop"
+              alt="Luxora Hotel exterior in Lodwar, Turkana County"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
             <div className="absolute bottom-0 left-0 right-0 p-6 md:p-12">
               <div className="container mx-auto">
                 <nav className="text-sm text-white/70 mb-4" aria-label="Breadcrumb">
