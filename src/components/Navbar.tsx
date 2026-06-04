@@ -1,111 +1,83 @@
-
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { ChevronDown, Menu } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const linkClass =
+    "relative text-[14px] font-medium text-body-ink hover:text-creekoxley transition-colors after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-lavender hover:after:w-full after:transition-all";
 
   return (
-    <nav className="bg-white shadow-sm py-4">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex justify-between items-center">
+    <>
+      <nav className="bg-white border-b border-rule">
+        <div className="container-x flex items-center justify-between h-20">
           <Link to="/" className="flex items-center">
-            <img 
-              src="/lovable-uploads/484943ae-2c20-4228-8536-7081b6c91bbd.png" 
-              alt="Creek Oxley" 
-              className="h-10 md:h-12" 
+            <img
+              src="/lovable-uploads/484943ae-2c20-4228-8536-7081b6c91bbd.png"
+              alt="Creek Oxley"
+              className="h-10 md:h-11"
             />
           </Link>
 
-          {/* Desktop Navigation - Centered */}
-          <div className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
-            <Link to="/" className="text-gray-700 hover:text-creekoxley">Home</Link>
-            <Link to="/about" className="text-gray-700 hover:text-creekoxley">About</Link>
-            <Link to="/services" className="text-gray-700 hover:text-creekoxley">Services</Link>
-            
-            {/* Service Divisions Dropdown */}
+          <div className="hidden md:flex items-center gap-9">
+            <Link to="/" className={linkClass}>Home</Link>
+            <Link to="/about" className={linkClass}>About</Link>
+            <Link to="/services" className={linkClass}>Services</Link>
             <div className="dropdown relative group">
-              <span className="flex items-center text-gray-700 cursor-default">
-                Service Divisions <ChevronDown className="ml-1 h-4 w-4" />
+              <span className="flex items-center text-[14px] font-medium text-body-ink cursor-default">
+                Divisions <ChevronDown className="ml-1 h-3 w-3" />
               </span>
-              <div className="dropdown-menu hidden absolute z-50 mt-2 w-64 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 py-1">
-                <Link
-                  to="/destination-management"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-creekoxley hover:text-white"
-                >
-                  Destination Management
-                </Link>
-                <Link
-                  to="/smart-staffing"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-creekoxley hover:text-white"
-                >
-                  Smart Staffing
-                </Link>
+              <div className="dropdown-menu hidden absolute mt-3 py-2">
+                <Link to="/dmc" className="block px-5 py-2.5 text-[14px] text-body-ink hover:bg-bone hover:text-creekoxley">Destination Management</Link>
+                <Link to="/smart-staffing" className="block px-5 py-2.5 text-[14px] text-body-ink hover:bg-bone hover:text-creekoxley">Smart Staffing</Link>
               </div>
             </div>
-            
-            <Link to="/blog" className="text-gray-700 hover:text-creekoxley">Blog</Link>
-            <Link to="/contact" className="text-gray-700 hover:text-creekoxley">Contact</Link>
+            <Link to="/blog" className={linkClass}>Insights</Link>
+            <Link to="/contact" className={linkClass}>Contact</Link>
           </div>
 
-          {/* Get Started Button - Right Aligned */}
           <div className="hidden md:block">
-            <Button className="bg-creekoxley hover:bg-creekoxley-medium">
-              <Link to="/contact" className="text-white">Get Started</Link>
-            </Button>
+            <Link to="/contact" className="btn-primary">Get in touch</Link>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <Button variant="ghost" onClick={toggleMenu}>
-              <Menu className="h-6 w-6" />
-            </Button>
-          </div>
+          <button className="md:hidden text-ink" onClick={toggleMenu} aria-label="Menu">
+            <Menu className="h-6 w-6" />
+          </button>
         </div>
+      </nav>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden mt-4 py-2">
-            <div className="flex flex-col space-y-3">
-              <Link to="/" className="text-gray-700 hover:text-creekoxley px-2">Home</Link>
-              <Link to="/about" className="text-gray-700 hover:text-creekoxley px-2">About</Link>
-              <Link to="/services" className="text-gray-700 hover:text-creekoxley px-2">Services</Link>
-              
-              {/* Service Divisions Mobile */}
-              <div>
-                <div className="text-gray-700 font-medium px-2">Service Divisions</div>
-                <div className="ml-4 mt-1 space-y-2">
-                  <Link
-                    to="/destination-management"
-                    className="block text-gray-700 hover:text-creekoxley text-sm"
-                  >
-                    Destination Management
-                  </Link>
-                  <Link
-                    to="/smart-staffing"
-                    className="block text-gray-700 hover:text-creekoxley text-sm"
-                  >
-                    Smart Staffing
-                  </Link>
-                </div>
-              </div>
-              
-              <Link to="/blog" className="text-gray-700 hover:text-creekoxley px-2">Blog</Link>
-              <Link to="/contact" className="text-gray-700 hover:text-creekoxley px-2">Contact</Link>
-              <Button className="bg-creekoxley hover:bg-creekoxley-medium w-full mt-2">
-                <Link to="/contact" className="text-white">Get Started</Link>
-              </Button>
-            </div>
+      {/* Mobile full-screen overlay */}
+      {isMenuOpen && (
+        <div className="fixed inset-0 z-[100000] bg-ink text-white flex flex-col">
+          <div className="flex items-center justify-between h-20 px-6 border-b border-white/10">
+            <span className="font-display text-2xl">Creek Oxley</span>
+            <button onClick={toggleMenu} aria-label="Close"><X className="h-6 w-6" /></button>
           </div>
-        )}
-      </div>
-    </nav>
+          <nav className="flex flex-col gap-6 px-8 py-10">
+            {[
+              ["Home", "/"],
+              ["About", "/about"],
+              ["Services", "/services"],
+              ["Destination Management", "/dmc"],
+              ["Smart Staffing", "/smart-staffing"],
+              ["Insights", "/blog"],
+              ["Contact", "/contact"],
+            ].map(([label, to]) => (
+              <Link
+                key={to}
+                to={to}
+                onClick={toggleMenu}
+                className="font-display text-[40px] leading-[1.05] text-white hover:text-silver"
+              >
+                {label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+      )}
+    </>
   );
 };
 

@@ -1,63 +1,54 @@
-
 import React from "react";
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Calendar, User, ArrowRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 const BlogPreview = () => {
   return (
-    <section className="py-16 md:py-24 bg-white">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-creekoxley mb-4">
-              Latest Insights
+    <section className="bg-bone">
+      <div className="container-x section-pad">
+        <div className="grid grid-cols-12 gap-8 mb-12">
+          <div className="col-span-12 md:col-span-4">
+            <p className="eyebrow mb-6">05 — Insights</p>
+            <h2 className="font-display text-[40px] md:text-[48px] leading-[1.05] text-creekoxley">
+              The firm,
+              <br />
+              <em className="italic">in writing.</em>
             </h2>
-            <p className="text-lg text-gray-600">
-              Expert advice and industry insights from our management consulting team
-            </p>
           </div>
-          
-          <div className="bg-gray-50 rounded-lg p-8 md:p-12">
-            <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
-              <div className="flex items-center gap-2">
-                <Calendar className="h-4 w-4" />
-                <span>February 2, 2026</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <User className="h-4 w-4" />
-                <span>Creek Oxley</span>
+          <div className="col-span-12 md:col-span-7 md:col-start-6 text-[17px] leading-[1.75] text-muted-ink">
+            Working papers, point-of-view essays and field notes from our consulting
+            engagements — written for operators, not the trade press.
+          </div>
+        </div>
+
+        <Link
+          to="/blog/firefighter-manager"
+          className="block group border-t border-b border-rule py-12"
+        >
+          <div className="grid grid-cols-12 gap-8 items-start">
+            <div className="col-span-12 md:col-span-2 eyebrow">February 2026 · Featured</div>
+            <div className="col-span-12 md:col-span-7">
+              <h3 className="font-display text-[32px] md:text-[40px] leading-[1.1] text-creekoxley group-hover:text-ink transition-colors">
+                The "Firefighter" Manager — when being busy is the biggest barrier to growth.
+              </h3>
+              <p className="mt-5 text-[16px] text-muted-ink max-w-2xl">
+                Why constantly fighting fires keeps managers from strategic work, and the
+                operating cadence that breaks the cycle.
+              </p>
+              <div className="mt-6 flex gap-6 text-[12px] text-silver uppercase tracking-[0.1em]">
+                <span>Management</span><span>Leadership</span><span>Strategy</span>
               </div>
             </div>
-            
-            <h3 className="text-2xl md:text-3xl font-bold text-creekoxley mb-4">
-              The "Firefighter" Manager: When Being Busy is the Biggest Barrier to Growth
-            </h3>
-            
-            <p className="text-gray-600 mb-6 leading-relaxed">
-              Discover why constantly fighting fires keeps managers from strategic work. Learn how to break the cycle of operational overwhelm...
-            </p>
-            
-            <div className="flex flex-wrap gap-2 mb-6">
-              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Management</span>
-              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Leadership</span>
-              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Productivity</span>
-              <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Strategy</span>
+            <div className="col-span-12 md:col-span-3 flex md:justify-end">
+              <span className="inline-flex items-center gap-2 text-[14px] font-medium text-creekoxley">
+                Read working paper <ArrowUpRight className="h-4 w-4" />
+              </span>
             </div>
-            
-            <Button className="bg-creekoxley hover:bg-creekoxley-medium text-white">
-              <Link to="/blog/firefighter-manager" className="flex items-center gap-2 text-white">
-                Read Full Article
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </Button>
           </div>
-          
-          <div className="text-center mt-8">
-            <Button variant="outline" className="border-creekoxley text-creekoxley hover:bg-creekoxley/10">
-              <Link to="/blog" className="text-creekoxley">View All Articles</Link>
-            </Button>
-          </div>
+        </Link>
+
+        <div className="mt-10">
+          <Link to="/blog" className="btn-secondary">All insights</Link>
         </div>
       </div>
     </section>

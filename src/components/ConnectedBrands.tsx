@@ -1,100 +1,62 @@
-
 import React from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import { ArrowUpRight } from "lucide-react";
 
 const ConnectedBrands = () => {
+  const items = [
+    {
+      tag: "Division 01",
+      name: "Destination Management",
+      lede: "We promote and operate hospitality businesses on international platforms — exhibitions, trade, distribution and brand stewardship across East Africa.",
+      points: ["Hospitality brand management", "International trade exhibitions", "Distribution & partnerships", "Operating standards & QA"],
+      to: "/dmc",
+    },
+    {
+      tag: "Division 02",
+      name: "Smart Staffing",
+      lede: "Talent acquisition, contract staffing and executive search engineered around the specific roles that move your business forward.",
+      points: ["Executive search", "Contract & temporary staffing", "Workforce analytics", "HR systems & policy"],
+      to: "/smart-staffing",
+    },
+  ];
+
   return (
-    <section className="py-16 md:py-24 bg-gray-50">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Our Service Divisions</h2>
-          <p className="text-lg text-gray-600">
-            Creek Oxley operates specialized service divisions to provide comprehensive solutions in destination management and staffing services.
-          </p>
+    <section className="bg-bone">
+      <div className="container-x section-pad">
+        <div className="grid grid-cols-12 gap-8 mb-14">
+          <div className="col-span-12 md:col-span-4">
+            <p className="eyebrow mb-6">04 — Divisions</p>
+            <h2 className="font-display text-[40px] md:text-[48px] leading-[1.05] text-creekoxley">
+              Specialist divisions
+              <br />
+              <em className="italic">under one firm.</em>
+            </h2>
+          </div>
+          <div className="col-span-12 md:col-span-7 md:col-start-6 text-[17px] leading-[1.75] text-muted-ink">
+            Beyond core consulting, Creek Oxley operates two specialist divisions
+            serving hospitality and workforce mandates with the same operating
+            discipline as the consultancy itself.
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Destination Management Division */}
-          <Card id="destination-management" className="border-0 shadow-lg overflow-hidden">
-            <div className="h-2 bg-creekoxley"></div>
-            <CardHeader className="bg-gradient-to-r from-creekoxley/5 to-creekoxley-light/5">
-              <CardTitle className="text-2xl font-bold text-creekoxley">Creek Oxley Destination Management</CardTitle>
-              <CardDescription className="text-gray-600 text-lg">
-                Expert travel and event coordination services
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="pt-6">
-              <p className="text-gray-600 mb-4">
-                Our Destination Management division specializes in creating exceptional experiences for corporate events, 
-                incentive trips, and conferences. We handle everything from venue selection to full itinerary planning.
-              </p>
-              <div className="space-y-3 mt-6">
-                <div className="flex items-center">
-                  <div className="w-2 h-2 rounded-full bg-creekoxley mr-2"></div>
-                  <span className="text-gray-700">Corporate Event Planning</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-2 h-2 rounded-full bg-creekoxley mr-2"></div>
-                  <span className="text-gray-700">Incentive Trip Management</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-2 h-2 rounded-full bg-creekoxley mr-2"></div>
-                  <span className="text-gray-700">Venue Selection & Logistics</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-2 h-2 rounded-full bg-creekoxley mr-2"></div>
-                  <span className="text-gray-700">Local Experience Curation</span>
-                </div>
-              </div>
-            </CardContent>
-            <CardFooter>
-              <Button variant="outline" className="border-creekoxley text-creekoxley hover:bg-creekoxley/10">
-                <Link to="/destination-management" className="text-creekoxley">Learn More</Link>
-              </Button>
-            </CardFooter>
-          </Card>
-
-          {/* Smart Staffing Division */}
-          <Card id="smart-staffing" className="border-0 shadow-lg overflow-hidden">
-            <div className="h-2 bg-creekoxley-medium"></div>
-            <CardHeader className="bg-gradient-to-r from-creekoxley-medium/5 to-creekoxley-light/5">
-              <CardTitle className="text-2xl font-bold text-creekoxley-medium">Creek Oxley Smart Staffing</CardTitle>
-              <CardDescription className="text-gray-600 text-lg">
-                Intelligent workforce solutions
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="pt-6">
-              <p className="text-gray-600 mb-4">
-                Our Smart Staffing division delivers innovative human resource solutions to help businesses find the right talent, 
-                optimize their workforce, and enhance productivity through data-driven staffing strategies.
-              </p>
-              <div className="space-y-3 mt-6">
-                <div className="flex items-center">
-                  <div className="w-2 h-2 rounded-full bg-creekoxley-medium mr-2"></div>
-                  <span className="text-gray-700">Executive Recruitment</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-2 h-2 rounded-full bg-creekoxley-medium mr-2"></div>
-                  <span className="text-gray-700">Temporary & Contract Staffing</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-2 h-2 rounded-full bg-creekoxley-medium mr-2"></div>
-                  <span className="text-gray-700">Workforce Optimization</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-2 h-2 rounded-full bg-creekoxley-medium mr-2"></div>
-                  <span className="text-gray-700">HR Consulting Services</span>
-                </div>
-              </div>
-            </CardContent>
-            <CardFooter>
-              <Button variant="outline" className="border-creekoxley-medium text-creekoxley-medium hover:bg-creekoxley-medium/10">
-                <Link to="/smart-staffing" className="text-creekoxley-medium">Learn More</Link>
-              </Button>
-            </CardFooter>
-          </Card>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-rule border border-rule">
+          {items.map((it) => (
+            <div key={it.name} className="bg-white border-l-[3px] border-lavender p-10 flex flex-col">
+              <p className="eyebrow mb-6">{it.tag}</p>
+              <h3 className="font-display text-[28px] text-creekoxley mb-4">{it.name}</h3>
+              <p className="text-[15px] text-muted-ink leading-[1.75] mb-8">{it.lede}</p>
+              <ul className="space-y-3 mb-10">
+                {it.points.map((p) => (
+                  <li key={p} className="flex gap-3 text-[14px] text-body-ink border-b border-rule pb-3">
+                    <span className="text-silver">—</span>{p}
+                  </li>
+                ))}
+              </ul>
+              <Link to={it.to} className="mt-auto inline-flex items-center gap-2 text-[14px] font-medium text-creekoxley hover:text-ink">
+                Visit division <ArrowUpRight className="h-4 w-4" />
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
     </section>

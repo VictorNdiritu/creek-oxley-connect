@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -15,10 +14,15 @@ export default {
 			center: true,
 			padding: '2rem',
 			screens: {
-				'2xl': '1400px'
+				'2xl': '1280px'
 			}
 		},
 		extend: {
+			fontFamily: {
+				display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+				serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+				sans: ['Inter', 'system-ui', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -53,24 +57,22 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				},
-				// Creek Oxley brand colors - Purple primary, White secondary
+				// Creek Oxley editorial brand system
 				creekoxley: {
-					DEFAULT: '#7c3aed',      // Primary purple
-					light: '#a855f7',        // Light purple
-					medium: '#8b5cf6',       // Medium purple
-					dark: '#6d28d9',         // Dark purple
-					white: '#ffffff',        // Secondary white
-				}
+					DEFAULT: '#3D1A8C',   // brand purple — text/accent only
+					light: '#A8A8B8',     // silver (kept name for backwards compat)
+					medium: '#7B5EA7',    // lavender mid — accents, hover
+					dark: '#1C1C2E',      // ink — dark panels, primary CTA
+					white: '#FFFFFF',
+					silver: '#A8A8B8',
+				},
+				ink: '#1C1C2E',
+				bone: '#F7F6F4',
+				rule: '#DDDAE8',
+				silver: '#A8A8B8',
+				lavender: '#7B5EA7',
+				'body-ink': '#2D2D3A',
+				'muted-ink': '#6B6878',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -78,22 +80,8 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			keyframes: {
-				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
-				},
-				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
-				}
+				'accordion-down': { from: { height: '0' }, to: { height: 'var(--radix-accordion-content-height)' } },
+				'accordion-up': { from: { height: 'var(--radix-accordion-content-height)' }, to: { height: '0' } }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
