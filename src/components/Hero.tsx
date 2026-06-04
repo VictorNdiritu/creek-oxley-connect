@@ -1,39 +1,51 @@
-
 import React from "react";
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="relative py-20 md:py-32 bg-gradient-to-br from-white via-slate-50 to-creekoxley-silver/20 overflow-hidden">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-4">
-            <span className="text-creekoxley font-semibold text-lg tracking-wider">
-              Observation.Innovation.Results
-            </span>
+    <section className="bg-bone">
+      <div className="container-x pt-20 pb-24 md:pt-28 md:pb-32">
+        <div className="grid grid-cols-12 gap-8 md:gap-12 items-start">
+          {/* Left 7/12 */}
+          <div className="col-span-12 md:col-span-7">
+            <p className="eyebrow mb-8">Management Consultancy — Est. Nairobi</p>
+            <h1 className="font-display text-[44px] md:text-[64px] lg:text-[76px] leading-[1.02] tracking-[-0.02em] text-creekoxley">
+              Strategy, structure
+              <br />
+              and the discipline
+              <br />
+              <em className="italic text-lavender font-medium">to deliver results.</em>
+            </h1>
+            <p className="mt-8 max-w-xl text-[17px] leading-[1.75] text-muted-ink">
+              Creek Oxley partners with operators and executives across East Africa to
+              resolve management problems, build durable strategy, and run the operating
+              cadence that turns plans into measurable outcomes.
+            </p>
+            <div className="mt-10 flex flex-wrap items-center gap-4">
+              <Link to="/services" className="btn-primary">Our practice</Link>
+              <Link to="/contact" className="btn-secondary">Begin a conversation</Link>
+            </div>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-creekoxley mb-6">
-            Expert Management Consulting For Your Business
-          </h1>
-          <p className="text-lg md:text-xl text-gray-600 mb-8 mx-auto">
-            Creek Oxley provides innovative management solutions to help your business grow,
-            adapt, and succeed in today's competitive marketplace.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-creekoxley hover:bg-creekoxley-medium text-white px-8 py-6 text-lg">
-              <Link to="/services" className="text-white">Our Services</Link>
-            </Button>
-            <Button variant="outline" className="border-creekoxley text-creekoxley hover:bg-creekoxley/10 px-8 py-6 text-lg">
-              <Link to="/contact" className="text-creekoxley">Contact Us</Link>
-            </Button>
+
+          {/* Right 5/12 — bordered positioning box */}
+          <div className="col-span-12 md:col-span-5 md:pt-6">
+            <div className="border-2 border-creekoxley p-8 md:p-10">
+              <p className="eyebrow mb-5">Positioning</p>
+              <p className="font-display italic text-[24px] md:text-[28px] leading-[1.25] text-creekoxley">
+                "We do not sell decks. We diagnose the business, install the fix, and
+                stay until the numbers move."
+              </p>
+              <div className="rule mt-8 mb-6" />
+              <p className="text-[14px] text-muted-ink">
+                Engagements across consulting, destination management and smart staffing —
+                anchored by a single operating philosophy:
+                <span className="italic"> Observation. Innovation. Results.</span>
+              </p>
+            </div>
           </div>
         </div>
       </div>
-
-      {/* Decorative Elements */}
-      <div className="absolute -top-20 -right-20 w-64 h-64 bg-creekoxley-light/10 rounded-full blur-3xl"></div>
-      <div className="absolute -bottom-32 -left-20 w-80 h-80 bg-creekoxley/10 rounded-full blur-3xl"></div>
+      <div className="rule" />
     </section>
   );
 };

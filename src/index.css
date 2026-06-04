@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -5,35 +6,36 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Editorial Creek Oxley system — flat, no gradients */
+    --background: 42 14% 97%;          /* #F7F6F4 bone */
+    --foreground: 240 13% 20%;         /* #2D2D3A body ink */
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 240 13% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 240 13% 20%;
 
-    --primary: 267 48% 58%; /* Creek Oxley primary purple */
+    --primary: 259 68% 33%;            /* #3D1A8C brand purple */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 100%; /* Creek Oxley secondary white */
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 240 10% 14%;          /* #1C1C2E ink */
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 252 25% 89%;              /* #DDDAE8 rule/border */
+    --muted-foreground: 247 6% 44%;    /* #6B6878 muted-ink */
 
-    --accent: 267 48% 65%; /* Creek Oxley accent purple */
+    --accent: 264 28% 51%;             /* #7B5EA7 lavender */
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 267 48% 58%;
+    --border: 252 25% 89%;             /* #DDDAE8 */
+    --input: 252 25% 89%;
+    --ring: 259 68% 33%;
 
-    --radius: 0.5rem;
+    --radius: 0.25rem;                 /* sharp-leaning; explicit 0 used for buttons */
   }
 }
 
@@ -41,71 +43,87 @@
   * {
     @apply border-border;
   }
-
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    font-size: 17px;
+    line-height: 1.75;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display;
+    color: #3D1A8C;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    font-weight: 600;
   }
 }
 
-/* Custom styles for Creek Oxley */
-.wave-divider {
-  position: relative;
-  height: 80px;
-  overflow: hidden;
+@layer components {
+  .eyebrow {
+    @apply font-sans uppercase;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: #7B5EA7;
+  }
+  .rule {
+    height: 1px;
+    background-color: #DDDAE8;
+  }
+  .rule-accent {
+    height: 2px;
+    width: 60px;
+    background-color: #7B5EA7;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center font-sans font-medium;
+    background-color: #1C1C2E;
+    color: #FFFFFF;
+    padding: 14px 32px;
+    border-radius: 0;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    transition: background-color 200ms ease;
+  }
+  .btn-primary:hover { background-color: #3D1A8C; }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center font-sans font-medium;
+    background-color: transparent;
+    color: #3D1A8C;
+    border: 1px solid #3D1A8C;
+    padding: 13px 31px;
+    border-radius: 0;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    transition: all 200ms ease;
+  }
+  .btn-secondary:hover { background-color: #3D1A8C; color: #FFFFFF; }
+
+  .section-pad { padding-top: 96px; padding-bottom: 96px; }
+  @media (min-width: 768px) {
+    .section-pad { padding-top: 120px; padding-bottom: 120px; }
+  }
+
+  .container-x { max-width: 1280px; margin-left: auto; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem; }
 }
 
-.wave-divider::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 100px;
-  background: linear-gradient(135deg, transparent 50%, white 50%);
-  transform: scaleX(1.5);
-}
-
+/* Dropdown — flat white, hairline border */
 @media (min-width: 768px) {
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
+  .dropdown:hover .dropdown-menu { display: block; }
 }
-
-/* Updated dropdown styling for better visibility and z-index */
 .dropdown-menu {
   width: auto !important;
   min-width: 240px !important;
   z-index: 99999 !important;
   position: absolute !important;
-  background-color: white !important;
-  border: 1px solid #e5e7eb !important;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+  background-color: #FFFFFF !important;
+  border: 1px solid #DDDAE8 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
 }
-
-.dropdown {
-  position: relative !important;
-  z-index: 99998 !important;
-}
-
-/* Ensure navbar has proper z-index */
-nav {
-  position: relative !important;
-  z-index: 99997 !important;
-}
-
-.logo-wave {
-  position: relative;
-  overflow: hidden;
-  padding: 0.75rem;
-}
-
-.logo-wave::before {
-  content: '';
-  position: absolute;
-  left: -20%;
-  right: -20%;
-  top: 0;
-  height: 100%;
-  background: linear-gradient(90deg, rgba(124, 58, 237, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
-  transform: skewY(-3deg);
-  z-index: -1;
-}
+.dropdown { position: relative !important; z-index: 99998 !important; }
+nav { position: relative !important; z-index: 99997 !important; }
