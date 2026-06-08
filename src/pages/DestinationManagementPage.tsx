@@ -10,6 +10,9 @@ import { MapPin, Calendar, Users, Building, ArrowRight } from "lucide-react";
 // Import hero image for Watamu card
 import poolImage from "@/assets/new dmc watamu images/WhatsApp Image 2026-02-14 at 18.41.32 (3).jpeg";
 import samburuImage from "@/assets/samburu-ribbon-cutting.jpg";
+import luxoraImage from "@/assets/luxora hotel photos/hero-hotel.jpg";
+import warwickImage from "@/assets/warwick hotel photos/Outside view, with swimming pool.jpeg";
+import trademarkPoolImage from "@/assets/Trademark Hotel Africa - Pool.jpg";
 
 const DestinationManagementPage = () => {
   return (
@@ -102,7 +105,7 @@ const DestinationManagementPage = () => {
             {/* Luxora Hotel - Lodwar */}
             <Link to="/dmc/lodwar" className="group block bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
               <div className="aspect-video overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1200&q=80&auto=format&fit=crop" alt="Luxora Hotel in Lodwar, northern Kenya" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                <img src={luxoraImage} alt="Luxora Hotel exterior in Lodwar, northern Kenya" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">Luxora Hotel</h3>
@@ -114,7 +117,7 @@ const DestinationManagementPage = () => {
             {/* Warwick Hotel - Nanyuki */}
             <Link to="/dmc/nanyuki" className="group block bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
               <div className="aspect-video overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=1200&q=80&auto=format&fit=crop" alt="Warwick Hotel in Nanyuki at the foothills of Mount Kenya" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                <img src={warwickImage} alt="Warwick Hotel exterior with pool in Nanyuki" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">Warwick Hotel</h3>
@@ -126,7 +129,7 @@ const DestinationManagementPage = () => {
             {/* TradeMark Hotel - Nairobi */}
             <Link to="/dmc/nairobi" className="group block bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
               <div className="aspect-video overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80&auto=format&fit=crop" alt="TradeMark Hotel in Nairobi, modern city hospitality" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                <img src={trademarkPoolImage} alt="TradeMark Hotel Africa rooftop pool in Nairobi" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">TradeMark Hotel</h3>

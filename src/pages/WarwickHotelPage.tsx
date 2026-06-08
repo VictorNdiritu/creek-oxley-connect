@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Building, Mountain, Compass, Star, Users } from "lucide-react";
+import warwickHeroImage from "@/assets/warwick hotel photos/Outside view, with swimming pool.jpeg";
 
 const WarwickHotelPage = () => {
   const faqSchema = {
@@ -48,8 +49,8 @@ const WarwickHotelPage = () => {
         <section className="relative">
           <div className="h-[60vh] md:h-[70vh] relative overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=1920&q=80&auto=format&fit=crop"
-              alt="Warwick Hotel grounds in Nanyuki at the foothills of Mount Kenya"
+              src={warwickHeroImage}
+              alt="Warwick Hotel exterior with swimming pool in Nanyuki"
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />

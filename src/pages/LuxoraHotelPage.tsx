@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Building, Star, Briefcase, Globe, Users } from "lucide-react";
+import luxoraHeroImage from "@/assets/luxora hotel photos/hero-hotel.jpg";
 
 const LuxoraHotelPage = () => {
   const faqSchema = {
@@ -48,7 +49,7 @@ const LuxoraHotelPage = () => {
         <section className="relative">
           <div className="h-[60vh] md:h-[70vh] relative overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1920&q=80&auto=format&fit=crop"
+              src={luxoraHeroImage}
               alt="Luxora Hotel exterior in Lodwar, Turkana County"
               className="absolute inset-0 w-full h-full object-cover"
             />

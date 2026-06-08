@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Building, Briefcase, Globe, Star, Users } from "lucide-react";
+import trademarkGreyImage from "@/assets/Trademark Hotel Africa - Grey.jpg";
 
 const TradeMarkHotelPage = () => {
   const faqSchema = {
@@ -48,8 +49,8 @@ const TradeMarkHotelPage = () => {
         <section className="relative">
           <div className="h-[60vh] md:h-[70vh] relative overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1920&q=80&auto=format&fit=crop"
-              alt="TradeMark Hotel — premier Nairobi city hospitality"
+              src={trademarkGreyImage}
+              alt="TradeMark Hotel Africa exterior in Nairobi"
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
