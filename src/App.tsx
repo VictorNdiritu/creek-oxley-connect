@@ -32,6 +32,21 @@ import PrivacyPage from "./pages/PrivacyPage";
 import TermsPage from "./pages/TermsPage";
 import NotFound from "./pages/NotFound";
 
+// Industries
+import IndustriesPage from "./pages/industries/IndustriesPage";
+import ManufacturingPage from "./pages/industries/ManufacturingPage";
+import HospitalityTourismPage from "./pages/industries/HospitalityTourismPage";
+import HealthcarePage from "./pages/industries/HealthcarePage";
+import FinancialServicesPage from "./pages/industries/FinancialServicesPage";
+import RetailPage from "./pages/industries/RetailPage";
+import TechnologyPage from "./pages/industries/TechnologyPage";
+import RealEstatePage from "./pages/industries/RealEstatePage";
+import EducationPage from "./pages/industries/EducationPage";
+import LogisticsPage from "./pages/industries/LogisticsPage";
+import AgriculturePage from "./pages/industries/AgriculturePage";
+import EnergyPage from "./pages/industries/EnergyPage";
+import NonProfitPage from "./pages/industries/NonProfitPage";
+
 
 const queryClient = new QueryClient();
 
@@ -43,10 +58,10 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/about-us" element={<AboutPage />} />
-        <Route path="/services" element={<ServicesPage />} />
+            <Route path="/" element={<Index />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/about-us" element={<AboutPage />} />
+            <Route path="/services" element={<ServicesPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/business-structure-kenya" element={<BusinessStructureArticlePage />} />
@@ -70,6 +85,22 @@ const App = () => (
             <Route path="/smart-staffing" element={<SmartStaffingPage />} />
             <Route path="/privacy" element={<PrivacyPage />} />
             <Route path="/terms" element={<TermsPage />} />
+
+            {/* Industries */}
+            <Route path="/industries" element={<IndustriesPage />} />
+            <Route path="/industries/manufacturing" element={<ManufacturingPage />} />
+            <Route path="/industries/hospitality-tourism" element={<HospitalityTourismPage />} />
+            <Route path="/industries/healthcare-life-sciences" element={<HealthcarePage />} />
+            <Route path="/industries/financial-services" element={<FinancialServicesPage />} />
+            <Route path="/industries/retail-consumer-goods" element={<RetailPage />} />
+            <Route path="/industries/technology-telecoms" element={<TechnologyPage />} />
+            <Route path="/industries/real-estate-construction" element={<RealEstatePage />} />
+            <Route path="/industries/education-training" element={<EducationPage />} />
+            <Route path="/industries/logistics-supply-chain" element={<LogisticsPage />} />
+            <Route path="/industries/agriculture-agribusiness" element={<AgriculturePage />} />
+            <Route path="/industries/energy-utilities" element={<EnergyPage />} />
+            <Route path="/industries/non-profit-ngo" element={<NonProfitPage />} />
+
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

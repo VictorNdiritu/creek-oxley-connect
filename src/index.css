@@ -118,12 +118,14 @@
 .dropdown-menu {
   width: auto !important;
   min-width: 240px !important;
+  max-height: 420px !important;
+  overflow-y: auto !important;
   z-index: 99999 !important;
   position: absolute !important;
   background-color: #FFFFFF !important;
   border: 1px solid #DDDAE8 !important;
   border-radius: 0 !important;
-  box-shadow: none !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08) !important;
 }
 .dropdown { position: relative !important; z-index: 99998 !important; }
 nav { position: relative !important; z-index: 99997 !important; }
