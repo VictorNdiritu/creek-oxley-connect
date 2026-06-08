@@ -122,10 +122,28 @@
   overflow-y: auto !important;
   z-index: 99999 !important;
   position: absolute !important;
-  background-color: #FFFFFF !important;
-  border: 1px solid #DDDAE8 !important;
-  border-radius: 0 !important;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08) !important;
+  top: 100% !important;        /* sit flush against the trigger */
+  padding-top: 12px !important; /* visual gap — but hover area stays connected */
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+/* Inner panel gets the white card styling */
+.dropdown-menu > * {
+  background-color: #FFFFFF;
+}
+.dropdown-menu::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 12px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #FFFFFF;
+  border: 1px solid #DDDAE8;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  z-index: -1;
 }
 .dropdown { position: relative !important; z-index: 99998 !important; }
 nav { position: relative !important; z-index: 99997 !important; }

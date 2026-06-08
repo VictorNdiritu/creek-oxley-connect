@@ -50,7 +50,7 @@ const Navbar = () => {
               >
                 Industries <ChevronDown className="ml-1 h-3 w-3 group-hover:rotate-180 transition-transform duration-200" />
               </Link>
-              <div className="dropdown-menu hidden absolute mt-3 py-2" style={{ minWidth: "240px" }}>
+              <div className="dropdown-menu hidden absolute py-2" style={{ minWidth: "240px" }}>
                 <Link
                   to="/industries"
                   className="block px-5 py-2.5 text-[13px] text-body-ink hover:bg-bone hover:text-creekoxley font-semibold border-b border-rule"
@@ -74,7 +74,7 @@ const Navbar = () => {
               <span className="flex items-center text-[14px] font-medium text-body-ink cursor-default">
                 Divisions <ChevronDown className="ml-1 h-3 w-3" />
               </span>
-              <div className="dropdown-menu hidden absolute mt-3 py-2">
+              <div className="dropdown-menu hidden absolute py-2">
                 <Link to="/dmc" className="block px-5 py-2.5 text-[14px] text-body-ink hover:bg-bone hover:text-creekoxley">Destination Management</Link>
                 <Link to="/smart-staffing" className="block px-5 py-2.5 text-[14px] text-body-ink hover:bg-bone hover:text-creekoxley">Smart Staffing</Link>
               </div>
