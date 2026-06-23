@@ -76,14 +76,14 @@ const PreCheckInPage = () => {
 
         {/* Header */}
         <section className="border-b border-silver/40 bg-white">
-          <div className="container mx-auto px-6 py-16 md:py-24 max-w-5xl">
+          <div className="container mx-auto px-6 py-16 md:py-24 max-w-5xl text-center">
             <p className="text-xs uppercase tracking-[0.2em] text-lavender mb-4">
               Destination Management — Creek Oxley
             </p>
             <h1 className="font-display text-4xl md:text-6xl text-creekoxley leading-tight mb-6">
               Traveller Pre-Check-In
             </h1>
-            <p className="text-ink/70 text-lg max-w-2xl leading-relaxed">
+            <p className="text-ink/70 text-lg max-w-2xl mx-auto leading-relaxed">
               Help us prepare for your arrival. Share your travel details, room
               preferences, dietary requirements and any special requests so our
               team can shape a personal welcome at the property.
