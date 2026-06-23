@@ -42,6 +42,7 @@ const routes = [
   '/dmc/lodwar',
   '/dmc/nanyuki',
   '/dmc/nairobi',
+  '/dmc/pre-check-in',
   '/smart-staffing',
   '/blog/business-structure-kenya',
   '/blog/management-problems',
