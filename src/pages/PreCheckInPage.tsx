@@ -88,7 +88,6 @@ const PreCheckInPage = () => {
               preferences, dietary requirements and any special requests so our
               team can shape a personal welcome at the property.
             </p>
-          </div>
         </section>
 
         {/* Form */}
