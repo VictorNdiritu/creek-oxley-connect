@@ -9,10 +9,10 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-ink text-white hover:bg-creekoxley",
+        default: "bg-creekoxley text-white hover:bg-ink",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline: "border border-creekoxley text-creekoxley bg-transparent hover:bg-creekoxley hover:text-white",
-        secondary: "bg-white text-ink border border-rule hover:border-creekoxley hover:text-creekoxley",
+        secondary: "bg-creekoxley text-white border border-creekoxley hover:bg-ink hover:border-ink",
         ghost: "hover:bg-rule/40 hover:text-creekoxley",
         link: "text-creekoxley underline-offset-4 hover:underline",
       },
