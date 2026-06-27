@@ -101,7 +101,7 @@ const GlobalExhibitionsArticlePage = () => {
 
             <div className="prose prose-lg max-w-none text-foreground">
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                As a business leader, you're constantly bombarded with promotions—emails, ads, and social media posts that promise the next big opportunity. It's easy to become numb to it all, especially when it comes to international trade shows.
+                As a business leader, you're constantly bombarded with promotions-emails, ads, and social media posts that promise the next big opportunity. It's easy to become numb to it all, especially when it comes to international trade shows.
               </p>
 
               <p>
@@ -109,7 +109,7 @@ const GlobalExhibitionsArticlePage = () => {
               </p>
 
               <p>
-                By consistently ignoring these events, you're not just saving yourself from a few promotional emails; you're actively choosing to operate in a vacuum. You're missing a critical chance for growth that your competitors are likely capitalizing on. International exhibitions are where industries connect, where trends are born, and where the most significant partnerships are forged. Your competitors are there, shaking hands with potential clients and showing off their latest innovations. Your absence isn't just unnoticed—it can be felt. You are missing out on invaluable market intelligence and the opportunity to get your product in front of a targeted, engaged audience.
+                By consistently ignoring these events, you're not just saving yourself from a few promotional emails; you're actively choosing to operate in a vacuum. You're missing a critical chance for growth that your competitors are likely capitalizing on. International exhibitions are where industries connect, where trends are born, and where the most significant partnerships are forged. Your competitors are there, shaking hands with potential clients and showing off their latest innovations. Your absence isn't just unnoticed-it can be felt. You are missing out on invaluable market intelligence and the opportunity to get your product in front of a targeted, engaged audience.
               </p>
 
               <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">
@@ -121,7 +121,7 @@ const GlobalExhibitionsArticlePage = () => {
               </p>
 
               <p>
-                This is where a <strong>Destination Management Company (DMC)</strong> becomes your most valuable asset. A DMC, like the brand of Creek Oxley, acts as a seamless extension of your team. They handle the entire logistical dance for you—from coordinating with local suppliers and securing your booth to ensuring your materials clear customs without a hitch. By entrusting these details to experts, you free your team to focus on what truly matters: networking with potential clients and making a lasting impression.
+                This is where a <strong>Destination Management Company (DMC)</strong> becomes your most valuable asset. A DMC, like the brand of Creek Oxley, acts as a seamless extension of your team. They handle the entire logistical dance for you-from coordinating with local suppliers and securing your booth to ensuring your materials clear customs without a hitch. By entrusting these details to experts, you free your team to focus on what truly matters: networking with potential clients and making a lasting impression.
               </p>
 
               <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">

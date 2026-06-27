@@ -82,7 +82,7 @@ const DestinationManagementPage = () => {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">Kilulu Luxury Island Villa</h3>
-                <p className="text-gray-600 mb-4">Watamu, Kenya — A 372 m² luxury sanctuary on the Kenyan coast.</p>
+                <p className="text-gray-600 mb-4">Watamu, Kenya - A 372 m² luxury sanctuary on the Kenyan coast.</p>
                 <span className="inline-flex items-center text-teal-700 font-medium">Explore <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
               </div>
             </Link>
@@ -94,7 +94,7 @@ const DestinationManagementPage = () => {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">Samburu Elephant Lodge</h3>
-                <p className="text-gray-600 mb-4">Samburu, Kenya — An exclusive wildlife lodge experience.</p>
+                <p className="text-gray-600 mb-4">Samburu, Kenya - An exclusive wildlife lodge experience.</p>
                 <span className="inline-flex items-center text-teal-700 font-medium">Explore <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
               </div>
             </Link>
@@ -106,7 +106,7 @@ const DestinationManagementPage = () => {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">Luxora Hotel</h3>
-                <p className="text-gray-600 mb-4">Lodwar, Kenya — A premier hospitality destination.</p>
+                <p className="text-gray-600 mb-4">Lodwar, Kenya - A premier hospitality destination.</p>
                 <span className="inline-flex items-center text-teal-700 font-medium">Explore <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
               </div>
             </Link>
@@ -118,7 +118,7 @@ const DestinationManagementPage = () => {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">Warwick Hotel</h3>
-                <p className="text-gray-600 mb-4">Nanyuki, Kenya — A distinguished highland property.</p>
+                <p className="text-gray-600 mb-4">Nanyuki, Kenya - A distinguished highland property.</p>
                 <span className="inline-flex items-center text-teal-700 font-medium">Explore <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
               </div>
             </Link>
@@ -130,7 +130,7 @@ const DestinationManagementPage = () => {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">TradeMark Hotel</h3>
-                <p className="text-gray-600 mb-4">Nairobi, Kenya — A premier city hospitality experience.</p>
+                <p className="text-gray-600 mb-4">Nairobi, Kenya - A premier city hospitality experience.</p>
                 <span className="inline-flex items-center text-teal-700 font-medium">Explore <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
               </div>
             </Link>

@@ -6,7 +6,7 @@
 
 @layer base {
   :root {
-    /* Editorial Creek Oxley system — flat, no gradients */
+    /* Editorial Creek Oxley system - flat, no gradients */
     --background: 42 14% 97%;          /* #F7F6F4 bone */
     --foreground: 240 13% 20%;         /* #2D2D3A body ink */
 
@@ -111,7 +111,7 @@
   .container-x { max-width: 1280px; margin-left: auto; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem; }
 }
 
-/* Dropdown — flat white, hairline border */
+/* Dropdown - flat white, hairline border */
 @media (min-width: 768px) {
   .dropdown:hover .dropdown-menu { display: block; }
 }
@@ -123,7 +123,7 @@
   z-index: 99999 !important;
   position: absolute !important;
   top: 100% !important;        /* sit flush against the trigger */
-  padding-top: 12px !important; /* visual gap — but hover area stays connected */
+  padding-top: 12px !important; /* visual gap - but hover area stays connected */
   background-color: transparent !important;
   border: none !important;
   box-shadow: none !important;

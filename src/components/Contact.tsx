@@ -36,14 +36,14 @@ const Contact = () => {
       <div className="container-x section-pad">
         <div className="grid grid-cols-12 gap-8 md:gap-16">
           <div className="col-span-12 md:col-span-5">
-            <p className="eyebrow mb-6">06 — Engage</p>
+            <p className="eyebrow mb-6">06 - Engage</p>
             <h2 className="font-display text-[40px] md:text-[56px] leading-[1.05] text-creekoxley">
               Begin a
               <br /><em className="italic">conversation.</em>
             </h2>
             <p className="mt-8 text-[17px] text-muted-ink max-w-md leading-[1.75]">
               Every engagement starts with a discovery conversation. Tell us where the
-              business is now and where it needs to be — we'll come back with a frame.
+              business is now and where it needs to be - we'll come back with a frame.
             </p>
 
             <dl className="mt-12 space-y-8">

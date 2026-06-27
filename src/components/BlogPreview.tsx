@@ -8,7 +8,7 @@ const BlogPreview = () => {
       <div className="container-x section-pad">
         <div className="grid grid-cols-12 gap-8 mb-12">
           <div className="col-span-12 md:col-span-4">
-            <p className="eyebrow mb-6">05 — Insights</p>
+            <p className="eyebrow mb-6">05 - Insights</p>
             <h2 className="font-display text-[40px] md:text-[48px] leading-[1.05] text-creekoxley">
               The firm,
               <br />
@@ -17,7 +17,7 @@ const BlogPreview = () => {
           </div>
           <div className="col-span-12 md:col-span-7 md:col-start-6 text-[17px] leading-[1.75] text-muted-ink">
             Working papers, point-of-view essays and field notes from our consulting
-            engagements — written for operators, not the trade press.
+            engagements - written for operators, not the trade press.
           </div>
         </div>
 
@@ -29,7 +29,7 @@ const BlogPreview = () => {
             <div className="col-span-12 md:col-span-2 eyebrow">February 2026 · Featured</div>
             <div className="col-span-12 md:col-span-7">
               <h3 className="font-display text-[32px] md:text-[40px] leading-[1.1] text-creekoxley group-hover:text-ink transition-colors">
-                The "Firefighter" Manager — when being busy is the biggest barrier to growth.
+                The "Firefighter" Manager - when being busy is the biggest barrier to growth.
               </h3>
               <p className="mt-5 text-[16px] text-muted-ink max-w-2xl">
                 Why constantly fighting fires keeps managers from strategic work, and the

@@ -63,7 +63,7 @@ const HotelManagementArticlePage = () => {
             {/* Article Content */}
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                Managing a hotel or lodge today is about far more than daily check-ins and housekeeping schedules. Guests expect seamless service, authentic experiences, and thoughtful touches that go beyond the ordinary — all while you keep an eye on profitability and sustainability.
+                Managing a hotel or lodge today is about far more than daily check-ins and housekeeping schedules. Guests expect seamless service, authentic experiences, and thoughtful touches that go beyond the ordinary - all while you keep an eye on profitability and sustainability.
               </p>
               
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
@@ -72,7 +72,7 @@ const HotelManagementArticlePage = () => {
               
               <h2 className="text-2xl font-bold text-creekoxley mb-4">1️⃣ Craft a Seamless Guest Journey, Start to Finish</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Begin by mapping the entire guest experience — from the moment they discover your website to when they leave a review after checkout.
+                Begin by mapping the entire guest experience - from the moment they discover your website to when they leave a review after checkout.
               </p>
               <ul className="list-disc pl-6 mb-6 text-gray-700">
                 <li>Automate booking confirmations and reminders to reduce no-shows and late arrivals.</li>
@@ -99,7 +99,7 @@ const HotelManagementArticlePage = () => {
               <ul className="list-disc pl-6 mb-6 text-gray-700">
                 <li>Partner with local farmers and artisans to source food, décor, or amenities.</li>
                 <li>Introduce eco-friendly practices: refillable toiletries, water-saving systems, and recycling programs.</li>
-                <li>Offer guests immersive local activities — from storytelling evenings to guided nature walks.</li>
+                <li>Offer guests immersive local activities - from storytelling evenings to guided nature walks.</li>
               </ul>
               <p className="text-gray-700 leading-relaxed mb-8">
                 These steps not only reduce your environmental impact but also strengthen your lodge's unique identity and guest appeal.
@@ -110,7 +110,7 @@ const HotelManagementArticlePage = () => {
               <ul className="list-disc pl-6 mb-6 text-gray-700">
                 <li>Provide regular training on customer service, communication, and local knowledge.</li>
                 <li>Create open channels where staff can share feedback or improvement ideas.</li>
-                <li>Recognize good work publicly — even small gestures help build loyalty and reduce turnover.</li>
+                <li>Recognize good work publicly - even small gestures help build loyalty and reduce turnover.</li>
               </ul>
               <p className="text-gray-700 leading-relaxed mb-8">
                 When staff feel valued and equipped, guests notice the difference.
@@ -171,7 +171,7 @@ const HotelManagementArticlePage = () => {
               
               <h2 className="text-2xl font-bold text-creekoxley mb-4">📌 Final Thoughts</h2>
               <p className="text-gray-700 leading-relaxed mb-8">
-                Start small: one or two changes can already make a difference. Over time, these strategies combine to turn your lodge into more than just a place to stay — they transform it into a memorable destination where guests return, recommend, and remember.
+                Start small: one or two changes can already make a difference. Over time, these strategies combine to turn your lodge into more than just a place to stay - they transform it into a memorable destination where guests return, recommend, and remember.
               </p>
             </div>
             

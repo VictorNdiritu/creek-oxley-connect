@@ -161,7 +161,7 @@ const EACArticlePage = () => {
               </h2>
 
               <p>
-                Expanding from Nairobi to Kigali is more than a geographic move—it is a strategic evolution. The EAC market offers immense opportunities, but only for businesses ready to navigate its complexity with precision. By applying these five management consulting pillars, organizations can not only expand but also thrive sustainably across borders.
+                Expanding from Nairobi to Kigali is more than a geographic move-it is a strategic evolution. The EAC market offers immense opportunities, but only for businesses ready to navigate its complexity with precision. By applying these five management consulting pillars, organizations can not only expand but also thrive sustainably across borders.
               </p>
 
               <div className="bg-muted/50 border border-border rounded-lg p-8 mt-12">

@@ -47,7 +47,7 @@ const ManagementProblemsArticlePage = () => {
             
             {/* Article title */}
             <h1 className="text-3xl md:text-5xl font-bold text-creekoxley mb-6">
-              Resolving Management Problems: Why Leadership Conflicts Can Break — or Build — Your Business
+              Resolving Management Problems: Why Leadership Conflicts Can Break - or Build - Your Business
             </h1>
             
             {/* Tags */}
@@ -69,7 +69,7 @@ const ManagementProblemsArticlePage = () => {
               </h2>
               
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Consider the case of two business owners or co-founders who find themselves locked in disagreement halfway through building their venture. One believes in aggressive expansion into new markets, while the other insists on consolidating existing operations and improving margins. Over time, this conflict escalates into open hostility — delaying key decisions, confusing employees, and unsettling investors.
+                Consider the case of two business owners or co-founders who find themselves locked in disagreement halfway through building their venture. One believes in aggressive expansion into new markets, while the other insists on consolidating existing operations and improving margins. Over time, this conflict escalates into open hostility - delaying key decisions, confusing employees, and unsettling investors.
               </p>
               
               <p className="text-gray-600 mb-6 leading-relaxed">
@@ -81,7 +81,7 @@ const ManagementProblemsArticlePage = () => {
               </h2>
               
               <p className="text-gray-600 mb-6 leading-relaxed">
-                In many cases, yes — but only with structured intervention. An external consultant can help the founders:
+                In many cases, yes - but only with structured intervention. An external consultant can help the founders:
               </p>
               
               <ul className="list-disc pl-6 mb-6 text-gray-600 leading-relaxed">
@@ -119,7 +119,7 @@ const ManagementProblemsArticlePage = () => {
               </p>
               
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Had the founders engaged an external advisor early on to formalize roles, address grievances, and mediate conflict, the dispute might have been resolved privately and less expensively — preserving both relationships and brand reputation.
+                Had the founders engaged an external advisor early on to formalize roles, address grievances, and mediate conflict, the dispute might have been resolved privately and less expensively - preserving both relationships and brand reputation.
               </p>
               
               <h2 className="text-2xl md:text-3xl font-bold text-creekoxley mt-8 mb-4">

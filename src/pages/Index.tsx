@@ -20,12 +20,12 @@ const Index = () => {
         <Navbar />
         <Hero />
 
-        {/* About — editorial two column */}
+        {/* About - editorial two column */}
         <section id="about" className="bg-bone">
           <div className="container-x section-pad">
             <div className="grid grid-cols-12 gap-8 md:gap-12">
               <div className="col-span-12 md:col-span-4">
-                <p className="eyebrow mb-6">01 — The Firm</p>
+                <p className="eyebrow mb-6">01 - The Firm</p>
                 <h2 className="font-display text-[40px] md:text-[48px] leading-[1.05] text-creekoxley">
                   Built for operators
                   <br />
@@ -35,7 +35,7 @@ const Index = () => {
               <div className="col-span-12 md:col-span-7 md:col-start-6">
                 <p className="text-[17px] leading-[1.75] text-body-ink mb-6">
                   Creek Oxley is a management consultancy founded on a diagnostic
-                  approach — scientific management tools applied with judgement, and a
+                  approach - scientific management tools applied with judgement, and a
                   bias toward outcomes the leadership team can actually see in the
                   numbers.
                 </p>
@@ -49,7 +49,7 @@ const Index = () => {
                   <div>
                     <p className="eyebrow mb-3">Vision</p>
                     <p className="font-display text-[22px] text-creekoxley leading-snug">
-                      Strategic, sustainable business ecosystems — built to last.
+                      Strategic, sustainable business ecosystems - built to last.
                     </p>
                   </div>
                   <div>
@@ -76,7 +76,7 @@ const Index = () => {
                   "Strategy is what you decide not to do. The work of the firm is to
                   make those decisions defensible, then operationally true."
                 </blockquote>
-                <p className="eyebrow mt-8">— The Creek Oxley operating philosophy</p>
+                <p className="eyebrow mt-8">- The Creek Oxley operating philosophy</p>
               </div>
             </div>
           </div>
@@ -88,7 +88,7 @@ const Index = () => {
         {/* Dark stat panel */}
         <section className="bg-ink text-white">
           <div className="container-x section-pad">
-            <p className="eyebrow !text-silver mb-10">03 — By the numbers</p>
+            <p className="eyebrow !text-silver mb-10">03 - By the numbers</p>
             <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-silver/30">
               {[
                 ["20+", "Years of senior operating experience"],
