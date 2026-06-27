@@ -108,7 +108,7 @@ const PreCheckInPage = () => {
                 </p>
                 <Link
                   to="/dmc"
-                  className="inline-block border border-ink px-6 py-3 text-sm uppercase tracking-[0.15em] text-ink hover:bg-ink hover:text-bone transition-colors"
+                  className="inline-block bg-creekoxley border border-creekoxley px-6 py-3 text-sm uppercase tracking-[0.15em] text-white hover:bg-ink hover:border-ink transition-colors"
                 >
                   Back to DMC
                 </Link>
