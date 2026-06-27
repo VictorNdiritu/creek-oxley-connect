@@ -53,6 +53,7 @@ const SamburuLodgeDmcPage = () => {
   return (
     <>
       <SEOHead
+        favicon="/dmc-favicon.png"
         title="Samburu Elephant Lodge | Creek Oxley DMC Kenya"
         description="Samburu Elephant Lodge - an exclusive eco-tourism wildlife lodge in Samburu, Kenya. Luxury accommodation, conservation, and authentic safari experiences managed by Creek Oxley DMC."
         canonical="https://creekoxley.com/dmc/samburu"

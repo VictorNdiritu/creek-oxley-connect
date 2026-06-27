@@ -15,6 +15,7 @@ const DestinationManagementPage = () => {
   return (
     <>
       <SEOHead
+        favicon="/dmc-favicon.png"
         title="DMC – Destination Management | Creek Oxley"
         description="Creek Oxley's Destination Management division promotes hospitality businesses on international platforms. Expert exhibition booth design, networking, and global trade show representation."
         canonical="https://creekoxley.com/destination-management"
@@ -26,6 +27,12 @@ const DestinationManagementPage = () => {
       <section className="relative py-20 md:py-32 bg-gradient-to-br from-white via-slate-50 to-creekoxley-silver/20 overflow-hidden">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-4xl mx-auto">
+            <img
+              src="/creek-oxley-dmc-logo.jpg"
+              alt="Creek Oxley - A Destination Management Company"
+              className="mx-auto mb-8 w-40 md:w-56 h-auto"
+              loading="eager"
+            />
             <div className="mb-4">
               <span className="text-sm uppercase tracking-wide text-creekoxley font-medium">Creek Oxley Service Division</span>
             </div>

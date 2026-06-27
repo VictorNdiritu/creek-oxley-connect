@@ -51,6 +51,7 @@ const WatamuVillaPage = () => {
   return (
     <>
       <SEOHead
+        favicon="/dmc-favicon.png"
         title="Kilulu Luxury Island Villa, Watamu | Creek Oxley DMC"
         description="Experience Kilulu Luxury Island Villa - a 372 m² coastal retreat in Watamu. 4 bedrooms, private pool, beach access. Managed by Creek Oxley DMC."
         canonical="https://creekoxley.com/dmc/watamu"
