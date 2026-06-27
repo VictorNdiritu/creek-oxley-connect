@@ -289,7 +289,7 @@ const PreCheckInPage = () => {
                 <div>
                   <h2 className={sectionTitle}>Room Preferences</h2>
                   <p className={sectionSub}>
-                    We will honour preferences subject to availability.
+                    We will honour preferences subject to availability. If you have already booked a specific room, please choose "No preference" below.
                   </p>
                   <div className="space-y-6">
                     <div>
