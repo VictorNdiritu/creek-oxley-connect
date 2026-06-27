@@ -131,7 +131,7 @@ const PreCheckInPage = () => {
                 <input
                   type="hidden"
                   name="_subject"
-                  value="New Traveller Pre-Check-In — Creek Oxley DMC"
+                  value="New Traveller Pre-Check-In / Creek Oxley DMC"
                 />
 
                 {/* Basic Information */}
