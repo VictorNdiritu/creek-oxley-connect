@@ -14,7 +14,7 @@ const LuxoraHotelPage = () => {
       {
         "@type": "Question",
         "name": "Where is Luxora Hotel located?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Luxora Hotel is located in Lodwar, Turkana County, Kenya — a growing economic hub in northern Kenya." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Luxora Hotel is located in Lodwar, Turkana County, Kenya - a growing economic hub in northern Kenya." }
       },
       {
         "@type": "Question",
@@ -38,7 +38,7 @@ const LuxoraHotelPage = () => {
     <>
       <SEOHead
         title="Luxora Hotel Lodwar | Creek Oxley DMC Kenya"
-        description="Luxora Hotel in Lodwar, Turkana County — a premier hospitality destination in northern Kenya. Managed and promoted internationally by Creek Oxley DMC for business and leisure travelers."
+        description="Luxora Hotel in Lodwar, Turkana County - a premier hospitality destination in northern Kenya. Managed and promoted internationally by Creek Oxley DMC for business and leisure travelers."
         canonical="https://creekoxley.com/dmc/lodwar"
       />
       <div className="min-h-screen bg-white">
@@ -154,7 +154,7 @@ const LuxoraHotelPage = () => {
               <div className="space-y-6">
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <h3 className="font-semibold text-lg mb-2 text-gray-900">Where is Luxora Hotel located?</h3>
-                  <p className="text-gray-600">Luxora Hotel is located in Lodwar, Turkana County, Kenya — a growing economic hub in northern Kenya driven by energy exploration and cross-border trade.</p>
+                  <p className="text-gray-600">Luxora Hotel is located in Lodwar, Turkana County, Kenya - a growing economic hub in northern Kenya driven by energy exploration and cross-border trade.</p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <h3 className="font-semibold text-lg mb-2 text-gray-900">What services does Creek Oxley provide for Luxora Hotel?</h3>

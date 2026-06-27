@@ -14,7 +14,7 @@ const WarwickHotelPage = () => {
       {
         "@type": "Question",
         "name": "Where is Warwick Hotel located?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Warwick Hotel is located in Nanyuki, Laikipia County, Kenya — at the foothills of Mount Kenya, one of Africa's most iconic peaks." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Warwick Hotel is located in Nanyuki, Laikipia County, Kenya - at the foothills of Mount Kenya, one of Africa's most iconic peaks." }
       },
       {
         "@type": "Question",
@@ -38,7 +38,7 @@ const WarwickHotelPage = () => {
     <>
       <SEOHead
         title="Warwick Hotel Nanyuki | Creek Oxley DMC Kenya"
-        description="Warwick Hotel in Nanyuki, Laikipia County — a distinguished highland hospitality property at the foothills of Mount Kenya. Managed by Creek Oxley DMC for business and leisure travelers."
+        description="Warwick Hotel in Nanyuki, Laikipia County - a distinguished highland hospitality property at the foothills of Mount Kenya. Managed by Creek Oxley DMC for business and leisure travelers."
         canonical="https://creekoxley.com/dmc/nanyuki"
       />
       <div className="min-h-screen bg-white">
@@ -155,7 +155,7 @@ const WarwickHotelPage = () => {
               <div className="space-y-6">
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <h3 className="font-semibold text-lg mb-2 text-gray-900">Where is Warwick Hotel located?</h3>
-                  <p className="text-gray-600">Warwick Hotel is located in Nanyuki, Laikipia County, Kenya — at the foothills of Mount Kenya, one of Africa's most iconic peaks.</p>
+                  <p className="text-gray-600">Warwick Hotel is located in Nanyuki, Laikipia County, Kenya - at the foothills of Mount Kenya, one of Africa's most iconic peaks.</p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <h3 className="font-semibold text-lg mb-2 text-gray-900">What makes Nanyuki a popular destination?</h3>

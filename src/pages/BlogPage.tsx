@@ -313,7 +313,7 @@ const BlogPage = () => {
                   </h3>
                   
                   <p className="text-gray-600 mb-6 leading-relaxed">
-                    As a business leader, you're constantly bombarded with promotions—emails, ads, and social media posts that promise the next big opportunity. It's easy to become numb to it all, especially when it comes to international trade shows...
+                    As a business leader, you're constantly bombarded with promotions-emails, ads, and social media posts that promise the next big opportunity. It's easy to become numb to it all, especially when it comes to international trade shows...
                   </p>
                   
                   <div className="flex flex-wrap gap-2 mb-6">
@@ -344,7 +344,7 @@ const BlogPage = () => {
                   </div>
                   
                   <h3 className="text-xl md:text-2xl font-bold text-creekoxley mb-4">
-                    Resolving Management Problems: Why Leadership Conflicts Can Break — or Build — Your Business
+                    Resolving Management Problems: Why Leadership Conflicts Can Break - or Build - Your Business
                   </h3>
                   
                   <p className="text-gray-600 mb-6 leading-relaxed">
@@ -418,7 +418,7 @@ const BlogPage = () => {
                   </h3>
                   
                   <p className="text-gray-600 mb-6 leading-relaxed">
-                    Starting a business in Kenya isn't just about the idea or the market — it's also about structure. The choice between registering a Business Name, setting up a Limited Liability Partnership (LLP), or incorporating a Private Limited Company can have lasting consequences...
+                    Starting a business in Kenya isn't just about the idea or the market - it's also about structure. The choice between registering a Business Name, setting up a Limited Liability Partnership (LLP), or incorporating a Private Limited Company can have lasting consequences...
                   </p>
                   
                   <div className="flex flex-wrap gap-2 mb-6">

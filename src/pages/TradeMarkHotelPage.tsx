@@ -38,7 +38,7 @@ const TradeMarkHotelPage = () => {
     <>
       <SEOHead
         title="TradeMark Hotel Nairobi | Creek Oxley DMC Kenya"
-        description="TradeMark Hotel in Nairobi — a premier city hospitality experience in Kenya's capital. Managed by Creek Oxley DMC for international business and leisure travelers."
+        description="TradeMark Hotel in Nairobi - a premier city hospitality experience in Kenya's capital. Managed by Creek Oxley DMC for international business and leisure travelers."
         canonical="https://creekoxley.com/dmc/nairobi"
       />
       <div className="min-h-screen bg-white">
@@ -49,7 +49,7 @@ const TradeMarkHotelPage = () => {
           <div className="h-[60vh] md:h-[70vh] relative overflow-hidden">
             <img
               src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1920&q=80&auto=format&fit=crop"
-              alt="TradeMark Hotel — premier Nairobi city hospitality"
+              alt="TradeMark Hotel - premier Nairobi city hospitality"
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
@@ -81,7 +81,7 @@ const TradeMarkHotelPage = () => {
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Premier City Hospitality in Nairobi</h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                TradeMark Hotel is a premier hospitality property in the heart of Nairobi, Kenya's vibrant capital and the commercial gateway to East Africa. As the region's largest economy and a hub for international organizations, Nairobi attracts millions of business travelers, conference attendees, and tourists each year—and TradeMark Hotel is designed to serve them all.
+                TradeMark Hotel is a premier hospitality property in the heart of Nairobi, Kenya's vibrant capital and the commercial gateway to East Africa. As the region's largest economy and a hub for international organizations, Nairobi attracts millions of business travelers, conference attendees, and tourists each year-and TradeMark Hotel is designed to serve them all.
               </p>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 Managed by Creek Oxley's Destination Management Company (DMC) division, TradeMark Hotel benefits from strategic international marketing, trade show visibility, and professional hospitality management. The property serves corporate clients, diplomats, NGO workers, and leisure travelers seeking quality accommodation with excellent connectivity to Nairobi's business districts, conference centres, and tourist attractions.

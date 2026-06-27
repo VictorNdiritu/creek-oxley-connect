@@ -63,7 +63,7 @@ const BusinessStructureArticlePage = () => {
             {/* Article Content */}
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                Starting a business in Kenya isn't just about the idea or the market — it's also about structure. The choice between registering a Business Name, setting up a Limited Liability Partnership (LLP), or incorporating a Private Limited Company can have lasting consequences on liability, taxes, credibility and growth potential.
+                Starting a business in Kenya isn't just about the idea or the market - it's also about structure. The choice between registering a Business Name, setting up a Limited Liability Partnership (LLP), or incorporating a Private Limited Company can have lasting consequences on liability, taxes, credibility and growth potential.
               </p>
               
               <h2 className="text-2xl font-bold text-creekoxley mb-4">Business Name: Simplicity and Speed</h2>

@@ -7,7 +7,7 @@ const ConnectedBrands = () => {
     {
       tag: "Division 01",
       name: "Destination Management",
-      lede: "We promote and operate hospitality businesses on international platforms — exhibitions, trade, distribution and brand stewardship across East Africa.",
+      lede: "We promote and operate hospitality businesses on international platforms - exhibitions, trade, distribution and brand stewardship across East Africa.",
       points: ["Hospitality brand management", "International trade exhibitions", "Distribution & partnerships", "Operating standards & QA"],
       to: "/dmc",
     },
@@ -25,7 +25,7 @@ const ConnectedBrands = () => {
       <div className="container-x section-pad">
         <div className="grid grid-cols-12 gap-8 mb-14">
           <div className="col-span-12 md:col-span-4">
-            <p className="eyebrow mb-6">04 — Divisions</p>
+            <p className="eyebrow mb-6">04 - Divisions</p>
             <h2 className="font-display text-[40px] md:text-[48px] leading-[1.05] text-creekoxley">
               Specialist divisions
               <br />
@@ -48,7 +48,7 @@ const ConnectedBrands = () => {
               <ul className="space-y-3 mb-10">
                 {it.points.map((p) => (
                   <li key={p} className="flex gap-3 text-[14px] text-body-ink border-b border-rule pb-3">
-                    <span className="text-silver">—</span>{p}
+                    <span className="text-silver">-</span>{p}
                   </li>
                 ))}
               </ul>

@@ -156,7 +156,7 @@ const IndustriesPage = () => (
             <p className="eyebrow mb-3">Why Creek Oxley</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Sector knowledge. Management discipline. Results.</h2>
             <p className="text-[17px] text-[#6B6878] mb-6 leading-relaxed">
-              Unlike generalist consulting firms, Creek Oxley builds dedicated sector expertise in each industry we serve. Our consultants combine deep knowledge of East Africa's business environment with internationally proven management frameworks — delivering solutions that are both rigorous and practically implementable.
+              Unlike generalist consulting firms, Creek Oxley builds dedicated sector expertise in each industry we serve. Our consultants combine deep knowledge of East Africa's business environment with internationally proven management frameworks - delivering solutions that are both rigorous and practically implementable.
             </p>
             <p className="text-[17px] text-[#6B6878] leading-relaxed">
               Whether you're a multinational entering the Kenyan market, an established local business seeking to scale, or a development organisation looking to increase impact, our sector-specific approach ensures we speak your language and understand your pressures from day one.
