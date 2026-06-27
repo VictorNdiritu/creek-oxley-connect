@@ -88,7 +88,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-silver/30 mt-14 pt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          <p className="text-[12px] text-muted-ink">
+          <p className="text-[12px] text-white/60">
             © {currentYear} Creek Oxley Management Consultant. All rights reserved.
           </p>
           <div className="flex gap-6 text-[12px] text-silver">
