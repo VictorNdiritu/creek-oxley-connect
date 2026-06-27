@@ -533,6 +533,38 @@ const PreCheckInPage = () => {
                   </div>
                 </div>
 
+                {/* Media Consent */}
+                <div>
+                  <h2 className={sectionTitle}>Photo & Video Consent</h2>
+                  <p className={sectionSub}>
+                    Our team and partner properties occasionally capture photos and video during your stay for marketing, social media and editorial use.
+                  </p>
+                  <div className="space-y-3">
+                    <label className="flex items-start gap-3 text-sm text-ink cursor-pointer">
+                      <input
+                        type="checkbox"
+                        name="mediaConsent"
+                        value="Yes"
+                        className="accent-creekoxley mt-1"
+                      />
+                      <span>
+                        I consent to Creek Oxley and its partner properties collecting and using photos and video featuring me (and members of my party) for promotional, marketing and editorial purposes across websites, print and social media.
+                      </span>
+                    </label>
+                    <label className="flex items-start gap-3 text-sm text-ink cursor-pointer">
+                      <input
+                        type="checkbox"
+                        name="mediaConsentDecline"
+                        value="Yes"
+                        className="accent-creekoxley mt-1"
+                      />
+                      <span>
+                        I do not consent. Please do not feature me or my party in any photos or video.
+                      </span>
+                    </label>
+                  </div>
+                </div>
+
                 {error && (
                   <p className="text-sm text-red-700 border border-red-200 bg-red-50 px-4 py-3">
                     {error}
@@ -542,7 +574,7 @@ const PreCheckInPage = () => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full inline-flex items-center justify-center px-8 py-4 bg-ink text-bone text-sm uppercase tracking-[0.15em] hover:bg-creekoxley transition-colors disabled:opacity-60"
+                  className="w-full inline-flex items-center justify-center px-8 py-4 bg-creekoxley text-white text-sm uppercase tracking-[0.15em] hover:bg-ink transition-colors disabled:opacity-60"
                 >
                   {loading ? "Submitting..." : "Complete Pre-Check-In"}
                 </button>
