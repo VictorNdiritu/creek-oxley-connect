@@ -9,8 +9,8 @@ const Footer = () => {
   const headCls = "eyebrow !text-silver mb-5";
 
   return (
-    <footer className="bg-ink text-white relative">
-      <div className="absolute top-0 left-0 right-0 h-[3px] bg-lavender" />
+    <footer className="bg-creekoxley text-white relative">
+      <div className="absolute top-0 left-0 right-0 h-[3px] bg-white/30" />
       <div className="container-x pt-20 pb-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
           <div className="md:col-span-3">
