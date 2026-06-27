@@ -37,6 +37,7 @@ const LuxoraHotelPage = () => {
   return (
     <>
       <SEOHead
+        favicon="/dmc-favicon.png"
         title="Luxora Hotel Lodwar | Creek Oxley DMC Kenya"
         description="Luxora Hotel in Lodwar, Turkana County - a premier hospitality destination in northern Kenya. Managed and promoted internationally by Creek Oxley DMC for business and leisure travelers."
         canonical="https://creekoxley.com/dmc/lodwar"

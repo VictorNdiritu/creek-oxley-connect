@@ -37,6 +37,7 @@ const TradeMarkHotelPage = () => {
   return (
     <>
       <SEOHead
+        favicon="/dmc-favicon.png"
         title="TradeMark Hotel Nairobi | Creek Oxley DMC Kenya"
         description="TradeMark Hotel in Nairobi - a premier city hospitality experience in Kenya's capital. Managed by Creek Oxley DMC for international business and leisure travelers."
         canonical="https://creekoxley.com/dmc/nairobi"

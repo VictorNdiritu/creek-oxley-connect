@@ -67,6 +67,7 @@ const PreCheckInPage = () => {
   return (
     <>
       <SEOHead
+        favicon="/dmc-favicon.png"
         title="Traveller Pre-Check-In | Creek Oxley DMC"
         description="Complete your pre-check-in with Creek Oxley Destination Management. Share your stay preferences, dietary needs and arrival details for a seamless arrival at our partner properties."
         canonical="https://creekoxley.com/dmc/pre-check-in"

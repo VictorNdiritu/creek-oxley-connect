@@ -37,6 +37,7 @@ const WarwickHotelPage = () => {
   return (
     <>
       <SEOHead
+        favicon="/dmc-favicon.png"
         title="Warwick Hotel Nanyuki | Creek Oxley DMC Kenya"
         description="Warwick Hotel in Nanyuki, Laikipia County - a distinguished highland hospitality property at the foothills of Mount Kenya. Managed by Creek Oxley DMC for business and leisure travelers."
         canonical="https://creekoxley.com/dmc/nanyuki"
