@@ -10,8 +10,7 @@ const inputClass =
   "w-full px-4 py-3 border border-silver bg-white text-sm text-ink placeholder:text-silver focus:outline-none focus:border-creekoxley transition-colors";
 const labelClass =
   "block text-xs uppercase tracking-[0.12em] font-medium text-ink/70 mb-2";
-const sectionTitle =
-  "font-display text-3xl text-creekoxley mb-1";
+const sectionTitle = "font-display text-3xl text-creekoxley mb-1";
 const sectionSub = "text-sm text-ink/60 mb-6";
 
 const RadioYesNo = ({ name }: { name: string }) => (
@@ -68,8 +67,8 @@ const PreCheckInPage = () => {
     <>
       <SEOHead
         favicon="/dmc-favicon.png"
-        title="Traveller Pre-Check-In | Creek Oxley DMC"
-        description="Complete your pre-check-in with Creek Oxley Destination Management. Share your stay preferences, dietary needs and arrival details for a seamless arrival at our partner properties."
+        title="Student Pre-Check-In | Creek Oxley DMC"
+        description="Complete your student trip pre-check-in with Creek Oxley Destination Management. Share your dietary needs, medical requirements and media consent for a safe and seamless trip."
         canonical="https://creekoxley.com/dmc/pre-check-in"
       />
       <div className="min-h-screen bg-bone">
@@ -82,12 +81,12 @@ const PreCheckInPage = () => {
               Destination Management / Creek Oxley
             </p>
             <h1 className="font-display text-4xl md:text-6xl text-creekoxley leading-tight mb-6">
-              Traveller Pre-Check-In
+              Student Pre-Check-In
             </h1>
             <p className="text-ink/70 text-lg max-w-2xl mx-auto leading-relaxed">
-              Help us prepare for your arrival. Share your travel details, room
-              preferences, dietary requirements and any special requests so our
-              team can shape a personal welcome at the property.
+              Help us prepare for your student trip. Share your dietary needs,
+              medical requirements and media consent so our team can plan a safe
+              and enjoyable experience.
             </p>
           </div>
         </section>
@@ -104,8 +103,8 @@ const PreCheckInPage = () => {
                   Pre-Check-In Received
                 </h2>
                 <p className="text-ink/70 mb-8 leading-relaxed">
-                  Thank you. Our destination team will review your details and
-                  reach out if anything further is needed before your arrival.
+                  Thank you. Our destination team has received your details and
+                  will reach out if anything further is needed before departure.
                 </p>
                 <Link
                   to="/dmc"
@@ -132,14 +131,14 @@ const PreCheckInPage = () => {
                 <input
                   type="hidden"
                   name="_subject"
-                  value="New Traveller Pre-Check-In / Creek Oxley DMC"
+                  value="New Student Pre-Check-In / Creek Oxley DMC"
                 />
 
                 {/* Basic Information */}
                 <div>
                   <h2 className={sectionTitle}>Basic Information</h2>
                   <p className={sectionSub}>
-                    So we can match you to your reservation.
+                    So we can match you to your trip reservation.
                   </p>
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
@@ -176,24 +175,14 @@ const PreCheckInPage = () => {
                       />
                     </div>
                     <div>
-                      <label className={labelClass}>Nationality</label>
-                      <input
-                        name="nationality"
-                        type="text"
-                        maxLength={80}
-                        placeholder="e.g. Kenyan"
-                        className={inputClass}
-                      />
-                    </div>
-                    <div>
-                      <label className={labelClass}>Property / Destination</label>
+                      <label className={labelClass}>Trip / Destination</label>
                       <select
                         name="property"
                         defaultValue=""
                         className={inputClass}
                       >
                         <option value="" disabled>
-                          Select property
+                          Select trip
                         </option>
                         <option value="Kilulu Villa, Watamu">
                           Kilulu Villa, Watamu
@@ -215,166 +204,32 @@ const PreCheckInPage = () => {
                         </option>
                       </select>
                     </div>
-                    <div>
-                      <label className={labelClass}>
-                        Booking Reference (if available)
-                      </label>
-                      <input
-                        name="bookingReference"
-                        type="text"
-                        maxLength={50}
-                        placeholder="REF123456"
-                        className={inputClass}
-                      />
-                    </div>
                   </div>
                 </div>
 
-                {/* Stay Details */}
+                {/* Medical Requirements */}
                 <div>
-                  <h2 className={sectionTitle}>Stay Details</h2>
-                  <p className={sectionSub}>Confirm your dates and party size.</p>
-                  <div className="grid sm:grid-cols-2 gap-5">
-                    <div>
-                      <label className={labelClass}>Check-In Date</label>
-                      <input
-                        name="checkIn"
-                        type="date"
-                        className={inputClass}
-                      />
-                    </div>
-                    <div>
-                      <label className={labelClass}>Check-Out Date</label>
-                      <input
-                        name="checkOut"
-                        type="date"
-                        className={inputClass}
-                      />
-                    </div>
-                    <div>
-                      <label className={labelClass}>Adults</label>
-                      <input
-                        name="adults"
-                        type="number"
-                        min={1}
-                        max={20}
-                        defaultValue={2}
-                        className={inputClass}
-                      />
-                    </div>
-                    <div>
-                      <label className={labelClass}>Children</label>
-                      <input
-                        name="children"
-                        type="number"
-                        min={0}
-                        max={20}
-                        defaultValue={0}
-                        className={inputClass}
-                      />
-                    </div>
-                    <div className="sm:col-span-2">
-                      <label className={labelClass}>Children's Ages</label>
-                      <input
-                        name="childrenAges"
-                        type="text"
-                        maxLength={100}
-                        placeholder="e.g., 5, 8, 12"
-                        className={inputClass}
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Room Preferences */}
-                <div>
-                  <h2 className={sectionTitle}>Room Preferences</h2>
+                  <h2 className={sectionTitle}>Medical Requirements</h2>
                   <p className={sectionSub}>
-                    We will honour preferences subject to availability. If you have already booked a specific room, please choose "No preference" below.
-                  </p>
-                  <div className="space-y-6">
-                    <div>
-                      <label className={labelClass}>Preferred Bed Type</label>
-                      <div className="grid sm:grid-cols-2 gap-2">
-                        {["King-size", "Double", "Twin beds", "No preference"].map(
-                          (v) => (
-                            <label
-                              key={v}
-                              className="flex items-center gap-2 text-sm text-ink cursor-pointer"
-                            >
-                              <input
-                                type="radio"
-                                name="bedType"
-                                value={v}
-                                className="accent-creekoxley"
-                              />
-                              {v}
-                            </label>
-                          )
-                        )}
-                      </div>
-                    </div>
-                    <div>
-                      <label className={labelClass}>
-                        Room Location Preference
-                      </label>
-                      <input
-                        name="locationPreference"
-                        type="text"
-                        maxLength={200}
-                        placeholder="e.g., Ground floor, garden view, quiet area"
-                        className={inputClass}
-                      />
-                    </div>
-                    <div className="grid sm:grid-cols-2 gap-5">
-                      <div>
-                        <label className={labelClass}>Early Check-In?</label>
-                        <RadioYesNo name="earlyCheckIn" />
-                      </div>
-                      <div>
-                        <label className={labelClass}>Late Check-Out?</label>
-                        <RadioYesNo name="lateCheckOut" />
-                      </div>
-                    </div>
-                    <div>
-                      <label className={labelClass}>
-                        Are you celebrating a special occasion?
-                      </label>
-                      <RadioYesNo name="specialOccasion" />
-                      <input
-                        name="specialOccasionDetails"
-                        type="text"
-                        maxLength={200}
-                        placeholder="If yes, please specify (Anniversary, Birthday, Honeymoon, etc.)"
-                        className={`${inputClass} mt-3`}
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Health & Accessibility */}
-                <div>
-                  <h2 className={sectionTitle}>Health & Accessibility</h2>
-                  <p className={sectionSub}>
-                    Help us make your stay safe and comfortable.
+                    Help us keep every student safe and supported during the trip.
                   </p>
                   <div className="space-y-6">
                     <div>
                       <label className={labelClass}>
-                        Any medical conditions or mobility concerns?
+                        Any medical conditions, allergies or medication we should know about?
                       </label>
                       <RadioYesNo name="medicalConcerns" />
                       <textarea
                         name="medicalDetails"
-                        rows={2}
-                        maxLength={500}
-                        placeholder="If yes, please provide details"
+                        rows={3}
+                        maxLength={800}
+                        placeholder="If yes, please provide details (condition, medication, emergency contact if different from above)"
                         className={`${inputClass} mt-3 resize-none`}
                       />
                     </div>
                     <div>
                       <label className={labelClass}>
-                        Need accessibility features?
+                        Any mobility or accessibility needs?
                       </label>
                       <RadioYesNo name="accessibility" />
                       <input
@@ -388,11 +243,11 @@ const PreCheckInPage = () => {
                   </div>
                 </div>
 
-                {/* Dietary Preferences */}
+                {/* Dietary Requirements */}
                 <div>
-                  <h2 className={sectionTitle}>Dietary Preferences</h2>
+                  <h2 className={sectionTitle}>Dietary Requirements</h2>
                   <p className={sectionSub}>
-                    So the kitchen can prepare for you.
+                    So the kitchen and trip organisers can prepare appropriately.
                   </p>
                   <div className="space-y-6">
                     <div>
@@ -431,104 +286,14 @@ const PreCheckInPage = () => {
                     </div>
                     <div>
                       <label className={labelClass}>
-                        Other dietary preferences
+                        Other dietary requirements
                       </label>
                       <input
                         name="dietaryOther"
                         type="text"
                         maxLength={300}
+                        placeholder="e.g. lactose intolerant, nut allergy, religious restrictions"
                         className={inputClass}
-                      />
-                    </div>
-                    <div>
-                      <label className={labelClass}>
-                        Travelling with infants / young children?
-                      </label>
-                      <RadioYesNo name="infants" />
-                      <input
-                        name="infantAges"
-                        type="text"
-                        maxLength={100}
-                        placeholder="If yes, ages"
-                        className={`${inputClass} mt-3`}
-                      />
-                    </div>
-                    <div>
-                      <label className={labelClass}>
-                        Do you require any of the following?
-                      </label>
-                      <div className="grid sm:grid-cols-3 gap-2">
-                        {["Baby Cot", "High Chair", "Baby Bath"].map((v) => (
-                          <label
-                            key={v}
-                            className="flex items-center gap-2 text-sm text-ink cursor-pointer"
-                          >
-                            <input
-                              type="checkbox"
-                              name="childEquipment"
-                              value={v}
-                              className="accent-creekoxley"
-                            />
-                            {v}
-                          </label>
-                        ))}
-                      </div>
-                      <input
-                        name="otherRequirements"
-                        type="text"
-                        maxLength={300}
-                        placeholder="Other requirements"
-                        className={`${inputClass} mt-3`}
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Travel Details */}
-                <div>
-                  <h2 className={sectionTitle}>Travel Details</h2>
-                  <p className={sectionSub}>Help us plan your arrival logistics.</p>
-                  <div className="space-y-6">
-                    <div>
-                      <label className={labelClass}>
-                        Estimated Time of Arrival
-                      </label>
-                      <input name="eta" type="time" className={inputClass} />
-                    </div>
-                    <div className="grid sm:grid-cols-2 gap-5">
-                      <div>
-                        <label className={labelClass}>
-                          Require airport / local transfer?
-                        </label>
-                        <RadioYesNo name="transfer" />
-                      </div>
-                      <div>
-                        <label className={labelClass}>Require parking?</label>
-                        <RadioYesNo name="parking" />
-                      </div>
-                    </div>
-                    <div>
-                      <label className={labelClass}>
-                        If yes, vehicle details
-                      </label>
-                      <input
-                        name="vehicleDetails"
-                        type="text"
-                        maxLength={200}
-                        placeholder="Make, model, license plate"
-                        className={inputClass}
-                      />
-                    </div>
-                    <div>
-                      <label className={labelClass}>
-                        Anything else we should know?
-                      </label>
-                      <textarea
-                        name="notes"
-                        rows={4}
-                        maxLength={1500}
-                        placeholder="Please share any other requests, preferences or information that would help us make your stay more comfortable..."
-                        className={`${inputClass} resize-none`}
                       />
                     </div>
                   </div>
@@ -538,7 +303,7 @@ const PreCheckInPage = () => {
                 <div>
                   <h2 className={sectionTitle}>Photo & Video Consent</h2>
                   <p className={sectionSub}>
-                    Our team and partner properties occasionally capture photos and video during your stay for marketing, social media and editorial use.
+                    Our team and partner properties occasionally capture photos and video during trips for marketing, social media and editorial use.
                   </p>
                   <div className="space-y-3">
                     <label className="flex items-start gap-3 text-sm text-ink cursor-pointer">
@@ -549,7 +314,7 @@ const PreCheckInPage = () => {
                         className="accent-creekoxley mt-1"
                       />
                       <span>
-                        I consent to Creek Oxley and its partner properties collecting and using photos and video featuring me (and members of my party) for promotional, marketing and editorial purposes across websites, print and social media.
+                        I consent to Creek Oxley and its partner properties collecting and using photos and video featuring me for promotional, marketing and editorial purposes across websites, print and social media.
                       </span>
                     </label>
                     <label className="flex items-start gap-3 text-sm text-ink cursor-pointer">
@@ -560,7 +325,7 @@ const PreCheckInPage = () => {
                         className="accent-creekoxley mt-1"
                       />
                       <span>
-                        I do not consent. Please do not feature me or my party in any photos or video.
+                        I do not consent. Please do not feature me in any photos or video.
                       </span>
                     </label>
                   </div>
