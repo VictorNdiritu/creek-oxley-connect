@@ -50,6 +50,99 @@ const BlogPage = () => {
               </div>
               
               <div className="grid md:grid-cols-2 gap-8">
+                {/* Online Booking Channels Article */}
+                <article className="bg-gray-50 rounded-lg p-8">
+                  <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
+                    <div className="flex items-center gap-2">
+                      <Calendar className="h-4 w-4" />
+                      <span>July 14, 2026</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <User className="h-4 w-4" />
+                      <span>Creek Oxley Team</span>
+                    </div>
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-bold text-creekoxley mb-4">
+                    The Hidden Revenue You're Losing Without Online Booking Channels
+                  </h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    Why relying on phone calls and walk-ins is quietly costing you bookings, and how OTAs, channel managers, and direct booking websites unlock hidden revenue for hotels, villas, and lodges...
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Hotel Digital Marketing</span>
+                    <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">OTA Management</span>
+                    <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Booking.com</span>
+                  </div>
+                  <Button className="bg-creekoxley hover:bg-creekoxley-medium text-white">
+                    <Link to="/blog/online-booking-channels" className="flex items-center gap-2 text-white">
+                      Read Full Article
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  </Button>
+                </article>
+
+                {/* HR Strategy Article */}
+                <article className="bg-gray-50 rounded-lg p-8">
+                  <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
+                    <div className="flex items-center gap-2">
+                      <Calendar className="h-4 w-4" />
+                      <span>July 14, 2026</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <User className="h-4 w-4" />
+                      <span>Creek Oxley Team</span>
+                    </div>
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-bold text-creekoxley mb-4">
+                    Attracting and Retaining Top Talent: Why HR Strategy Is a Business Growth Strategy
+                  </h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    How strategic HR practices, from recruitment and onboarding to performance management and culture, directly drive business growth and reduce turnover costs...
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">HR Consulting Kenya</span>
+                    <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Talent Acquisition</span>
+                    <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Employee Retention</span>
+                  </div>
+                  <Button className="bg-creekoxley hover:bg-creekoxley-medium text-white">
+                    <Link to="/blog/hr-strategy-business-growth" className="flex items-center gap-2 text-white">
+                      Read Full Article
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  </Button>
+                </article>
+
+                {/* Hotel Management Outsourcing Article */}
+                <article className="bg-gray-50 rounded-lg p-8">
+                  <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
+                    <div className="flex items-center gap-2">
+                      <Calendar className="h-4 w-4" />
+                      <span>July 14, 2026</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <User className="h-4 w-4" />
+                      <span>Creek Oxley Team</span>
+                    </div>
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-bold text-creekoxley mb-4">
+                    Hotel Management Outsourcing: A Smarter Way to Improve Performance and Profitability
+                  </h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    How villa, lodge, and resort owners use outsourced hotel management to increase occupancy, optimise revenue, and deliver world-class guest experiences without daily firefighting...
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Hotel Management Outsourcing</span>
+                    <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Hospitality Kenya</span>
+                    <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Villa Management</span>
+                  </div>
+                  <Button className="bg-creekoxley hover:bg-creekoxley-medium text-white">
+                    <Link to="/blog/hotel-management-outsourcing" className="flex items-center gap-2 text-white">
+                      Read Full Article
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  </Button>
+                </article>
+
                 {/* Firefighter Manager Article */}
                 <article className="bg-gray-50 rounded-lg p-8">
                   <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
