@@ -55,7 +55,7 @@ const BlogPage = () => {
                   <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
                     <div className="flex items-center gap-2">
                       <Calendar className="h-4 w-4" />
-                      <span>July 14, 2026</span>
+                      <span>July 06, 2026</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <User className="h-4 w-4" />
@@ -86,7 +86,7 @@ const BlogPage = () => {
                   <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
                     <div className="flex items-center gap-2">
                       <Calendar className="h-4 w-4" />
-                      <span>July 14, 2026</span>
+                      <span>July 08, 2026</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <User className="h-4 w-4" />
@@ -117,7 +117,7 @@ const BlogPage = () => {
                   <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
                     <div className="flex items-center gap-2">
                       <Calendar className="h-4 w-4" />
-                      <span>July 14, 2026</span>
+                      <span>July 10, 2026</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <User className="h-4 w-4" />
