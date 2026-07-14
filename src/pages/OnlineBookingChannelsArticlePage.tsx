@@ -14,7 +14,7 @@ const OnlineBookingChannelsArticlePage = () => {
         description="Discover how OTAs like Booking.com and Expedia, channel managers, and direct booking websites unlock hidden revenue for hotels, villas, and lodges. Hospitality consulting Kenya."
         canonical="https://creekoxley.com/blog/online-booking-channels"
         article={{
-          publishedTime: "2026-07-14T00:00:00Z",
+          publishedTime: "2026-07-06T00:00:00Z",
           author: "Creek Oxley Team",
           tags: ["Hotel Digital Marketing", "OTA Management", "Booking.com", "Hospitality Consulting Kenya"]
         }}
@@ -38,7 +38,7 @@ const OnlineBookingChannelsArticlePage = () => {
                 <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
                   <div className="flex items-center gap-2">
                     <Calendar className="h-4 w-4" />
-                    <span>July 14, 2026</span>
+                    <span>July 06, 2026</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <User className="h-4 w-4" />
