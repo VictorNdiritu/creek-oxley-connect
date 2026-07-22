@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, TreePine, Shield, Users, Compass, Star } from "lucide-react";
 
+import imgHero from "@/assets/samburu-elephant-lodge.png.asset.json";
 import imgRibbonCutting from "@/assets/samburu-ribbon-cutting.jpg";
 import imgSignage from "@/assets/samburu-signage.jpg";
 import imgTreePlanting from "@/assets/samburu-tree-planting.jpg";
