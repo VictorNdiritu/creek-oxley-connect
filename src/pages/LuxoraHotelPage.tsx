@@ -50,7 +50,7 @@ const LuxoraHotelPage = () => {
         <section className="relative">
           <div className="h-[60vh] md:h-[70vh] relative overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1920&q=80&auto=format&fit=crop"
+              src={heroImage.url}
               alt="Luxora Hotel exterior in Lodwar, Turkana County"
               className="absolute inset-0 w-full h-full object-cover"
             />
