@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Building, Star, Briefcase, Globe, Users } from "lucide-react";
+import heroImage from "@/assets/luxora-hotel.jpg.asset.json";
 
 const LuxoraHotelPage = () => {
   const faqSchema = {
