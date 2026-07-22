@@ -100,7 +100,7 @@ const DestinationManagementPage = () => {
             {/* Samburu Elephant Lodge */}
             <Link to="/dmc/samburu" className="group block bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
               <div className="aspect-video overflow-hidden">
-                <img src={samburuImage} alt="Samburu Elephant Lodge opening ceremony" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                <img src={samburuImage.url} alt="Samburu Elephant Lodge in Samburu County, Kenya" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">Samburu Elephant Lodge</h3>
