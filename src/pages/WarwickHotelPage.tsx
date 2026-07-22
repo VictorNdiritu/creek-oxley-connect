@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Building, Mountain, Compass, Star, Users } from "lucide-react";
+import heroImage from "@/assets/warwick-hotel.jpg.asset.json";
 
 const WarwickHotelPage = () => {
   const faqSchema = {
