@@ -50,7 +50,7 @@ const TradeMarkHotelPage = () => {
         <section className="relative">
           <div className="h-[60vh] md:h-[70vh] relative overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1920&q=80&auto=format&fit=crop"
+              src={heroImage.url}
               alt="TradeMark Hotel - premier Nairobi city hospitality"
               className="absolute inset-0 w-full h-full object-cover"
             />
