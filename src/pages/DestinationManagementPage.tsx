@@ -7,9 +7,12 @@ import { Link } from "react-router-dom";
 import { MapPin, Calendar, Users, Building, ArrowRight } from "lucide-react";
 
 
-// Import hero image for Watamu card
-import poolImage from "@/assets/new dmc watamu images/WhatsApp Image 2026-02-14 at 18.41.32 (3).jpeg";
-import samburuImage from "@/assets/samburu-ribbon-cutting.jpg";
+// Property card images
+import poolImage from "@/assets/kilulu.png.asset.json";
+import samburuImage from "@/assets/samburu-elephant-lodge.png.asset.json";
+import luxoraImage from "@/assets/luxora-hotel.jpg.asset.json";
+import warwickImage from "@/assets/warwick-hotel.jpg.asset.json";
+import trademarkImage from "@/assets/trademark-hotel.jpg.asset.json";
 
 const DestinationManagementPage = () => {
   return (
@@ -85,7 +88,7 @@ const DestinationManagementPage = () => {
             {/* Kilulu Villa - Watamu */}
             <Link to="/dmc/watamu" className="group block bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
               <div className="aspect-video overflow-hidden">
-                <img src={poolImage} alt="Kilulu Luxury Island Villa pool overlooking the Indian Ocean in Watamu" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                <img src={poolImage.url} alt="Kilulu Luxury Island Villa pool overlooking the Indian Ocean in Watamu" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">Kilulu Luxury Island Villa</h3>
@@ -97,7 +100,7 @@ const DestinationManagementPage = () => {
             {/* Samburu Elephant Lodge */}
             <Link to="/dmc/samburu" className="group block bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
               <div className="aspect-video overflow-hidden">
-                <img src={samburuImage} alt="Samburu Elephant Lodge opening ceremony" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                <img src={samburuImage.url} alt="Samburu Elephant Lodge in Samburu County, Kenya" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">Samburu Elephant Lodge</h3>
@@ -109,7 +112,7 @@ const DestinationManagementPage = () => {
             {/* Luxora Hotel - Lodwar */}
             <Link to="/dmc/lodwar" className="group block bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
               <div className="aspect-video overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1200&q=80&auto=format&fit=crop" alt="Luxora Hotel in Lodwar, northern Kenya" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                <img src={luxoraImage.url} alt="Luxora Hotel in Lodwar, northern Kenya" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">Luxora Hotel</h3>
@@ -121,7 +124,7 @@ const DestinationManagementPage = () => {
             {/* Warwick Hotel - Nanyuki */}
             <Link to="/dmc/nanyuki" className="group block bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
               <div className="aspect-video overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=1200&q=80&auto=format&fit=crop" alt="Warwick Hotel in Nanyuki at the foothills of Mount Kenya" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                <img src={warwickImage.url} alt="Warwick Hotel in Nanyuki at the foothills of Mount Kenya" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">Warwick Hotel</h3>
@@ -133,7 +136,7 @@ const DestinationManagementPage = () => {
             {/* TradeMark Hotel - Nairobi */}
             <Link to="/dmc/nairobi" className="group block bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
               <div className="aspect-video overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80&auto=format&fit=crop" alt="TradeMark Hotel in Nairobi, modern city hospitality" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                <img src={trademarkImage.url} alt="TradeMark Hotel in Nairobi, modern city hospitality" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">TradeMark Hotel</h3>

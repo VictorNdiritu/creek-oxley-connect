@@ -25,6 +25,7 @@ import imgKitchen from "@/assets/new dmc watamu images/WhatsApp Image 2026-02-14
 import imgBeach from "@/assets/new dmc watamu images/WhatsApp Image 2026-02-14 at 18.41.33 (1).jpeg";
 import imgOceanView from "@/assets/new dmc watamu images/WhatsApp Image 2026-02-14 at 18.41.33 (2).jpeg";
 import imgGate from "@/assets/new dmc watamu images/WhatsApp Image 2026-02-14 at 18.41.33 (3).jpeg";
+import imgHero from "@/assets/kilulu.png.asset.json";
 
 const WatamuVillaPage = () => {
   const galleryImages = [
@@ -63,7 +64,7 @@ const WatamuVillaPage = () => {
         <section className="relative">
           <div className="h-[60vh] md:h-[70vh] relative overflow-hidden">
             <img
-              src={imgPool}
+              src={imgHero.url}
               alt="Kilulu Luxury Island Villa swimming pool with ocean view"
               className="w-full h-full object-cover"
             />
