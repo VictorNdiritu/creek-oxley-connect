@@ -64,7 +64,7 @@ const WatamuVillaPage = () => {
         <section className="relative">
           <div className="h-[60vh] md:h-[70vh] relative overflow-hidden">
             <img
-              src={imgPool}
+              src={imgHero.url}
               alt="Kilulu Luxury Island Villa swimming pool with ocean view"
               className="w-full h-full object-cover"
             />
