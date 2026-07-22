@@ -7,9 +7,12 @@ import { Link } from "react-router-dom";
 import { MapPin, Calendar, Users, Building, ArrowRight } from "lucide-react";
 
 
-// Import hero image for Watamu card
-import poolImage from "@/assets/new dmc watamu images/WhatsApp Image 2026-02-14 at 18.41.32 (3).jpeg";
-import samburuImage from "@/assets/samburu-ribbon-cutting.jpg";
+// Property card images
+import poolImage from "@/assets/kilulu.png.asset.json";
+import samburuImage from "@/assets/samburu-elephant-lodge.png.asset.json";
+import luxoraImage from "@/assets/luxora-hotel.jpg.asset.json";
+import warwickImage from "@/assets/warwick-hotel.jpg.asset.json";
+import trademarkImage from "@/assets/trademark-hotel.jpg.asset.json";
 
 const DestinationManagementPage = () => {
   return (
