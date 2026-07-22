@@ -66,7 +66,7 @@ const SamburuLodgeDmcPage = () => {
         <section className="relative">
           <div className="h-[60vh] md:h-[70vh] relative overflow-hidden">
             <img
-              src={imgRibbonCutting}
+              src={imgHero.url}
               alt="Samburu Elephant Lodge opening ceremony in Samburu County, Kenya"
               className="w-full h-full object-cover"
             />
