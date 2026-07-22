@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Building, Briefcase, Globe, Star, Users } from "lucide-react";
+import heroImage from "@/assets/trademark-hotel.jpg.asset.json";
 
 const TradeMarkHotelPage = () => {
   const faqSchema = {
