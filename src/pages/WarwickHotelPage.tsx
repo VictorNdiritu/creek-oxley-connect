@@ -50,7 +50,7 @@ const WarwickHotelPage = () => {
         <section className="relative">
           <div className="h-[60vh] md:h-[70vh] relative overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=1920&q=80&auto=format&fit=crop"
+              src={heroImage.url}
               alt="Warwick Hotel grounds in Nanyuki at the foothills of Mount Kenya"
               className="absolute inset-0 w-full h-full object-cover"
             />
