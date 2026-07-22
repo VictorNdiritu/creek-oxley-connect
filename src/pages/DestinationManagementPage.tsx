@@ -112,7 +112,7 @@ const DestinationManagementPage = () => {
             {/* Luxora Hotel - Lodwar */}
             <Link to="/dmc/lodwar" className="group block bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
               <div className="aspect-video overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1200&q=80&auto=format&fit=crop" alt="Luxora Hotel in Lodwar, northern Kenya" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                <img src={luxoraImage.url} alt="Luxora Hotel in Lodwar, northern Kenya" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">Luxora Hotel</h3>
