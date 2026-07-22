@@ -124,7 +124,7 @@ const DestinationManagementPage = () => {
             {/* Warwick Hotel - Nanyuki */}
             <Link to="/dmc/nanyuki" className="group block bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
               <div className="aspect-video overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=1200&q=80&auto=format&fit=crop" alt="Warwick Hotel in Nanyuki at the foothills of Mount Kenya" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                <img src={warwickImage.url} alt="Warwick Hotel in Nanyuki at the foothills of Mount Kenya" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">Warwick Hotel</h3>
