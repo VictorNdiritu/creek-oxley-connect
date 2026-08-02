@@ -50,6 +50,37 @@ const BlogPage = () => {
               </div>
               
               <div className="grid md:grid-cols-2 gap-8">
+                {/* Kenya Health Insurance Article */}
+                <article className="bg-gray-50 rounded-lg p-8">
+                  <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
+                    <div className="flex items-center gap-2">
+                      <Calendar className="h-4 w-4" />
+                      <span>August 02, 2026</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <User className="h-4 w-4" />
+                      <span>Creek Oxley Team</span>
+                    </div>
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-bold text-creekoxley mb-4">
+                    New Mandatory Health Insurance Rules for Travellers Entering Kenya
+                  </h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    Kenya has introduced mandatory travel health insurance for international visitors. Learn the minimum coverage requirements, who is affected, and how to prepare for your trip...
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Kenya Travel</span>
+                    <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Health Insurance</span>
+                    <span className="bg-creekoxley/10 text-creekoxley px-3 py-1 rounded-full text-sm">Destination Management</span>
+                  </div>
+                  <Button className="bg-creekoxley hover:bg-creekoxley-medium text-white">
+                    <Link to="/blog/kenya-travel-health-insurance-requirements" className="flex items-center gap-2 text-white">
+                      Read Full Article
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  </Button>
+                </article>
+
                 {/* Online Booking Channels Article */}
                 <article className="bg-gray-50 rounded-lg p-8">
                   <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">

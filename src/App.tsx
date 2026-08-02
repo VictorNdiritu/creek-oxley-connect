@@ -22,6 +22,7 @@ import BusyNotStrategyArticlePage from "./pages/BusyNotStrategyArticlePage";
 import OwningFranchisingArticlePage from "./pages/OwningFranchisingArticlePage";
 import FirefighterManagerArticlePage from "./pages/FirefighterManagerArticlePage";
 import OnlineBookingChannelsArticlePage from "./pages/OnlineBookingChannelsArticlePage";
+import KenyaHealthInsuranceArticlePage from "./pages/KenyaHealthInsuranceArticlePage";
 import HRStrategyArticlePage from "./pages/HRStrategyArticlePage";
 import HotelOutsourcingArticlePage from "./pages/HotelOutsourcingArticlePage";
 import DestinationManagementPage from "./pages/DestinationManagementPage";
@@ -80,6 +81,7 @@ const App = () => (
             <Route path="/blog/owning-vs-franchising" element={<OwningFranchisingArticlePage />} />
             <Route path="/blog/firefighter-manager" element={<FirefighterManagerArticlePage />} />
             <Route path="/blog/online-booking-channels" element={<OnlineBookingChannelsArticlePage />} />
+            <Route path="/blog/kenya-travel-health-insurance-requirements" element={<KenyaHealthInsuranceArticlePage />} />
             <Route path="/blog/hr-strategy-business-growth" element={<HRStrategyArticlePage />} />
             <Route path="/blog/hotel-management-outsourcing" element={<HotelOutsourcingArticlePage />} />
             <Route path="/destination-management" element={<DestinationManagementPage />} />
