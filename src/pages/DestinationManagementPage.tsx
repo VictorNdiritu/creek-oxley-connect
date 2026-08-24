@@ -97,17 +97,8 @@ const DestinationManagementPage = () => {
               </div>
             </Link>
 
-            {/* Samburu Elephant Lodge */}
-            <Link to="/dmc/samburu" className="group block bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
-              <div className="aspect-video overflow-hidden">
-                <img src={samburuImage.url} alt="Samburu Elephant Lodge in Samburu County, Kenya" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">Samburu Elephant Lodge</h3>
-                <p className="text-gray-600 mb-4">Samburu, Kenya - An exclusive wildlife lodge experience.</p>
-                <span className="inline-flex items-center text-teal-700 font-medium">Explore <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
-              </div>
-            </Link>
+
+
 
             {/* Luxora Hotel - Lodwar */}
             <Link to="/dmc/lodwar" className="group block bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
@@ -117,18 +108,6 @@ const DestinationManagementPage = () => {
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">Luxora Hotel</h3>
                 <p className="text-gray-600 mb-4">Lodwar, Kenya - A premier hospitality destination.</p>
-                <span className="inline-flex items-center text-teal-700 font-medium">Explore <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
-              </div>
-            </Link>
-
-            {/* Warwick Hotel - Nanyuki */}
-            <Link to="/dmc/nanyuki" className="group block bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
-              <div className="aspect-video overflow-hidden">
-                <img src={warwickImage.url} alt="Warwick Hotel in Nanyuki at the foothills of Mount Kenya" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">Warwick Hotel</h3>
-                <p className="text-gray-600 mb-4">Nanyuki, Kenya - A distinguished highland property.</p>
                 <span className="inline-flex items-center text-teal-700 font-medium">Explore <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
               </div>
             </Link>
@@ -147,6 +126,43 @@ const DestinationManagementPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Past Projects / Success Stories */}
+      <section className="py-16 md:py-20 bg-white border-t border-gray-100">
+        <div className="container mx-auto px-4 md:px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Past Projects &amp; Success Stories</h2>
+          <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+            Properties we have previously represented and promoted on international platforms.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <Link to="/dmc/samburu" className="group block bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden transition-all hover:shadow-lg">
+              <div className="aspect-video overflow-hidden">
+                <img src={samburuImage.url} alt="Samburu Elephant Lodge in Samburu County, Kenya" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              </div>
+              <div className="p-6">
+                <span className="text-xs uppercase tracking-wide text-gray-500">Past project</span>
+                <h3 className="text-xl font-semibold mt-1 mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">Samburu Elephant Lodge</h3>
+                <p className="text-gray-600 mb-4">Samburu, Kenya - An exclusive wildlife lodge experience.</p>
+                <span className="inline-flex items-center text-teal-700 font-medium">View case <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
+              </div>
+            </Link>
+
+            <Link to="/dmc/nanyuki" className="group block bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden transition-all hover:shadow-lg">
+              <div className="aspect-video overflow-hidden">
+                <img src={warwickImage.url} alt="Warwick Hotel in Nanyuki at the foothills of Mount Kenya" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              </div>
+              <div className="p-6">
+                <span className="text-xs uppercase tracking-wide text-gray-500">Past project</span>
+                <h3 className="text-xl font-semibold mt-1 mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">Warwick Hotel</h3>
+                <p className="text-gray-600 mb-4">Nanyuki, Kenya - A distinguished highland property.</p>
+                <span className="inline-flex items-center text-teal-700 font-medium">View case <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       
       {/* Core Competencies */}
       <section className="py-16 md:py-20 bg-gray-50">
