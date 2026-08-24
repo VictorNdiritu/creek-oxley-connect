@@ -97,17 +97,8 @@ const DestinationManagementPage = () => {
               </div>
             </Link>
 
-            {/* Samburu Elephant Lodge */}
-            <Link to="/dmc/samburu" className="group block bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
-              <div className="aspect-video overflow-hidden">
-                <img src={samburuImage.url} alt="Samburu Elephant Lodge in Samburu County, Kenya" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">Samburu Elephant Lodge</h3>
-                <p className="text-gray-600 mb-4">Samburu, Kenya - An exclusive wildlife lodge experience.</p>
-                <span className="inline-flex items-center text-teal-700 font-medium">Explore <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
-              </div>
-            </Link>
+
+
 
             {/* Luxora Hotel - Lodwar */}
             <Link to="/dmc/lodwar" className="group block bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
