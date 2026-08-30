@@ -21,12 +21,17 @@ import Hospitality2026ArticlePage from "./pages/Hospitality2026ArticlePage";
 import BusyNotStrategyArticlePage from "./pages/BusyNotStrategyArticlePage";
 import OwningFranchisingArticlePage from "./pages/OwningFranchisingArticlePage";
 import FirefighterManagerArticlePage from "./pages/FirefighterManagerArticlePage";
+import OnlineBookingChannelsArticlePage from "./pages/OnlineBookingChannelsArticlePage";
+import KenyaHealthInsuranceArticlePage from "./pages/KenyaHealthInsuranceArticlePage";
+import HRStrategyArticlePage from "./pages/HRStrategyArticlePage";
+import HotelOutsourcingArticlePage from "./pages/HotelOutsourcingArticlePage";
 import DestinationManagementPage from "./pages/DestinationManagementPage";
 import WatamuVillaPage from "./pages/WatamuVillaPage";
 import SamburuLodgeDmcPage from "./pages/SamburuLodgeDmcPage";
 import LuxoraHotelPage from "./pages/LuxoraHotelPage";
 import WarwickHotelPage from "./pages/WarwickHotelPage";
 import TradeMarkHotelPage from "./pages/TradeMarkHotelPage";
+import PreCheckInPage from "./pages/PreCheckInPage";
 import SmartStaffingPage from "./pages/SmartStaffingPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import TermsPage from "./pages/TermsPage";
@@ -80,6 +85,10 @@ const App = () => (
             <Route path="/blog/busy-not-strategy" element={<BusyNotStrategyArticlePage />} />
             <Route path="/blog/owning-vs-franchising" element={<OwningFranchisingArticlePage />} />
             <Route path="/blog/firefighter-manager" element={<FirefighterManagerArticlePage />} />
+            <Route path="/blog/online-booking-channels" element={<OnlineBookingChannelsArticlePage />} />
+            <Route path="/blog/kenya-travel-health-insurance-requirements" element={<KenyaHealthInsuranceArticlePage />} />
+            <Route path="/blog/hr-strategy-business-growth" element={<HRStrategyArticlePage />} />
+            <Route path="/blog/hotel-management-outsourcing" element={<HotelOutsourcingArticlePage />} />
             <Route path="/destination-management" element={<DestinationManagementPage />} />
             <Route path="/dmc" element={<DestinationManagementPage />} />
             <Route path="/dmc/watamu" element={<WatamuVillaPage />} />
@@ -87,6 +96,7 @@ const App = () => (
             <Route path="/dmc/lodwar" element={<LuxoraHotelPage />} />
             <Route path="/dmc/nanyuki" element={<WarwickHotelPage />} />
             <Route path="/dmc/nairobi" element={<TradeMarkHotelPage />} />
+            <Route path="/dmc/pre-check-in" element={<PreCheckInPage />} />
             <Route path="/smart-staffing" element={<SmartStaffingPage />} />
 
             {/* Hospitality Campaign Landing Pages */}

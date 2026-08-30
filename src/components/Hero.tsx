@@ -8,7 +8,7 @@ const Hero = () => {
         <div className="grid grid-cols-12 gap-8 md:gap-12 items-start">
           {/* Left 7/12 */}
           <div className="col-span-12 md:col-span-7">
-            <p className="eyebrow mb-8">Management Consultancy — Est. Nairobi</p>
+            <p className="eyebrow mb-8">Management Consultancy - Est. Nairobi</p>
             <h1 className="font-display text-[44px] md:text-[64px] lg:text-[76px] leading-[1.02] tracking-[-0.02em] text-creekoxley">
               Strategy, structure
               <br />
@@ -27,7 +27,7 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right 5/12 — bordered positioning box */}
+          {/* Right 5/12 - bordered positioning box */}
           <div className="col-span-12 md:col-span-5 md:pt-6">
             <div className="border-2 border-creekoxley p-8 md:p-10">
               <p className="eyebrow mb-5">Positioning</p>
@@ -37,7 +37,7 @@ const Hero = () => {
               </p>
               <div className="rule mt-8 mb-6" />
               <p className="text-[14px] text-muted-ink">
-                Engagements across consulting, destination management and smart staffing —
+                Engagements across consulting, destination management and smart staffing -
                 anchored by a single operating philosophy:
                 <span className="italic"> Observation. Innovation. Results.</span>
               </p>

@@ -13,6 +13,7 @@ interface SEOHeadProps {
     tags?: string[];
   };
   noIndex?: boolean;
+  favicon?: string;
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -22,6 +23,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   ogImage = "https://creekoxley.com/creek-oxley-logo.png",
   article,
   noIndex = false,
+  favicon,
 }) => {
   const organizationSchema = {
     "@context": "https://schema.org",
@@ -78,6 +80,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="description" content={description} />
       <meta name="robots" content={noIndex ? "noindex, nofollow" : "index, follow"} />
       <link rel="canonical" href={canonical} />
+      {favicon && <link rel="icon" type="image/png" href={favicon} />}
+      {favicon && <link rel="shortcut icon" type="image/png" href={favicon} />}
+      
       
       {/* Open Graph tags */}
       <meta property="og:title" content={title} />

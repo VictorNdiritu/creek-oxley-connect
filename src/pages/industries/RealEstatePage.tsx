@@ -50,7 +50,7 @@ const RealEstatePage = () => (
           <div className="max-w-5xl mx-auto">
             <p className="eyebrow mb-3">Industry Context</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Challenges in Real Estate & Construction</h2>
-            <p className="text-[17px] text-[#6B6878] mb-12 max-w-2xl">East Africa's construction boom brings enormous opportunity — and significant execution risk. Our consultants have worked across both.</p>
+            <p className="text-[17px] text-[#6B6878] mb-12 max-w-2xl">East Africa's construction boom brings enormous opportunity - and significant execution risk. Our consultants have worked across both.</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {challenges.map((c, i) => (
                 <div key={i} className="flex items-start gap-3 bg-white p-5 border border-[#DDDAE8]">

@@ -9,8 +9,8 @@ const Footer = () => {
   const headCls = "eyebrow !text-silver mb-5";
 
   return (
-    <footer className="bg-ink text-white relative">
-      <div className="absolute top-0 left-0 right-0 h-[3px] bg-lavender" />
+    <footer className="bg-creekoxley text-white relative">
+      <div className="absolute top-0 left-0 right-0 h-[3px] bg-white/30" />
       <div className="container-x pt-20 pb-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
           <div className="md:col-span-3">
@@ -58,11 +58,11 @@ const Footer = () => {
             <ul className="space-y-3">
               <li><Link to="/dmc" className={linkCls}>Destination Management</Link></li>
               <li><Link to="/smart-staffing" className={linkCls}>Smart Staffing</Link></li>
-              <li><Link to="/dmc/watamu" className={linkCls}>Kilulu Villa — Watamu</Link></li>
+              <li><Link to="/dmc/watamu" className={linkCls}>Kilulu Villa - Watamu</Link></li>
               <li><Link to="/dmc/samburu" className={linkCls}>Samburu Elephant Lodge</Link></li>
-              <li><Link to="/dmc/lodwar" className={linkCls}>Luxora Hotel — Lodwar</Link></li>
-              <li><Link to="/dmc/nanyuki" className={linkCls}>Warwick Hotel — Nanyuki</Link></li>
-              <li><Link to="/dmc/nairobi" className={linkCls}>TradeMark Hotel — Nairobi</Link></li>
+              <li><Link to="/dmc/lodwar" className={linkCls}>Luxora Hotel - Lodwar</Link></li>
+              <li><Link to="/dmc/nanyuki" className={linkCls}>Warwick Hotel - Nanyuki</Link></li>
+              <li><Link to="/dmc/nairobi" className={linkCls}>TradeMark Hotel - Nairobi</Link></li>
             </ul>
           </div>
 
@@ -88,7 +88,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-silver/30 mt-14 pt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          <p className="text-[12px] text-muted-ink">
+          <p className="text-[12px] text-white/60">
             © {currentYear} Creek Oxley Management Consultant. All rights reserved.
           </p>
           <div className="flex gap-6 text-[12px] text-silver">

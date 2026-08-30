@@ -72,7 +72,7 @@ const FirefighterManagerArticlePage = () => {
               </p>
 
               <p className="text-gray-600 leading-relaxed mb-8">
-                If you struggle to answer that, you aren't alone. You've likely fallen into the "Firefighter Trap"—a common cycle where operational managers spend their entire day solving urgent problems, leaving zero room for the important strategic work they were actually hired to do.
+                If you struggle to answer that, you aren't alone. You've likely fallen into the "Firefighter Trap"-a common cycle where operational managers spend their entire day solving urgent problems, leaving zero room for the important strategic work they were actually hired to do.
               </p>
 
               <h2 className="text-2xl md:text-3xl font-bold text-creekoxley mt-12 mb-6">
@@ -108,7 +108,7 @@ const FirefighterManagerArticlePage = () => {
 
                 <h3 className="text-xl font-semibold text-creekoxley mb-4">The Not Urgent & Important (The Strategy)</h3>
                 <p className="text-gray-600">
-                  This is where long-term growth lives. It's the time spent training your team, refining processes, and planning for next year. Because these tasks don't have a "ticking clock," they are the first to be sacrificed—yet they are the only tasks that actually prevent future fires.
+                  This is where long-term growth lives. It's the time spent training your team, refining processes, and planning for next year. Because these tasks don't have a "ticking clock," they are the first to be sacrificed-yet they are the only tasks that actually prevent future fires.
                 </p>
               </div>
 

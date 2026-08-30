@@ -23,7 +23,7 @@ const services = [
   {
     icon: <Star className="h-6 w-6 text-creekoxley" />,
     title: "Guest Experience Design",
-    desc: "We map the full guest journey — from pre-arrival to post-checkout — identifying touchpoints where exceptional service creates loyalty and referrals.",
+    desc: "We map the full guest journey - from pre-arrival to post-checkout - identifying touchpoints where exceptional service creates loyalty and referrals.",
   },
   {
     icon: <Globe className="h-6 w-6 text-creekoxley" />,

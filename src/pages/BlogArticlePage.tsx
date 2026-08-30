@@ -63,16 +63,16 @@ const BlogArticlePage = () => {
             {/* Article Content */}
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                From Samburu to the Serengeti, remote lodges are some of the most captivating destinations in the world. But behind the scenic views and Instagram-perfect sunsets lies a very different reality: running a hospitality business in a remote location is operationally brutal. Supply chains break down. Power fails. Staff turnover is high. And guests — expecting luxury — are rarely forgiving.
+                From Samburu to the Serengeti, remote lodges are some of the most captivating destinations in the world. But behind the scenic views and Instagram-perfect sunsets lies a very different reality: running a hospitality business in a remote location is operationally brutal. Supply chains break down. Power fails. Staff turnover is high. And guests - expecting luxury - are rarely forgiving.
               </p>
               
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                At Creek Oxley, we've worked with safari properties and remote lodges that were bleeding potential because they had no systems built for scale. Here's what it actually takes to grow — and survive — in the wild.
+                At Creek Oxley, we've worked with safari properties and remote lodges that were bleeding potential because they had no systems built for scale. Here's what it actually takes to grow - and survive - in the wild.
               </p>
               
               <h2 className="text-2xl font-bold text-creekoxley mb-4">1. SOPs: The Backbone of Consistency</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
-                In a remote lodge, your best staff might be offline for hours — or days. What keeps the guest experience consistent is not people, but process. Standard Operating Procedures (SOPs) ensure:
+                In a remote lodge, your best staff might be offline for hours - or days. What keeps the guest experience consistent is not people, but process. Standard Operating Procedures (SOPs) ensure:
               </p>
               <ul className="list-disc pl-6 mb-6 text-gray-700">
                 <li>Housekeeping knows exactly how to turn around a room between game drives</li>
@@ -80,10 +80,10 @@ const BlogArticlePage = () => {
                 <li>Front desk staff handle last-minute changes the same way every time</li>
               </ul>
               <p className="text-gray-700 leading-relaxed mb-8">
-                Without SOPs, service delivery becomes personality-dependent — and that's not scalable.
+                Without SOPs, service delivery becomes personality-dependent - and that's not scalable.
               </p>
               
-              <h2 className="text-2xl font-bold text-creekoxley mb-4">2. Inventory Management Isn't a Checklist — It's Survival</h2>
+              <h2 className="text-2xl font-bold text-creekoxley mb-4">2. Inventory Management Isn't a Checklist - It's Survival</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
                 Getting supplies to a remote lodge is never just about ordering. It's about forecasting, batching, and contingency.
               </p>
@@ -93,7 +93,7 @@ const BlogArticlePage = () => {
                 <li>Is your stock rotation system preventing waste?</li>
               </ul>
               <p className="text-gray-700 leading-relaxed mb-8">
-                We've helped properties set up tiered inventory control systems that allow for both routine and emergency operations — no panic reorders, no overstocking.
+                We've helped properties set up tiered inventory control systems that allow for both routine and emergency operations - no panic reorders, no overstocking.
               </p>
               
               <h2 className="text-2xl font-bold text-creekoxley mb-4">3. Multi-Skilled Staffing Models Win in the Wild</h2>
@@ -111,7 +111,7 @@ const BlogArticlePage = () => {
               
               <h2 className="text-2xl font-bold text-creekoxley mb-4">4. Guest Experience Systems: Remote Doesn't Mean Basic</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Your guests expect a smooth, high-touch experience — even without fiber internet. That means:
+                Your guests expect a smooth, high-touch experience - even without fiber internet. That means:
               </p>
               <ul className="list-disc pl-6 mb-6 text-gray-700">
                 <li>Seamless check-in and orientation</li>
@@ -132,12 +132,12 @@ const BlogArticlePage = () => {
                 <li>Power failures during full occupancy</li>
               </ul>
               <p className="text-gray-700 leading-relaxed mb-8">
-                We help safari lodges design and test response playbooks — so that when disruptions hit, operations don't collapse, and guests still feel taken care of.
+                We help safari lodges design and test response playbooks - so that when disruptions hit, operations don't collapse, and guests still feel taken care of.
               </p>
               
               <h2 className="text-2xl font-bold text-creekoxley mb-4">Final Word: A Scenic Property Is Not a Scalable Business</h2>
               <p className="text-gray-700 leading-relaxed mb-8">
-                Having a gorgeous view and a compelling story will bring guests in once. What brings them back — and keeps your business viable — is operational strength. At Creek Oxley, we help remote hospitality businesses build internal systems strong enough to handle chaos, scale with confidence, and deliver excellence in every season.
+                Having a gorgeous view and a compelling story will bring guests in once. What brings them back - and keeps your business viable - is operational strength. At Creek Oxley, we help remote hospitality businesses build internal systems strong enough to handle chaos, scale with confidence, and deliver excellence in every season.
               </p>
             </div>
             

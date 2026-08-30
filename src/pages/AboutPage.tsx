@@ -23,7 +23,7 @@ const AboutPage = () => {
                 Transforming Businesses Across East Africa
               </h1>
               <p className="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed">
-                Creek Oxley is more than a consulting firm—we are strategic partners committed to building sustainable business ecosystems that drive economic prosperity while respecting our environment.
+                Creek Oxley is more than a consulting firm-we are strategic partners committed to building sustainable business ecosystems that drive economic prosperity while respecting our environment.
               </p>
             </div>
           </div>
@@ -37,7 +37,7 @@ const AboutPage = () => {
                 <h2 className="text-3xl md:text-4xl font-bold mb-8 text-creekoxley">Our Story</h2>
                 <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
                   <p className="text-lg leading-relaxed">
-                    Founded on the principle that every business challenge has a practical, tailored solution, Creek Oxley emerged from a vision to transform the East African business landscape. We recognized a critical gap in the market: organizations needed more than generic advice—they needed strategic partners who understood the unique dynamics of operating in diverse, rapidly evolving markets.
+                    Founded on the principle that every business challenge has a practical, tailored solution, Creek Oxley emerged from a vision to transform the East African business landscape. We recognized a critical gap in the market: organizations needed more than generic advice-they needed strategic partners who understood the unique dynamics of operating in diverse, rapidly evolving markets.
                   </p>
                   <p className="text-lg leading-relaxed">
                     Today, we stand as a trusted advisor to businesses across Kenya, Rwanda, Uganda, Tanzania, and beyond. Our multidisciplinary team combines deep regional expertise with global best practices, delivering solutions that are both innovative and implementable. From startups finding their footing to established enterprises navigating digital transformation, we've guided organizations through every stage of their growth journey.
@@ -91,13 +91,13 @@ const AboutPage = () => {
                   <div className="bg-creekoxley/5 p-8 rounded-xl border border-creekoxley/20">
                     <h3 className="text-xl font-bold mb-4 text-creekoxley">Operational Excellence</h3>
                     <p className="text-gray-700 leading-relaxed">
-                      We optimize your operations through process improvement, supply chain management, and systems integration—ensuring efficiency without compromising quality or sustainability.
+                      We optimize your operations through process improvement, supply chain management, and systems integration-ensuring efficiency without compromising quality or sustainability.
                     </p>
                   </div>
                   <div className="bg-creekoxley/5 p-8 rounded-xl border border-creekoxley/20">
                     <h3 className="text-xl font-bold mb-4 text-creekoxley">Change Management</h3>
                     <p className="text-gray-700 leading-relaxed">
-                      Organizational transformation requires more than new processes—it demands cultural alignment. We guide teams through change with training, leadership development, and communication strategies.
+                      Organizational transformation requires more than new processes-it demands cultural alignment. We guide teams through change with training, leadership development, and communication strategies.
                     </p>
                   </div>
                 </div>
@@ -162,7 +162,7 @@ const AboutPage = () => {
                   <div className="bg-white p-8 rounded-xl shadow-md border-l-4 border-creekoxley">
                     <h3 className="text-xl font-bold mb-3 text-creekoxley">2. Strategy Development</h3>
                     <p className="text-gray-700">
-                      Using evidence-based insights, we design tailored strategies that align with your goals, resources, and market realities—always practical, never theoretical.
+                      Using evidence-based insights, we design tailored strategies that align with your goals, resources, and market realities-always practical, never theoretical.
                     </p>
                   </div>
                   <div className="bg-white p-8 rounded-xl shadow-md border-l-4 border-creekoxley">
@@ -196,7 +196,7 @@ const AboutPage = () => {
                     <div>
                       <h3 className="text-xl font-bold mb-2 text-creekoxley">Regional Expertise</h3>
                       <p className="text-gray-700">
-                        Deep understanding of East African markets, regulatory environments, and business cultures—insights you won't find in generic international firms.
+                        Deep understanding of East African markets, regulatory environments, and business cultures-insights you won't find in generic international firms.
                       </p>
                     </div>
                   </div>
@@ -208,7 +208,7 @@ const AboutPage = () => {
                     <div>
                       <h3 className="text-xl font-bold mb-2 text-creekoxley">Proven Track Record</h3>
                       <p className="text-gray-700">
-                        Decades of combined experience delivering tangible results across diverse industries—from hospitality and tourism to manufacturing and retail.
+                        Decades of combined experience delivering tangible results across diverse industries-from hospitality and tourism to manufacturing and retail.
                       </p>
                     </div>
                   </div>
@@ -220,7 +220,7 @@ const AboutPage = () => {
                     <div>
                       <h3 className="text-xl font-bold mb-2 text-creekoxley">Practical Solutions</h3>
                       <p className="text-gray-700">
-                        No ivory tower theories—our recommendations are designed for real-world implementation with measurable ROI.
+                        No ivory tower theories-our recommendations are designed for real-world implementation with measurable ROI.
                       </p>
                     </div>
                   </div>
@@ -264,7 +264,7 @@ const AboutPage = () => {
                   <div className="bg-white p-8 rounded-xl shadow-md border-t-4 border-creekoxley text-center">
                     <h3 className="text-xl font-bold mb-3 text-creekoxley">Partnership</h3>
                     <p className="text-gray-700">
-                      Your success is our success—we work as true partners invested in your long-term growth.
+                      Your success is our success-we work as true partners invested in your long-term growth.
                     </p>
                   </div>
                   <div className="bg-white p-8 rounded-xl shadow-md border-t-4 border-creekoxley text-center">

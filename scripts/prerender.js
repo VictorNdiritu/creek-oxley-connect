@@ -42,6 +42,7 @@ const routes = [
   '/dmc/lodwar',
   '/dmc/nanyuki',
   '/dmc/nairobi',
+  '/dmc/pre-check-in',
   '/smart-staffing',
   '/blog/business-structure-kenya',
   '/blog/management-problems',
@@ -54,6 +55,10 @@ const routes = [
   '/blog/busy-not-strategy',
   '/blog/owning-vs-franchising',
   '/blog/firefighter-manager',
+  '/blog/online-booking-channels',
+  '/blog/hr-strategy-business-growth',
+  '/blog/hotel-management-outsourcing',
+  '/blog/kenya-travel-health-insurance-requirements',
 ];
 
 console.log('Pre-rendering script (documentation only)');

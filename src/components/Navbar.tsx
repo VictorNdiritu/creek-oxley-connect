@@ -72,7 +72,7 @@ const Navbar = () => {
             {/* Divisions dropdown */}
             <div className="dropdown relative group">
               <span className="flex items-center text-[14px] font-medium text-body-ink cursor-default">
-                Divisions <ChevronDown className="ml-1 h-3 w-3" />
+                Our Other Divisions <ChevronDown className="ml-1 h-3 w-3" />
               </span>
               <div className="dropdown-menu hidden absolute py-2">
                 <Link to="/dmc" className="block px-5 py-2.5 text-[14px] text-body-ink hover:bg-bone hover:text-creekoxley">Destination Management</Link>
