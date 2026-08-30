@@ -31,6 +31,11 @@ import SmartStaffingPage from "./pages/SmartStaffingPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import TermsPage from "./pages/TermsPage";
 import NotFound from "./pages/NotFound";
+import HotelPerformancePage from "./pages/HotelPerformancePage";
+import HotelRevenuePage from "./pages/HotelRevenuePage";
+import HotelOccupancyPage from "./pages/HotelOccupancyPage";
+import HotelManagementPage from "./pages/HotelManagementPage";
+import HotelTurnaroundPage from "./pages/HotelTurnaroundPage";
 
 // Industries
 import IndustriesPage from "./pages/industries/IndustriesPage";
@@ -83,6 +88,14 @@ const App = () => (
             <Route path="/dmc/nanyuki" element={<WarwickHotelPage />} />
             <Route path="/dmc/nairobi" element={<TradeMarkHotelPage />} />
             <Route path="/smart-staffing" element={<SmartStaffingPage />} />
+
+            {/* Hospitality Campaign Landing Pages */}
+            <Route path="/hotel-performance" element={<HotelPerformancePage />} />
+            <Route path="/hotel-revenue" element={<HotelRevenuePage />} />
+            <Route path="/hotel-occupancy" element={<HotelOccupancyPage />} />
+            <Route path="/hotel-management" element={<HotelManagementPage />} />
+            <Route path="/hotel-turnaround" element={<HotelTurnaroundPage />} />
+
             <Route path="/privacy" element={<PrivacyPage />} />
             <Route path="/terms" element={<TermsPage />} />
 

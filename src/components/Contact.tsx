@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+﻿import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
@@ -49,7 +49,7 @@ const Contact = () => {
             <dl className="mt-12 space-y-8">
               <div className="grid grid-cols-3 gap-4 border-t border-rule pt-6">
                 <dt className="eyebrow col-span-1">Phone</dt>
-                <dd className="col-span-2 text-[16px] text-body-ink">+254 725 276 757</dd>
+                <dd className="col-span-2 text-[16px] text-body-ink">+254 110 463 062</dd>
               </div>
               <div className="grid grid-cols-3 gap-4 border-t border-rule pt-6">
                 <dt className="eyebrow col-span-1">Email</dt>

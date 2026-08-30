@@ -1,4 +1,4 @@
-
+﻿
 import React from "react";
 import SEOHead from "@/components/SEOHead";
 import Navbar from "@/components/Navbar";
@@ -24,7 +24,7 @@ const ServicesPage = () => {
       {
         "@type": "Question",
         "name": "How do I engage Creek Oxley for consulting?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Contact us at +254 725 276 757 or email info@creekoxley.com. We begin with a discovery consultation to understand your needs before proposing a tailored engagement." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Contact us at +254 110 463 062 or email info@creekoxley.com. We begin with a discovery consultation to understand your needs before proposing a tailored engagement." }
       }
     ]
   };
@@ -88,7 +88,7 @@ const ServicesPage = () => {
                 </div>
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h3 className="font-semibold text-lg mb-2 text-gray-900">How do I engage Creek Oxley for consulting?</h3>
-                  <p className="text-gray-600">Contact us at +254 725 276 757 or email info@creekoxley.com. We begin with a discovery consultation to understand your needs before proposing a tailored engagement. Visit our <Link to="/contact" className="text-creekoxley hover:underline">contact page</Link> to get started.</p>
+                  <p className="text-gray-600">Contact us at +254 110 463 062 or email info@creekoxley.com. We begin with a discovery consultation to understand your needs before proposing a tailored engagement. Visit our <Link to="/contact" className="text-creekoxley hover:underline">contact page</Link> to get started.</p>
                 </div>
               </div>
             </div>

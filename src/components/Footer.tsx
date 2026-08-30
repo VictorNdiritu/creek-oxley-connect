@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { Link } from "react-router-dom";
 import RSSLink from "./RSSLink";
 
@@ -71,7 +71,7 @@ const Footer = () => {
             <ul className="space-y-3 text-[14px] text-silver">
               <li>Riverside Close, Riverside Drive</li>
               <li>Nairobi, Kenya</li>
-              <li><a className="hover:text-white" href="tel:+254725276757">+254 725 276 757</a></li>
+              <li><a className="hover:text-white" href="tel:+254110463062">+254 110 463 062</a></li>
               <li><a className="hover:text-white" href="mailto:info@creekoxley.com">info@creekoxley.com</a></li>
             </ul>
             <div className="mt-6">
