@@ -42,7 +42,7 @@ const ContactPage = () => {
                     <Phone className="h-6 w-6 text-creekoxley" />
                   </div>
                   <h3 className="font-semibold mb-2">Phone</h3>
-                  <p className="text-gray-600">+254 725 276 757</p>
+                  <p className="text-gray-600">+254 110 463 062</p>
                 </div>
                 
                 <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 text-center">
