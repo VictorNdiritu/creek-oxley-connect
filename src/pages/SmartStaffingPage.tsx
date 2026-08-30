@@ -29,7 +29,7 @@ const SmartStaffingPage = () => {
       {
         "@type": "Question",
         "name": "How can I contact Smart Staffing?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Contact Creek Oxley at +254 725 276 757 or email info@creekoxley.com to discuss your staffing needs." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Contact Creek Oxley at +254 110 463 062 or email info@creekoxley.com to discuss your staffing needs." }
       }
     ]
   };
@@ -199,7 +199,7 @@ const SmartStaffingPage = () => {
               </div>
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <h3 className="font-semibold text-lg mb-2 text-gray-900">How can I contact Smart Staffing?</h3>
-                <p className="text-gray-600">Contact Creek Oxley at +254 725 276 757 or email info@creekoxley.com to discuss your staffing needs. You can also reach us through our <Link to="/contact" className="text-creekoxley hover:underline">contact page</Link>.</p>
+                <p className="text-gray-600">Contact Creek Oxley at +254 110 463 062 or email info@creekoxley.com to discuss your staffing needs. You can also reach us through our <Link to="/contact" className="text-creekoxley hover:underline">contact page</Link>.</p>
               </div>
             </div>
           </div>

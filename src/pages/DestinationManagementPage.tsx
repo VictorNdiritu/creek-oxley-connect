@@ -256,7 +256,7 @@ const DestinationManagementPage = () => {
               <h3 className="text-xl font-semibold mb-2">Paul Mwenda</h3>
               <p className="text-gray-600 mb-1">Managing Partner</p>
               <p className="text-gray-600 mb-4">Creek Oxley Management Consulting</p>
-              <p className="text-gray-600 mb-1">Phone: +254 725 276 757</p>
+              <p className="text-gray-600 mb-1">Phone: +254 110 463 062</p>
               <p className="text-gray-600">Email: info@creekoxley.com</p>
               <div className="mt-6">
                 <Button className="bg-creekoxley hover:bg-creekoxley-medium">
