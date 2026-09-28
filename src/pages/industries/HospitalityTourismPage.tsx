@@ -109,6 +109,29 @@ const HospitalityTourismPage = () => (
         </div>
       </section>
 
+      {/* Interactive Tool Banner */}
+      <section className="py-14 bg-bone border-y border-[#DDDAE8]">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 bg-white p-8 border border-[#DDDAE8] shadow-sm">
+            <div>
+              <span className="eyebrow block mb-2">Free Modeling Tool</span>
+              <h3 className="font-display text-2xl md:text-3xl text-creekoxley font-semibold mb-2">
+                Hospitality Rate Parity & Net Revenue Calculator
+              </h3>
+              <p className="text-[15px] text-[#6B6878] max-w-xl">
+                Model real net revenue realizations across Direct, OTAs, and Tour Operator (STO) wholesale channels. Identify parity breaches and protect your property's GOPPAR.
+              </p>
+            </div>
+            <Link
+              to="/rate-parity-calculator"
+              className="inline-flex items-center gap-2 btn-primary whitespace-nowrap"
+            >
+              Open Calculator <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-[#1C1C2E]">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to elevate your guest experience?</h2>

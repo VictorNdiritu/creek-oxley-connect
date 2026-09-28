@@ -41,6 +41,7 @@ import HotelRevenuePage from "./pages/HotelRevenuePage";
 import HotelOccupancyPage from "./pages/HotelOccupancyPage";
 import HotelManagementPage from "./pages/HotelManagementPage";
 import HotelTurnaroundPage from "./pages/HotelTurnaroundPage";
+import RateParityCalculatorPage from "./pages/RateParityCalculatorPage";
 
 // Industries
 import IndustriesPage from "./pages/industries/IndustriesPage";
@@ -105,6 +106,9 @@ const App = () => (
             <Route path="/hotel-occupancy" element={<HotelOccupancyPage />} />
             <Route path="/hotel-management" element={<HotelManagementPage />} />
             <Route path="/hotel-turnaround" element={<HotelTurnaroundPage />} />
+            <Route path="/rate-parity-calculator" element={<RateParityCalculatorPage />} />
+            <Route path="/rate-parity" element={<RateParityCalculatorPage />} />
+            <Route path="/hotel-rate-calculator" element={<RateParityCalculatorPage />} />
 
             <Route path="/privacy" element={<PrivacyPage />} />
             <Route path="/terms" element={<TermsPage />} />

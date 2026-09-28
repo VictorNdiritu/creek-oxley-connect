@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import RSSLink from "./RSSLink";
 
@@ -58,6 +58,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li><Link to="/dmc" className={linkCls}>Destination Management</Link></li>
               <li><Link to="/smart-staffing" className={linkCls}>Smart Staffing</Link></li>
+              <li><Link to="/rate-parity-calculator" className={linkCls}>Rate Parity Calculator</Link></li>
               <li><Link to="/dmc/watamu" className={linkCls}>Kilulu Villa - Watamu</Link></li>
               <li><Link to="/dmc/samburu" className={linkCls}>Samburu Elephant Lodge</Link></li>
               <li><Link to="/dmc/lodwar" className={linkCls}>Luxora Hotel - Lodwar</Link></li>

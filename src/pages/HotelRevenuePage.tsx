@@ -1,4 +1,4 @@
-﻿import React, { useState } from "react";
+import React, { useState } from "react";
 import SEOHead from "@/components/SEOHead";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -187,6 +187,25 @@ const HotelRevenuePage = () => {
                   <p className="text-[13px] text-muted-ink leading-relaxed">{item.desc}</p>
                 </div>
               ))}
+            </div>
+
+            {/* Interactive Calculator Callout */}
+            <div className="mt-14 bg-white border border-creekoxley/30 p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+              <div>
+                <p className="eyebrow mb-2">Interactive Hospitality Tool</p>
+                <h3 className="font-display text-2xl md:text-3xl text-creekoxley mb-2">
+                  Test Your Channel Parity & Commission Leakage
+                </h3>
+                <p className="text-[14px] text-muted-ink max-w-xl">
+                  Use our live calculator to model how OTA commission tiers and wholesale STO discounts impact your net room yield and identify undercutting conflicts.
+                </p>
+              </div>
+              <Link
+                to="/rate-parity-calculator"
+                className="btn-primary inline-flex items-center gap-2 whitespace-nowrap"
+              >
+                Launch Calculator <ArrowRight className="h-4 w-4" />
+              </Link>
             </div>
           </div>
         </section>
