@@ -11,101 +11,94 @@ import {
   ArrowRight,
   TrendingUp,
   Percent,
-  DollarSign,
-  Building,
-  Globe,
-  Compass,
   CheckCircle2,
   ChevronDown,
-  Info,
-  Layers,
   Sparkles,
-  RefreshCw,
   Sliders,
   BarChart3,
+  Copy,
+  Check,
+  Send,
+  Eye,
+  Globe,
+  Users,
+  Building2,
   Phone,
-  Mail
+  Mail,
+  FileSpreadsheet
 } from "lucide-react";
 
 interface CurrencyOption {
   code: string;
   name: string;
   symbol: string;
-  defaultRate: number; // relative to USD
 }
 
 const CURRENCIES: Record<string, CurrencyOption> = {
-  USD: { code: "USD", name: "US Dollar", symbol: "$", defaultRate: 1.0 },
-  KES: { code: "KES", name: "Kenya Shilling", symbol: "KSh ", defaultRate: 129.5 },
-  EUR: { code: "EUR", name: "Euro", symbol: "€", defaultRate: 0.92 },
-  GBP: { code: "GBP", name: "British Pound", symbol: "£", defaultRate: 0.79 },
-  ZAR: { code: "ZAR", name: "South African Rand", symbol: "R ", defaultRate: 18.2 },
-  AED: { code: "AED", name: "UAE Dirham", symbol: "AED ", defaultRate: 3.67 },
-  CAD: { code: "CAD", name: "Canadian Dollar", symbol: "C$ ", defaultRate: 1.36 },
-  AUD: { code: "AUD", name: "Australian Dollar", symbol: "A$ ", defaultRate: 1.52 },
-  CUSTOM: { code: "CUSTOM", name: "Custom Symbol", symbol: "", defaultRate: 1.0 },
+  USD: { code: "USD", name: "US Dollar", symbol: "$" },
+  KES: { code: "KES", name: "Kenya Shilling", symbol: "KSh " },
+  EUR: { code: "EUR", name: "Euro", symbol: "€" },
+  GBP: { code: "GBP", name: "British Pound", symbol: "£" },
+  ZAR: { code: "ZAR", name: "South African Rand", symbol: "R " },
+  AED: { code: "AED", name: "UAE Dirham", symbol: "AED " },
+  CAD: { code: "CAD", name: "Canadian Dollar", symbol: "C$ " },
+  AUD: { code: "AUD", name: "Australian Dollar", symbol: "A$ " },
+  CUSTOM: { code: "CUSTOM", name: "Custom Symbol", symbol: "" },
 };
-
-type PricingModel = "parity" | "markup";
-type PromoScope = "none" | "global" | "direct" | "booking" | "expedia" | "sto";
-
-interface ChannelResult {
-  id: string;
-  name: string;
-  type: "direct" | "ota" | "wholesale";
-  tag: string;
-  grossPrice: number;
-  feeLabel: string;
-  feeAmount: number;
-  netRevenue: number;
-  retentionPct: number;
-}
 
 const faqData = [
   {
-    q: "What is Rate Parity in hospitality?",
-    a: "Rate parity is the legal or contractual commitment by a hotel or lodge to maintain consistent room rates across all public sales channels, including online travel agencies (OTAs) like Booking.com and Expedia, as well as the hotel's own direct website."
+    q: "Why should we add a markup on Booking.com and other OTAs?",
+    a: "OTAs typically charge commissions between 15% and 25%. If you list on OTAs at your base rack rate, you lose 15% to 25% of your revenue on every room sold. Adding an intentional markup ensures you protect your net revenue or give direct website bookers the best public price."
   },
   {
-    q: "What is the difference between Rack Rate and STO Rate?",
-    a: "The Rack Rate (or BAR - Best Available Rate) is the baseline published retail rate available to individual consumers. The Standard Tour Operator (STO) rate is a discounted wholesale net rate (typically 10% to 25% below Rack Rate) offered strictly to contracted B2B travel agents and destination management companies (DMCs) who package accommodation with safaris, flights, and transfers."
+    q: "What is an STO Rate and what do we send to Tour Operators?",
+    a: "STO stands for Standard Tour Operator rate. It is a contracted wholesale net rate (typically 10% to 25% less than your Rack Rate) sent confidentially to B2B tour operators and DMCs. The tour operator packages this rate with flights and safaris, and sells to their client at your recommended Rack Rate."
   },
   {
-    q: "What happens if our OTA rate undercuts our contracted STO rate?",
-    a: "If public OTA rates drop below contracted STO wholesale rates, tour operators cannot assemble viable travel packages and may delist your lodge or property. It also creates immediate contractual breach liabilities under standard B2B wholesale agreements across East Africa."
+    q: "What happens if our Booking.com rate is lower than our Tour Operator STO rate?",
+    a: "This is a critical parity conflict. If a tour operator sees that a traveler can book on Booking.com for less than the confidential wholesale rate they contracted, they can no longer sell your property and will terminate the partnership."
   },
   {
-    q: "Can we offer exclusive perks or lower rates on our direct website?",
-    a: "While strict rate parity clauses historically restricted lower public prices, modern hotel strategies employ 'fenced' private rates (e.g., direct booking club, WhatsApp member promo, resident rates) or direct booking perks (complimentary airport transfer, room upgrade, flexible cancellation) to drive high-margin direct conversions without breaching public parity contracts."
+    q: "Can we offer direct guests lower prices than Booking.com?",
+    a: "Yes. By listing on Booking.com at a marked-up rate (e.g. +15% to +20%) and keeping your direct website at base rack rate, direct guests always enjoy the best rate guarantee. Alternatively, you can offer fenced member perks, flexible check-in, or free airport transfers."
   },
   {
-    q: "How does Creek Oxley help hotels optimize distribution channels?",
-    a: "Creek Oxley conducts comprehensive commercial audits: analyzing your channel cost of sale, renegotiating OTA margins, structuring compliant STO wholesale tiers, and installing high-converting direct booking funnels that significantly elevate NetRevPAR and gross operating profit."
+    q: "How does Creek Oxley help hoteliers structure their distribution rates?",
+    a: "Creek Oxley reviews your entire commercial rate architecture across direct booking engines, OTAs, and tour operator agreements to establish clear rate tiers that protect wholesale contracts while maximizing direct NetRevPAR."
   }
 ];
 
 export default function RateParityCalculatorPage() {
-  // Inputs
+  // ── Core Inputs ──
   const [currencyKey, setCurrencyKey] = useState<string>("USD");
   const [customSymbol, setCustomSymbol] = useState<string>("$");
-  const [pricingModel, setPricingModel] = useState<PricingModel>("parity"); // 'parity' (equal gross) vs 'markup' (OTA mark-up)
-  const [baseRackRate, setBaseRackRate] = useState<number>(300);
-  const [otaCommissionPct, setOtaCommissionPct] = useState<number>(18);
+  
+  // 1. Base Rack Rate (X)
+  const [baseRackRate, setBaseRackRate] = useState<number>(200);
+
+  // 2. OTA Markup (+X% for Booking.com / Expedia)
+  const [otaMarkupPct, setOtaMarkupPct] = useState<number>(18);
+
+  // 3. STO Wholesale Discount (-X% for Tour Operators)
   const [stoDiscountPct, setStoDiscountPct] = useState<number>(15);
-  const [gatewayFeePct, setGatewayFeePct] = useState<number>(2.5);
-  const [promoDiscountPct, setPromoDiscountPct] = useState<number>(0);
-  const [promoScope, setPromoScope] = useState<PromoScope>("none");
 
-  // Volume Modeling (Optional interactive scenario)
-  const [showVolumeModel, setShowVolumeModel] = useState<boolean>(false);
-  const [monthlyRoomNights, setMonthlyRoomNights] = useState<number>(300);
-  const [directSharePct, setDirectSharePct] = useState<number>(35);
-  const [otaSharePct, setOtaSharePct] = useState<number>(45);
-  // remaining is STO Share: 100 - direct - ota
+  // Optional realistic friction settings
+  const [otaCommissionPct, setOtaCommissionPct] = useState<number>(18); // commission charged by OTA
+  const [gatewayFeePct, setGatewayFeePct] = useState<number>(2.5); // credit card fee on direct site
 
+  // Copy state
+  const [copied, setCopied] = useState<boolean>(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
-  // Active currency symbol
+  // Volume Modeling
+  const [showVolumeModel, setShowVolumeModel] = useState<boolean>(false);
+  const [monthlyRoomNights, setMonthlyRoomNights] = useState<number>(300);
+  const [directSharePct, setDirectSharePct] = useState<number>(30);
+  const [otaSharePct, setOtaSharePct] = useState<number>(50);
+  // remaining 20% is STO
+
+  // Active currency
   const activeCurrency = CURRENCIES[currencyKey] || CURRENCIES.USD;
   const currencySymbol = currencyKey === "CUSTOM" ? customSymbol.trim() + " " : activeCurrency.symbol;
 
@@ -116,216 +109,141 @@ export default function RateParityCalculatorPage() {
     })}`;
   };
 
-  // Calculations
-  const calculatedChannels = useMemo<ChannelResult[]>(() => {
+  // ── Rate Calculations ──
+  const rates = useMemo(() => {
     const rack = Math.max(0, baseRackRate);
-    const otaComm = Math.max(0, otaCommissionPct) / 100;
+    const otaMarkup = Math.max(0, otaMarkupPct) / 100;
     const stoDisc = Math.max(0, stoDiscountPct) / 100;
+    const otaComm = Math.max(0, otaCommissionPct) / 100;
     const gateway = Math.max(0, gatewayFeePct) / 100;
-    const promo = Math.max(0, promoDiscountPct) / 100;
 
-    // Apply promo factors based on scope
-    const promoActiveFor = (scope: PromoScope) => {
-      if (promoScope === "global") return promo;
-      if (promoScope === scope) return promo;
-      return 0;
-    };
-
-    // 1. Direct Web
-    const directPromoRate = promoActiveFor("direct");
-    const directGross = rack * (1 - directPromoRate);
+    // 1. Direct Website
+    const directGross = rack;
     const directFee = directGross * gateway;
     const directNet = directGross - directFee;
     const directRetention = directGross > 0 ? (directNet / directGross) * 100 : 0;
 
-    // 2. Booking.com
-    const bookingPromoRate = promoActiveFor("booking");
-    let bookingGross = 0;
-    if (pricingModel === "parity") {
-      bookingGross = rack * (1 - bookingPromoRate);
-    } else {
-      bookingGross = (rack * (1 + otaComm)) * (1 - bookingPromoRate);
-    }
-    const bookingFee = bookingGross * otaComm;
-    const bookingNet = bookingGross - bookingFee;
-    const bookingRetention = bookingGross > 0 ? (bookingNet / bookingGross) * 100 : 0;
+    // 2. OTA Listing (Booking.com / Expedia) -> Rack + X%
+    const otaGross = rack * (1 + otaMarkup);
+    const otaFee = otaGross * otaComm;
+    const otaNet = otaGross - otaFee;
+    const otaRetention = otaGross > 0 ? (otaNet / otaGross) * 100 : 0;
 
-    // 3. Expedia
-    const expediaPromoRate = promoActiveFor("expedia");
-    let expediaGross = 0;
-    if (pricingModel === "parity") {
-      expediaGross = rack * (1 - expediaPromoRate);
-    } else {
-      expediaGross = (rack * (1 + otaComm)) * (1 - expediaPromoRate);
-    }
-    const expediaFee = expediaGross * otaComm;
-    const expediaNet = expediaGross - expediaFee;
-    const expediaRetention = expediaGross > 0 ? (expediaNet / expediaGross) * 100 : 0;
-
-    // 4. Tour Operator (STO)
-    const stoPromoRate = promoActiveFor("sto");
-    // STO is traditionally a discount from base rack rate
-    const stoBaseWholesaleNet = rack * (1 - stoDisc);
-    const stoNet = stoBaseWholesaleNet * (1 - stoPromoRate);
-    const stoGross = rack; // The client sells packages based on rack or contracted rate
-    const stoFee = rack - stoNet;
+    // 3. Tour Operator STO Net -> Rack - X%
+    const stoNet = rack * (1 - stoDisc);
+    const stoGross = rack; // Recommended retail package price
+    const stoDiscountAmount = rack - stoNet;
     const stoRetention = stoGross > 0 ? (stoNet / stoGross) * 100 : 0;
 
-    return [
-      {
-        id: "direct",
-        name: "Direct Website",
-        type: "direct",
-        tag: "High Yield Channel",
-        grossPrice: directGross,
-        feeLabel: `${gatewayFeePct.toFixed(1)}% Gateway Fee`,
-        feeAmount: directFee,
-        netRevenue: directNet,
-        retentionPct: directRetention,
-      },
-      {
-        id: "booking",
-        name: "Booking.com",
-        type: "ota",
-        tag: "Retail OTA",
-        grossPrice: bookingGross,
-        feeLabel: `${otaCommissionPct.toFixed(1)}% OTA Commission`,
-        feeAmount: bookingFee,
-        netRevenue: bookingNet,
-        retentionPct: bookingRetention,
-      },
-      {
-        id: "expedia",
-        name: "Expedia Group",
-        type: "ota",
-        tag: "Retail OTA",
-        grossPrice: expediaGross,
-        feeLabel: `${otaCommissionPct.toFixed(1)}% OTA Commission`,
-        feeAmount: expediaFee,
-        netRevenue: expediaNet,
-        retentionPct: expediaRetention,
-      },
-      {
-        id: "sto",
-        name: "Tour Operator (STO)",
-        type: "wholesale",
-        tag: "B2B Wholesale Net",
-        grossPrice: stoGross,
-        feeLabel: `${stoDiscountPct.toFixed(1)}% Contracted Discount`,
-        feeAmount: stoFee,
-        netRevenue: stoNet,
-        retentionPct: stoRetention,
-      },
-    ];
-  }, [
-    baseRackRate,
-    otaCommissionPct,
-    stoDiscountPct,
-    gatewayFeePct,
-    promoDiscountPct,
-    promoScope,
-    pricingModel,
-  ]);
+    return {
+      rack,
+      directGross,
+      directFee,
+      directNet,
+      directRetention,
+      otaGross,
+      otaFee,
+      otaNet,
+      otaRetention,
+      stoGross,
+      stoNet,
+      stoDiscountAmount,
+      stoRetention,
+    };
+  }, [baseRackRate, otaMarkupPct, stoDiscountPct, otaCommissionPct, gatewayFeePct]);
 
-  // Diagnostics Engine
+  // ── Parity Diagnostics ──
   const diagnostics = useMemo(() => {
-    const direct = calculatedChannels.find((c) => c.id === "direct")!;
-    const booking = calculatedChannels.find((c) => c.id === "booking")!;
-    const expedia = calculatedChannels.find((c) => c.id === "expedia")!;
-    const sto = calculatedChannels.find((c) => c.id === "sto")!;
-
-    const minOtaGross = Math.min(booking.grossPrice, expedia.grossPrice);
     const issues: { type: "critical" | "warning"; title: string; desc: string }[] = [];
 
-    // Critical: OTA public rate is less than or equal to STO wholesale net
-    if (minOtaGross <= sto.netRevenue) {
+    // Critical: OTA price is less than or equal to STO wholesale net
+    if (rates.otaGross <= rates.stoNet) {
       issues.push({
         type: "critical",
-        title: "Wholesale Parity Conflict: OTAs Undercutting STO Contract",
-        desc: `Public OTA price (${formatPrice(minOtaGross)}) is lower than or equal to your contracted tour operator net rate (${formatPrice(sto.netRevenue)}). Inbound tour operators and safari DMCs cannot package trips and will lodge formal contractual complaints.`,
+        title: "Wholesale Parity Breach: OTA Undercuts Tour Operator Rate",
+        desc: `Public OTA price (${formatPrice(rates.otaGross)}) is less than or equal to what you send to Tour Operators (${formatPrice(rates.stoNet)}). Tour operators will refuse to contract your property because public customers can buy cheaper online.`,
       });
     }
 
-    // Warning / Critical: OTA public rate undercuts direct website rate
-    if (minOtaGross < direct.grossPrice - 0.01) {
+    // Critical: Direct website is higher than OTA
+    if (rates.directGross > rates.otaGross) {
       issues.push({
         type: "warning",
-        title: "Direct Channel Cannibalization",
-        desc: `Public OTA rates (${formatPrice(minOtaGross)}) undercut your direct website (${formatPrice(direct.grossPrice)}). Bookers are being financially incentivized to book via third parties, costing you an extra ${otaCommissionPct}% commission.`,
+        title: "Direct Cannibalization: Direct Website Is More Expensive Than OTAs",
+        desc: `Your direct website (${formatPrice(rates.directGross)}) is more expensive than your OTA listing (${formatPrice(rates.otaGross)}). Guests have zero incentive to book direct.`,
       });
     }
 
-    // Contractual Flag: Direct promotional rate drops below STO wholesale rate
-    if (direct.grossPrice < sto.netRevenue) {
+    // Direct vs STO
+    if (rates.directGross < rates.stoNet) {
       issues.push({
         type: "warning",
-        title: "B2B Contract Integrity Risk",
-        desc: `Your direct promotional price (${formatPrice(direct.grossPrice)}) is below contracted wholesale net (${formatPrice(sto.netRevenue)}). Check your wholesale agreements for strict non-undercutting covenants.`,
+        title: "Direct Price Lower Than Contracted STO",
+        desc: `Your public direct rate (${formatPrice(rates.directGross)}) is below contracted wholesale net (${formatPrice(rates.stoNet)}). Check your tour operator contract terms regarding public undercutting.`,
       });
     }
 
-    // Healthy State
-    const status: "compliant" | "warning" | "critical" =
+    const status: "healthy" | "warning" | "critical" =
       issues.some((i) => i.type === "critical")
         ? "critical"
         : issues.length > 0
         ? "warning"
-        : "compliant";
+        : "healthy";
 
     return { status, issues };
-  }, [calculatedChannels, formatPrice, otaCommissionPct]);
+  }, [rates, formatPrice]);
 
-  // Volume Scenario Calculations
-  const volumeMetrics = useMemo(() => {
-    const directShare = Math.min(100, Math.max(0, directSharePct));
-    const otaShare = Math.min(100 - directShare, Math.max(0, otaSharePct));
-    const stoShare = Math.max(0, 100 - directShare - otaShare);
+  // ── Copy Quotation Sheet ──
+  const copyQuotation = () => {
+    const text = `CREEK OXLEY - RATE DISTRIBUTION & QUOTATION SHEET
+-----------------------------------------------------------
+Base Rack Rate (Direct BAR): ${formatPrice(rates.rack)} / night
 
-    const direct = calculatedChannels.find((c) => c.id === "direct")!;
-    const booking = calculatedChannels.find((c) => c.id === "booking")!;
-    const sto = calculatedChannels.find((c) => c.id === "sto")!;
+1. DIRECT WEBSITE (What Direct Guests See):
+   - Published Guest Price: ${formatPrice(rates.directGross)}
+   - Hotel Net Payout (after card fee): ${formatPrice(rates.directNet)}
 
-    const directNights = (monthlyRoomNights * directShare) / 100;
-    const otaNights = (monthlyRoomNights * otaShare) / 100;
-    const stoNights = (monthlyRoomNights * stoShare) / 100;
+2. BOOKING.COM / EXPEDIA (What OTA Customers See):
+   - Public Listed Price: ${formatPrice(rates.otaGross)} (+${otaMarkupPct}% markup)
+   - OTA Commission: ${otaCommissionPct}% (-${formatPrice(rates.otaFee)})
+   - Hotel Net Payout: ${formatPrice(rates.otaNet)}
 
-    const directGrossTot = directNights * direct.grossPrice;
-    const directNetTot = directNights * direct.netRevenue;
-    const otaGrossTot = otaNights * booking.grossPrice;
-    const otaNetTot = otaNights * booking.netRevenue;
-    const stoGrossTot = stoNights * sto.grossPrice;
-    const stoNetTot = stoNights * sto.netRevenue;
+3. TOUR OPERATOR / DMC (What You Send In Contract):
+   - Confidential STO Net Rate: ${formatPrice(rates.stoNet)} (-${stoDiscountPct}% wholesale discount)
+   - Tour Operator Selling Price (RRP): ${formatPrice(rates.stoGross)}
 
-    const totalGross = directGrossTot + otaGrossTot + stoGrossTot;
-    const totalNet = directNetTot + otaNetTot + stoNetTot;
-    const totalCommissionFriction = totalGross - totalNet;
-    const blendedRetention = totalGross > 0 ? (totalNet / totalGross) * 100 : 0;
+Channel Parity Status: ${diagnostics.status.toUpperCase()}
+Generated via Creek Oxley Hospitality Advisory
+https://creekoxley.com/rate-parity-calculator`;
 
-    // Potential savings if 10% of OTA shifted to Direct
-    const shiftNights = otaNights * 0.15; // 15% of OTA volume shifted to direct
-    const currentShiftNet = shiftNights * booking.netRevenue;
-    const newShiftNet = shiftNights * direct.netRevenue;
-    const monthlyOpportunity = Math.max(0, newShiftNet - currentShiftNet);
-    const annualOpportunity = monthlyOpportunity * 12;
+    navigator.clipboard.writeText(text);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2500);
+  };
+
+  // ── Volume Model ──
+  const volumeData = useMemo(() => {
+    const directNights = (monthlyRoomNights * directSharePct) / 100;
+    const otaNights = (monthlyRoomNights * otaSharePct) / 100;
+    const stoSharePct = Math.max(0, 100 - directSharePct - otaSharePct);
+    const stoNights = (monthlyRoomNights * stoSharePct) / 100;
+
+    const directNetTot = directNights * rates.directNet;
+    const otaNetTot = otaNights * rates.otaNet;
+    const stoNetTot = stoNights * rates.stoNet;
+
+    const totalNetRevenue = directNetTot + otaNetTot + stoNetTot;
+    const totalDeductions = (directNights * rates.directFee) + (otaNights * rates.otaFee) + (stoNights * rates.stoDiscountAmount);
 
     return {
       directNights,
       otaNights,
       stoNights,
-      stoShare,
-      totalGross,
-      totalNet,
-      totalCommissionFriction,
-      blendedRetention,
-      monthlyOpportunity,
-      annualOpportunity,
+      stoSharePct,
+      totalNetRevenue,
+      totalDeductions,
     };
-  }, [
-    monthlyRoomNights,
-    directSharePct,
-    otaSharePct,
-    calculatedChannels,
-  ]);
+  }, [monthlyRoomNights, directSharePct, otaSharePct, rates]);
 
   const jsonLdSchema = {
     "@context": "https://schema.org",
@@ -336,7 +254,7 @@ export default function RateParityCalculatorPage() {
         "url": "https://creekoxley.com/rate-parity-calculator",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "All",
-        "description": "Executive modeling tool for hospitality leaders to calculate channel yield distribution, prevent OTA undercutting, and model STO wholesale rate integrity.",
+        "description": "Executive hotel rate distribution calculator: set base rack rate, add markup for Booking.com, and calculate STO tour operator wholesale rates.",
         "creator": {
           "@type": "Organization",
           "name": "Creek Oxley",
@@ -357,8 +275,8 @@ export default function RateParityCalculatorPage() {
   return (
     <>
       <SEOHead
-        title="Hospitality Rate Parity & Net Revenue Calculator | Creek Oxley"
-        description="Interactive hotel rate parity calculator to model direct bookings, OTA commissions, and STO wholesale contracts. Protect NetRevPAR and prevent rate cannibalization."
+        title="Hospitality Rate & Parity Calculator | Rack, OTA & STO Rates - Creek Oxley"
+        description="Calculate what direct guests see, what to list on Booking.com with markup, and what STO net rates to send to tour operators. Protect hotel margins and maintain rate parity."
         canonical="https://creekoxley.com/rate-parity-calculator"
       />
       <script
@@ -370,138 +288,106 @@ export default function RateParityCalculatorPage() {
         <Navbar />
 
         {/* ── HERO BANNER ── */}
-        <section className="relative bg-[#1C1C2E] text-white pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden border-b border-white/10">
+        <section className="relative bg-[#1C1C2E] text-white pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden border-b border-white/10">
           <div className="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#7B5EA7_1px,transparent_1px)] [background-size:24px_24px]" />
           
           <div className="container-x relative z-10">
             <div className="max-w-4xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 text-white text-[11px] font-sans tracking-widest uppercase mb-6 rounded-none border border-white/20">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 text-white text-[11px] font-sans tracking-widest uppercase mb-5 border border-white/20">
                 <Calculator className="h-3.5 w-3.5 text-[#7B5EA7]" />
-                Commercial Revenue & Distribution Suite
+                Hospitality Distribution Engine
               </div>
 
-              <h1 className="font-display text-4xl sm:text-5xl md:text-6xl text-white font-semibold leading-[1.08] mb-6">
-                Hospitality Rate Parity & Net Revenue Yield Calculator
+              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-semibold leading-[1.1] mb-5">
+                Hotel Rate & Parity Calculator
               </h1>
 
-              <p className="text-[17px] md:text-[19px] text-[#DDDAE8] max-w-3xl leading-relaxed mb-8">
-                Model real net revenue realizations across your Direct Website, Online Travel Agencies (OTAs), and Contracted Tour Operator (STO) wholesale channels. Identify parity breaches and protect your property's GOPPAR.
+              <p className="text-[17px] md:text-[19px] text-[#DDDAE8] max-w-3xl leading-relaxed mb-6">
+                Start with your <strong className="text-white font-semibold">Base Rack Rate</strong>. Set the <strong className="text-white font-semibold">markup %</strong> you add for Booking.com and the <strong className="text-white font-semibold">discount %</strong> you give for Tour Operator (STO) rates. Instantly see what customers see and what to send in your wholesale contracts.
               </p>
 
-              <div className="flex flex-wrap items-center gap-6 pt-2 border-t border-white/15 text-sm text-[#DDDAE8]">
+              <div className="flex flex-wrap items-center gap-6 pt-4 border-t border-white/15 text-sm text-[#DDDAE8]">
                 <div className="flex items-center gap-2">
-                  <ShieldCheck className="h-4 w-4 text-emerald-400" />
-                  <span>Real-Time Parity Diagnostics</span>
+                  <Eye className="h-4 w-4 text-emerald-400" />
+                  <span>Customer View vs Tour Operator View</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Percent className="h-4 w-4 text-[#7B5EA7]" />
-                  <span>NetRevPAR Friction Modeling</span>
+                  <FileSpreadsheet className="h-4 w-4 text-[#7B5EA7]" />
+                  <span>One-Click Rate Sheet Generator</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Globe className="h-4 w-4 text-sky-400" />
-                  <span>Multi-Currency East Africa & Global Support</span>
+                  <ShieldCheck className="h-4 w-4 text-sky-400" />
+                  <span>Contract Parity Protection</span>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ── CALCULATOR APPLICATION INTERFACE ── */}
+        {/* ── CORE CALCULATOR APPLICATION ── */}
         <section className="py-12 md:py-16">
           <div className="container-x">
-            
-            {/* Top Bar / Model Selector */}
-            <div className="bg-white p-5 md:p-6 border border-[#DDDAE8] mb-8 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
-              <div>
-                <span className="eyebrow block mb-1">Pricing Architecture</span>
-                <h3 className="font-display text-xl text-[#3D1A8C] font-semibold">
-                  Select Channel Parity Setup
-                </h3>
-              </div>
 
-              <div className="flex flex-wrap items-center gap-3">
-                <button
-                  type="button"
-                  onClick={() => setPricingModel("parity")}
-                  className={`px-4 py-2.5 text-xs uppercase tracking-wider font-semibold transition-all border ${
-                    pricingModel === "parity"
-                      ? "bg-[#3D1A8C] text-white border-[#3D1A8C]"
-                      : "bg-[#F7F6F4] text-[#2D2D3A] border-[#DDDAE8] hover:bg-white"
-                  }`}
-                >
-                  Strict Rate Parity (Equal Public Rates)
-                </button>
-
-                <button
-                  type="button"
-                  onClick={() => setPricingModel("markup")}
-                  className={`px-4 py-2.5 text-xs uppercase tracking-wider font-semibold transition-all border ${
-                    pricingModel === "markup"
-                      ? "bg-[#3D1A8C] text-white border-[#3D1A8C]"
-                      : "bg-[#F7F6F4] text-[#2D2D3A] border-[#DDDAE8] hover:bg-white"
-                  }`}
-                >
-                  Mark-Up Strategy (OTA Gross &gt; Rack)
-                </button>
-              </div>
-            </div>
-
-            {/* Main Interactive Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-              
-              {/* ── LEFT INPUTS COLUMN (5 COLS) ── */}
-              <div className="lg:col-span-5 bg-white border border-[#DDDAE8] p-6 shadow-sm">
-                
-                <div className="flex items-center justify-between pb-4 mb-6 border-b border-[#DDDAE8]">
-                  <div className="flex items-center gap-2">
-                    <Sliders className="h-4 w-4 text-[#3D1A8C]" />
-                    <span className="font-display text-lg font-semibold text-[#1C1C2E]">
-                      Model Parameters
-                    </span>
-                  </div>
-
-                  {/* Currency Picker */}
-                  <div className="flex items-center gap-1.5">
-                    <select
-                      value={currencyKey}
-                      onChange={(e) => setCurrencyKey(e.target.value)}
-                      className="text-xs bg-[#F7F6F4] border border-[#DDDAE8] py-1.5 px-2.5 font-medium text-[#1C1C2E] focus:outline-none focus:border-[#3D1A8C]"
-                    >
-                      <option value="USD">USD ($)</option>
-                      <option value="KES">KES (KSh)</option>
-                      <option value="EUR">EUR (€)</option>
-                      <option value="GBP">GBP (£)</option>
-                      <option value="ZAR">ZAR (R)</option>
-                      <option value="AED">AED (AED)</option>
-                      <option value="CAD">CAD (C$)</option>
-                      <option value="AUD">AUD (A$)</option>
-                      <option value="CUSTOM">Custom Symbol</option>
-                    </select>
-
-                    {currencyKey === "CUSTOM" && (
-                      <input
-                        type="text"
-                        value={customSymbol}
-                        onChange={(e) => setCustomSymbol(e.target.value)}
-                        placeholder="$"
-                        maxLength={5}
-                        className="w-12 text-xs bg-[#F7F6F4] border border-[#DDDAE8] py-1.5 px-2 text-center"
-                      />
-                    )}
-                  </div>
+            {/* Step 1: Input Control Strip */}
+            <div className="bg-white border border-[#DDDAE8] p-6 md:p-8 shadow-sm mb-10">
+              <div className="flex flex-col md:flex-row md:items-center justify-between pb-6 mb-6 border-b border-[#DDDAE8] gap-4">
+                <div>
+                  <span className="eyebrow block mb-1">Step 1 — Set Your Rule Percentages</span>
+                  <h2 className="font-display text-2xl md:text-3xl text-[#3D1A8C] font-semibold">
+                    Set Your Rack Rate, OTA Markup & STO Discount
+                  </h2>
                 </div>
 
-                {/* Input 1: Base Rack Rate */}
-                <div className="mb-6">
-                  <div className="flex justify-between items-center mb-1.5">
-                    <label className="text-xs uppercase tracking-wider font-semibold text-[#1C1C2E]">
-                      Base Rack Rate / Direct BAR
+                {/* Currency selector */}
+                <div className="flex items-center gap-2">
+                  <span className="text-xs uppercase font-semibold text-[#6B6878]">Currency:</span>
+                  <select
+                    value={currencyKey}
+                    onChange={(e) => setCurrencyKey(e.target.value)}
+                    className="text-xs font-semibold bg-[#F7F6F4] border border-[#DDDAE8] py-2 px-3 text-[#1C1C2E] focus:outline-none focus:border-[#3D1A8C]"
+                  >
+                    <option value="USD">USD ($)</option>
+                    <option value="KES">KES (KSh)</option>
+                    <option value="EUR">EUR (€)</option>
+                    <option value="GBP">GBP (£)</option>
+                    <option value="ZAR">ZAR (R)</option>
+                    <option value="AED">AED (AED)</option>
+                    <option value="CAD">CAD (C$)</option>
+                    <option value="AUD">AUD (A$)</option>
+                    <option value="CUSTOM">Custom Symbol</option>
+                  </select>
+
+                  {currencyKey === "CUSTOM" && (
+                    <input
+                      type="text"
+                      value={customSymbol}
+                      onChange={(e) => setCustomSymbol(e.target.value)}
+                      placeholder="$"
+                      maxLength={5}
+                      className="w-12 text-xs bg-[#F7F6F4] border border-[#DDDAE8] py-2 px-2 text-center font-bold"
+                    />
+                  )}
+                </div>
+              </div>
+
+              {/* 3 Main Sliders/Inputs in a 3-column layout */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                {/* 1. Base Rack Rate */}
+                <div className="bg-[#F7F6F4] p-5 border border-[#DDDAE8] relative">
+                  <div className="flex items-center justify-between mb-2">
+                    <label className="text-xs uppercase tracking-wider font-bold text-[#1C1C2E]">
+                      1. Base Rack Rate (X)
                     </label>
-                    <span className="text-xs text-[#6B6878]">Per Room Night</span>
+                    <span className="text-[11px] text-[#6B6878]">Direct Base Price</span>
                   </div>
-                  
-                  <div className="relative flex items-center">
-                    <span className="absolute left-3 text-sm text-[#6B6878] font-medium pointer-events-none">
+
+                  <p className="text-xs text-[#6B6878] mb-3 leading-tight">
+                    Your baseline published room rate per night on your direct website.
+                  </p>
+
+                  <div className="relative flex items-center mb-3">
+                    <span className="absolute left-3 text-base text-[#6B6878] font-bold pointer-events-none">
                       {currencySymbol}
                     </span>
                     <input
@@ -510,22 +396,22 @@ export default function RateParityCalculatorPage() {
                       step={10}
                       value={baseRackRate || ""}
                       onChange={(e) => setBaseRackRate(parseFloat(e.target.value) || 0)}
-                      className="w-full pl-9 pr-3 py-2.5 text-base font-semibold bg-[#F7F6F4] border border-[#DDDAE8] text-[#1C1C2E] focus:bg-white focus:outline-none focus:border-[#3D1A8C] transition-colors"
+                      className="w-full pl-9 pr-3 py-2.5 text-xl font-bold bg-white border border-[#DDDAE8] text-[#1C1C2E] focus:outline-none focus:border-[#3D1A8C]"
                     />
                   </div>
 
-                  {/* Preset quick pills */}
-                  <div className="flex items-center gap-1.5 mt-2">
-                    <span className="text-[11px] text-[#6B6878]">Presets:</span>
-                    {[150, 250, 350, 500, 750].map((val) => (
+                  {/* Preset quick buttons */}
+                  <div className="flex items-center gap-1.5 flex-wrap">
+                    <span className="text-[10px] text-[#6B6878] font-semibold">Quick:</span>
+                    {[100, 150, 200, 300, 500].map((val) => (
                       <button
                         key={val}
                         type="button"
                         onClick={() => setBaseRackRate(val)}
-                        className={`text-[11px] px-2 py-0.5 border ${
+                        className={`text-[10px] px-2 py-0.5 border ${
                           baseRackRate === val
                             ? "bg-[#3D1A8C] text-white border-[#3D1A8C]"
-                            : "bg-[#F7F6F4] text-[#6B6878] border-[#DDDAE8] hover:border-[#3D1A8C]"
+                            : "bg-white text-[#6B6878] border-[#DDDAE8] hover:border-[#3D1A8C]"
                         }`}
                       >
                         {val}
@@ -534,483 +420,531 @@ export default function RateParityCalculatorPage() {
                   </div>
                 </div>
 
-                {/* Input 2: OTA Commission % */}
-                <div className="mb-6">
-                  <div className="flex justify-between items-center mb-1.5">
-                    <label className="text-xs uppercase tracking-wider font-semibold text-[#1C1C2E]">
-                      OTA Commission Rate
+                {/* 2. OTA Markup */}
+                <div className="bg-[#F7F6F4] p-5 border border-[#DDDAE8]">
+                  <div className="flex items-center justify-between mb-2">
+                    <label className="text-xs uppercase tracking-wider font-bold text-[#1C1C2E]">
+                      2. Add for Booking.com (+X%)
                     </label>
-                    <span className="text-xs font-semibold text-[#3D1A8C]">
-                      {otaCommissionPct}%
+                    <span className="text-sm font-bold text-[#3D1A8C]">
+                      +{otaMarkupPct}%
                     </span>
                   </div>
 
-                  <input
-                    type="range"
-                    min={5}
-                    max={35}
-                    step={0.5}
-                    value={otaCommissionPct}
-                    onChange={(e) => setOtaCommissionPct(parseFloat(e.target.value))}
-                    className="w-full accent-[#3D1A8C] cursor-pointer"
-                  />
-                  <div className="flex justify-between text-[11px] text-[#6B6878] mt-1">
-                    <span>5% (Preferred)</span>
-                    <span>15% - 18% (Standard)</span>
-                    <span>25%+ (High tier)</span>
-                  </div>
-                </div>
-
-                {/* Input 3: STO Wholesale Discount % */}
-                <div className="mb-6">
-                  <div className="flex justify-between items-center mb-1.5">
-                    <label className="text-xs uppercase tracking-wider font-semibold text-[#1C1C2E]">
-                      Tour Operator (STO) Wholesale Discount
-                    </label>
-                    <span className="text-xs font-semibold text-[#3D1A8C]">
-                      {stoDiscountPct}%
-                    </span>
-                  </div>
-
-                  <input
-                    type="range"
-                    min={5}
-                    max={35}
-                    step={0.5}
-                    value={stoDiscountPct}
-                    onChange={(e) => setStoDiscountPct(parseFloat(e.target.value))}
-                    className="w-full accent-[#3D1A8C] cursor-pointer"
-                  />
-                  <div className="flex justify-between text-[11px] text-[#6B6878] mt-1">
-                    <span>5% (Fringe)</span>
-                    <span>10% - 15% (Standard East Africa)</span>
-                    <span>25% (Series Charter)</span>
-                  </div>
-                </div>
-
-                {/* Input 4: Direct Payment Gateway Fee */}
-                <div className="mb-6 pb-6 border-b border-[#DDDAE8]">
-                  <div className="flex justify-between items-center mb-1.5">
-                    <label className="text-xs uppercase tracking-wider font-semibold text-[#1C1C2E]">
-                      Direct Booking Gateway / Merchant Fee
-                    </label>
-                    <span className="text-xs font-semibold text-[#3D1A8C]">
-                      {gatewayFeePct}%
-                    </span>
-                  </div>
-
-                  <input
-                    type="range"
-                    min={0.5}
-                    max={5.0}
-                    step={0.1}
-                    value={gatewayFeePct}
-                    onChange={(e) => setGatewayFeePct(parseFloat(e.target.value))}
-                    className="w-full accent-[#3D1A8C] cursor-pointer"
-                  />
-                  <span className="text-[11px] text-[#6B6878] block mt-1">
-                    Merchant processing deduction for Stripe, DPO, or Pesapal direct bookings.
-                  </span>
-                </div>
-
-                {/* Input 5: Campaign & Promotion Stress Testing */}
-                <div className="bg-[#F7F6F4] p-4 border border-[#DDDAE8]">
-                  <div className="flex items-center gap-1.5 mb-3">
-                    <Sparkles className="h-3.5 w-3.5 text-[#7B5EA7]" />
-                    <span className="text-xs uppercase tracking-wider font-bold text-[#1C1C2E]">
-                      Promotional Stress Test
-                    </span>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-3 mb-3">
-                    <div>
-                      <label className="block text-[11px] uppercase tracking-wider font-semibold text-[#6B6878] mb-1">
-                        Promo Discount
-                      </label>
-                      <div className="flex items-center">
-                        <input
-                          type="number"
-                          min={0}
-                          max={50}
-                          value={promoDiscountPct || ""}
-                          onChange={(e) => setPromoDiscountPct(parseFloat(e.target.value) || 0)}
-                          className="w-full py-1.5 px-2 bg-white border border-[#DDDAE8] text-xs font-semibold focus:outline-none"
-                        />
-                        <span className="bg-[#DDDAE8] px-2 py-1.5 text-xs text-[#2D2D3A] font-semibold">
-                          %
-                        </span>
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="block text-[11px] uppercase tracking-wider font-semibold text-[#6B6878] mb-1">
-                        Applied Channel
-                      </label>
-                      <select
-                        value={promoScope}
-                        onChange={(e) => setPromoScope(e.target.value as PromoScope)}
-                        className="w-full py-1.5 px-2 bg-white border border-[#DDDAE8] text-xs font-semibold focus:outline-none"
-                      >
-                        <option value="none">No Campaign</option>
-                        <option value="global">All Channels</option>
-                        <option value="direct">Direct Web Only</option>
-                        <option value="booking">Booking.com Only</option>
-                        <option value="expedia">Expedia Only</option>
-                        <option value="sto">Tour Operators Only</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <p className="text-[11px] text-[#6B6878] leading-tight">
-                    Simulate how flash sales or unilateral channel promotions trigger rate parity alerts.
+                  <p className="text-xs text-[#6B6878] mb-3 leading-tight">
+                    Markup added to your Rack Rate when listing on Booking.com / Expedia to absorb OTA commissions.
                   </p>
+
+                  <div className="flex items-center gap-3 mb-2">
+                    <input
+                      type="range"
+                      min={0}
+                      max={40}
+                      step={1}
+                      value={otaMarkupPct}
+                      onChange={(e) => {
+                        const val = parseFloat(e.target.value) || 0;
+                        setOtaMarkupPct(val);
+                        // By default keep commission matching markup if desired
+                        setOtaCommissionPct(val > 0 ? val : 18);
+                      }}
+                      className="w-full accent-[#3D1A8C] cursor-pointer"
+                    />
+                    <div className="flex items-center">
+                      <input
+                        type="number"
+                        min={0}
+                        max={50}
+                        value={otaMarkupPct}
+                        onChange={(e) => setOtaMarkupPct(parseFloat(e.target.value) || 0)}
+                        className="w-16 py-1 px-2 text-center text-xs font-bold bg-white border border-[#DDDAE8]"
+                      />
+                      <span className="text-xs font-bold ml-1 text-[#6B6878]">%</span>
+                    </div>
+                  </div>
+
+                  <div className="flex justify-between text-[10px] text-[#6B6878]">
+                    <span>0% (Equal Parity)</span>
+                    <span>+15% (Typical)</span>
+                    <span>+20% (Full buffer)</span>
+                  </div>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-[#DDDAE8] flex justify-between items-center text-xs text-[#6B6878]">
-                  <span>Need an automated distribution audit?</span>
-                  <Link
-                    to="/contact"
-                    className="text-[#3D1A8C] font-semibold hover:underline inline-flex items-center gap-1"
-                  >
-                    Consult our team <ArrowRight className="h-3 w-3" />
-                  </Link>
+                {/* 3. STO Discount */}
+                <div className="bg-[#F7F6F4] p-5 border border-[#DDDAE8]">
+                  <div className="flex items-center justify-between mb-2">
+                    <label className="text-xs uppercase tracking-wider font-bold text-[#1C1C2E]">
+                      3. Less for STO Rates (-X%)
+                    </label>
+                    <span className="text-sm font-bold text-[#7B5EA7]">
+                      -{stoDiscountPct}%
+                    </span>
+                  </div>
+
+                  <p className="text-xs text-[#6B6878] mb-3 leading-tight">
+                    Discount subtracted from Rack Rate for contracted Tour Operators & DMCs.
+                  </p>
+
+                  <div className="flex items-center gap-3 mb-2">
+                    <input
+                      type="range"
+                      min={5}
+                      max={40}
+                      step={1}
+                      value={stoDiscountPct}
+                      onChange={(e) => setStoDiscountPct(parseFloat(e.target.value) || 0)}
+                      className="w-full accent-[#7B5EA7] cursor-pointer"
+                    />
+                    <div className="flex items-center">
+                      <input
+                        type="number"
+                        min={0}
+                        max={50}
+                        value={stoDiscountPct}
+                        onChange={(e) => setStoDiscountPct(parseFloat(e.target.value) || 0)}
+                        className="w-16 py-1 px-2 text-center text-xs font-bold bg-white border border-[#DDDAE8]"
+                      />
+                      <span className="text-xs font-bold ml-1 text-[#6B6878]">%</span>
+                    </div>
+                  </div>
+
+                  <div className="flex justify-between text-[10px] text-[#6B6878]">
+                    <span>-10% (Corporate/Agent)</span>
+                    <span>-15% (Standard STO)</span>
+                    <span>-20%+ (High Volume)</span>
+                  </div>
                 </div>
+
+              </div>
+            </div>
+
+            {/* Step 2: "What They See / What You Send" Persona Cards */}
+            <div className="mb-10">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+                <div>
+                  <span className="eyebrow block mb-1">Step 2 — Who Sees What & What to Send</span>
+                  <h2 className="font-display text-2xl md:text-3xl text-[#1C1C2E] font-semibold">
+                    Rate Distribution Matrix
+                  </h2>
+                </div>
+
+                {/* One-click copy quotation button */}
+                <button
+                  type="button"
+                  onClick={copyQuotation}
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#3D1A8C] text-white hover:bg-[#1C1C2E] text-xs font-semibold uppercase tracking-wider transition-colors shadow-sm self-start sm:self-auto"
+                >
+                  {copied ? (
+                    <>
+                      <Check className="h-4 w-4 text-emerald-300" />
+                      <span>Rate Sheet Copied!</span>
+                    </>
+                  ) : (
+                    <>
+                      <Copy className="h-4 w-4" />
+                      <span>Copy Rate Sheet</span>
+                    </>
+                  )}
+                </button>
               </div>
 
-              {/* ── RIGHT DASHBOARD COLUMN (7 COLS) ── */}
-              <div className="lg:col-span-7 space-y-6">
-                
-                {/* 1. Diagnostics Notification Alert Box */}
-                <div
-                  className={`p-5 border transition-all ${
-                    diagnostics.status === "compliant"
-                      ? "bg-emerald-50/80 border-emerald-300 text-emerald-950"
+              {/* Parity Status Banner */}
+              <div
+                className={`p-4 border mb-6 flex items-start gap-3 transition-colors ${
+                  diagnostics.status === "healthy"
+                    ? "bg-emerald-50 border-emerald-300 text-emerald-950"
+                    : diagnostics.status === "warning"
+                    ? "bg-amber-50 border-amber-300 text-amber-950"
+                    : "bg-rose-50 border-rose-300 text-rose-950"
+                }`}
+              >
+                {diagnostics.status === "healthy" ? (
+                  <CheckCircle2 className="h-5 w-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                ) : diagnostics.status === "warning" ? (
+                  <AlertTriangle className="h-5 w-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                ) : (
+                  <AlertOctagon className="h-5 w-5 text-rose-600 flex-shrink-0 mt-0.5" />
+                )}
+
+                <div className="flex-1 text-xs">
+                  <div className="font-bold uppercase tracking-wider mb-0.5">
+                    {diagnostics.status === "healthy"
+                      ? "Healthy Rate Hierarchy: OTA Price > Direct Website > Tour Operator STO Net"
                       : diagnostics.status === "warning"
-                      ? "bg-amber-50/90 border-amber-300 text-amber-950"
-                      : "bg-rose-50 border-rose-300 text-rose-950"
-                  }`}
-                >
-                  <div className="flex items-start gap-3">
-                    {diagnostics.status === "compliant" ? (
-                      <CheckCircle2 className="h-5 w-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                    ) : diagnostics.status === "warning" ? (
-                      <AlertTriangle className="h-5 w-5 text-amber-600 flex-shrink-0 mt-0.5" />
-                    ) : (
-                      <AlertOctagon className="h-5 w-5 text-rose-600 flex-shrink-0 mt-0.5" />
-                    )}
-
-                    <div className="flex-1">
-                      <div className="flex items-center justify-between mb-1">
-                        <span className="text-xs uppercase tracking-wider font-bold">
-                          {diagnostics.status === "compliant"
-                            ? "Rate Hierarchy Compliant"
-                            : diagnostics.status === "warning"
-                            ? "Channel Parity Imbalance Detected"
-                            : "Critical Rate Parity & Contract Breach"}
-                        </span>
-                        <span className="text-[11px] px-2 py-0.5 font-bold uppercase tracking-wider rounded-none bg-white/70">
-                          {diagnostics.status}
-                        </span>
-                      </div>
-
-                      {diagnostics.status === "compliant" ? (
-                        <p className="text-xs leading-relaxed text-emerald-800">
-                          Your channel distribution hierarchy is sound. Public OTA rates do not undercut your contracted tour operator (STO) wholesale net, and direct bookings preserve maximum net revenue margin without channel cannibalization.
-                        </p>
-                      ) : (
-                        <div className="space-y-2 mt-2">
-                          {diagnostics.issues.map((issue, idx) => (
-                            <div key={idx} className="text-xs leading-relaxed bg-white/60 p-2.5 border border-black/5">
-                              <strong className="block text-[11px] uppercase tracking-wide mb-0.5">
-                                {issue.title}
-                              </strong>
-                              <span>{issue.desc}</span>
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </div>
+                      ? "Rate Imbalance Alert"
+                      : "Critical Parity Breach"}
                   </div>
-                </div>
-
-                {/* 2. Channel Yield Output Cards */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {calculatedChannels.map((channel) => {
-                    const isDirect = channel.id === "direct";
-                    return (
-                      <div
-                        key={channel.id}
-                        className={`bg-white p-5 border relative transition-all ${
-                          isDirect
-                            ? "border-[#3D1A8C] ring-1 ring-[#3D1A8C]/20 shadow-sm"
-                            : "border-[#DDDAE8] shadow-sm hover:border-[#6B6878]"
-                        }`}
-                      >
-                        {isDirect && (
-                          <span className="absolute top-0 right-0 bg-[#3D1A8C] text-white text-[9px] uppercase tracking-widest px-2.5 py-0.5 font-bold">
-                            Highest Net Yield
-                          </span>
-                        )}
-
-                        <div className="flex justify-between items-center mb-3">
-                          <div>
-                            <span className="text-[10px] uppercase tracking-wider text-[#6B6878] font-bold block">
-                              {channel.tag}
-                            </span>
-                            <h4 className="font-display text-lg font-semibold text-[#1C1C2E]">
-                              {channel.name}
-                            </h4>
-                          </div>
-                        </div>
-
-                        <div className="space-y-2.5 pt-2 border-t border-[#DDDAE8]/60">
-                          <div className="flex justify-between items-center text-xs">
-                            <span className="text-[#6B6878]">Public / Listed Price:</span>
-                            <span className="font-medium text-[#1C1C2E]">
-                              {formatPrice(channel.grossPrice)}
-                            </span>
-                          </div>
-
-                          <div className="flex justify-between items-center text-xs">
-                            <span className="text-[#6B6878]">Fee / Commission:</span>
-                            <span className="text-rose-600 font-medium">
-                              -{formatPrice(channel.feeAmount)}
-                            </span>
-                          </div>
-
-                          <div className="flex justify-between items-baseline pt-2 border-t border-[#DDDAE8]">
-                            <div>
-                              <span className="text-[10px] uppercase tracking-wider font-bold text-[#6B6878] block">
-                                Net Realized Payout
-                              </span>
-                              <span className="text-xl font-bold font-sans text-[#1C1C2E]">
-                                {formatPrice(channel.netRevenue)}
-                              </span>
-                            </div>
-
-                            <div className="text-right">
-                              <span className="text-[10px] uppercase tracking-wider font-semibold text-[#6B6878] block">
-                                Retention
-                              </span>
-                              <span
-                                className={`text-xs font-bold ${
-                                  channel.retentionPct >= 90
-                                    ? "text-emerald-600"
-                                    : channel.retentionPct >= 80
-                                    ? "text-sky-600"
-                                    : "text-amber-600"
-                                }`}
-                              >
-                                {channel.retentionPct.toFixed(1)}%
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-
-                {/* 3. Channel Economics Ledger Table */}
-                <div className="bg-white border border-[#DDDAE8] p-5 shadow-sm">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center gap-2">
-                      <BarChart3 className="h-4 w-4 text-[#3D1A8C]" />
-                      <span className="font-display text-base font-semibold text-[#1C1C2E]">
-                        Channel Economics & Margin Matrix
-                      </span>
-                    </div>
-                    <span className="text-xs text-[#6B6878]">Per Room Night Sold</span>
-                  </div>
-
-                  <div className="overflow-x-auto">
-                    <table className="w-full text-left text-xs">
-                      <thead>
-                        <tr className="border-b border-[#DDDAE8] bg-[#F7F6F4] text-[#6B6878] uppercase tracking-wider text-[10px]">
-                          <th className="py-2.5 px-3 font-semibold">Channel</th>
-                          <th className="py-2.5 px-3 font-semibold">Listed Rate</th>
-                          <th className="py-2.5 px-3 font-semibold">Friction / Deductions</th>
-                          <th className="py-2.5 px-3 font-semibold">Net Payout</th>
-                          <th className="py-2.5 px-3 font-semibold text-right">Margin Retention</th>
-                        </tr>
-                      </thead>
-                      <tbody className="divide-y divide-[#DDDAE8]/60">
-                        {calculatedChannels.map((c) => (
-                          <tr key={c.id} className="hover:bg-[#F7F6F4]/50 transition-colors">
-                            <td className="py-3 px-3 font-semibold text-[#1C1C2E]">
-                              {c.name}
-                            </td>
-                            <td className="py-3 px-3 text-[#1C1C2E]">
-                              {formatPrice(c.grossPrice)}
-                            </td>
-                            <td className="py-3 px-3 text-[#6B6878]">
-                              {c.feeLabel} ({formatPrice(c.feeAmount)})
-                            </td>
-                            <td className="py-3 px-3 font-bold text-[#1C1C2E]">
-                              {formatPrice(c.netRevenue)}
-                            </td>
-                            <td className="py-3 px-3 text-right">
-                              <div className="flex items-center justify-end gap-2">
-                                <div className="w-16 bg-[#DDDAE8] h-1.5 overflow-hidden rounded-none hidden sm:block">
-                                  <div
-                                    className="bg-[#3D1A8C] h-full"
-                                    style={{ width: `${Math.min(100, c.retentionPct)}%` }}
-                                  />
-                                </div>
-                                <span className="font-semibold text-[#1C1C2E]">
-                                  {c.retentionPct.toFixed(1)}%
-                                </span>
-                              </div>
-                            </td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-
-                  <div className="mt-4 pt-3 border-t border-[#DDDAE8] flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-[#6B6878]">
-                    <span>
-                      Direct web retention reflects net earnings after credit card merchant fees.
-                    </span>
-                    <span className="font-medium text-[#3D1A8C]">
-                      Net Spread: {formatPrice(calculatedChannels[0].netRevenue - calculatedChannels[1].netRevenue)} / night advantage on Direct vs OTA
-                    </span>
-                  </div>
-                </div>
-
-                {/* 4. Interactive Channel Mix & Volume Scenario (Expandable) */}
-                <div className="bg-white border border-[#DDDAE8] p-5 shadow-sm">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <div className="flex items-center gap-2">
-                        <TrendingUp className="h-4 w-4 text-[#3D1A8C]" />
-                        <h4 className="font-display text-base font-semibold text-[#1C1C2E]">
-                          Monthly Revenue & Commission Friction Simulator
-                        </h4>
-                      </div>
-                      <p className="text-xs text-[#6B6878] mt-0.5">
-                        Model total monthly cash flow and calculate savings from shifting OTA share to direct.
-                      </p>
-                    </div>
-
-                    <button
-                      type="button"
-                      onClick={() => setShowVolumeModel(!showVolumeModel)}
-                      className="px-3 py-1.5 text-xs font-semibold border border-[#DDDAE8] hover:bg-[#F7F6F4] text-[#3D1A8C] transition-colors"
-                    >
-                      {showVolumeModel ? "Hide Simulator" : "Expand Simulator"}
-                    </button>
-                  </div>
-
-                  {showVolumeModel && (
-                    <div className="mt-6 pt-5 border-t border-[#DDDAE8] space-y-6">
-                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        <div>
-                          <label className="text-[11px] uppercase tracking-wider font-semibold text-[#6B6878] block mb-1">
-                            Monthly Room Nights Sold
-                          </label>
-                          <input
-                            type="number"
-                            min={10}
-                            step={20}
-                            value={monthlyRoomNights}
-                            onChange={(e) => setMonthlyRoomNights(parseInt(e.target.value) || 0)}
-                            className="w-full py-1.5 px-3 bg-[#F7F6F4] border border-[#DDDAE8] text-sm font-semibold"
-                          />
-                        </div>
-
-                        <div>
-                          <label className="text-[11px] uppercase tracking-wider font-semibold text-[#6B6878] block mb-1">
-                            Direct Share ({directSharePct}%)
-                          </label>
-                          <input
-                            type="range"
-                            min={0}
-                            max={100}
-                            value={directSharePct}
-                            onChange={(e) => {
-                              const val = parseInt(e.target.value);
-                              setDirectSharePct(val);
-                              if (val + otaSharePct > 100) {
-                                setOtaSharePct(100 - val);
-                              }
-                            }}
-                            className="w-full accent-[#3D1A8C]"
-                          />
-                        </div>
-
-                        <div>
-                          <label className="text-[11px] uppercase tracking-wider font-semibold text-[#6B6878] block mb-1">
-                            OTA Share ({otaSharePct}%)
-                          </label>
-                          <input
-                            type="range"
-                            min={0}
-                            max={100 - directSharePct}
-                            value={otaSharePct}
-                            onChange={(e) => setOtaSharePct(parseInt(e.target.value))}
-                            className="w-full accent-[#3D1A8C]"
-                          />
-                          <span className="text-[10px] text-[#6B6878]">
-                            Remaining STO wholesale: {volumeMetrics.stoShare}%
-                          </span>
-                        </div>
-                      </div>
-
-                      {/* Scenario Summary Banner */}
-                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 bg-[#F7F6F4] p-4 border border-[#DDDAE8]">
-                        <div>
-                          <span className="text-[10px] uppercase tracking-wider font-bold text-[#6B6878] block">
-                            Gross Booked Volume
-                          </span>
-                          <span className="text-lg font-bold font-sans text-[#1C1C2E]">
-                            {formatPrice(volumeMetrics.totalGross)}
-                          </span>
-                        </div>
-
-                        <div>
-                          <span className="text-[10px] uppercase tracking-wider font-bold text-[#6B6878] block">
-                            Net Realized Revenue
-                          </span>
-                          <span className="text-lg font-bold font-sans text-emerald-700">
-                            {formatPrice(volumeMetrics.totalNet)}
-                          </span>
-                        </div>
-
-                        <div>
-                          <span className="text-[10px] uppercase tracking-wider font-bold text-[#6B6878] block">
-                            Total Channel Deductions
-                          </span>
-                          <span className="text-lg font-bold font-sans text-rose-600">
-                            -{formatPrice(volumeMetrics.totalCommissionFriction)}
-                          </span>
-                        </div>
-                      </div>
-
-                      {/* Direct Shift ROI Callout */}
-                      <div className="bg-[#1C1C2E] text-white p-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-                        <div>
-                          <span className="text-[11px] uppercase tracking-widest text-[#DDDAE8] font-semibold block">
-                            Direct Channel Shift Opportunity
-                          </span>
-                          <p className="text-xs text-[#DDDAE8] mt-0.5">
-                            Shifting just 15% of your current OTA volume to direct bookings recovers:
-                          </p>
-                        </div>
-                        <div className="text-right">
-                          <span className="text-xl font-bold font-display text-emerald-400">
-                            +{formatPrice(volumeMetrics.annualOpportunity)}
-                          </span>
-                          <span className="text-[10px] uppercase tracking-widest text-[#DDDAE8] block">
-                            Estimated Annual Profit Recovery
-                          </span>
-                        </div>
-                      </div>
+                  {diagnostics.status === "healthy" ? (
+                    <p className="text-emerald-800">
+                      Your pricing protects your B2B tour operators with a wholesale buffer, incentivizes direct website booking, and covers OTA commissions.
+                    </p>
+                  ) : (
+                    <div className="space-y-1 mt-1">
+                      {diagnostics.issues.map((issue, idx) => (
+                        <div key={idx}>• {issue.desc}</div>
+                      ))}
                     </div>
                   )}
                 </div>
+              </div>
+
+              {/* 3 HERO PERSONA CARDS */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                {/* ── CARD 1: DIRECT WEBSITE GUEST ── */}
+                <div className="bg-white border-2 border-[#3D1A8C] p-6 shadow-sm relative flex flex-col justify-between">
+                  <div className="absolute -top-3 left-6 bg-[#3D1A8C] text-white text-[10px] uppercase font-bold tracking-widest px-3 py-0.5">
+                    Direct Channel • Highest Net
+                  </div>
+
+                  <div>
+                    <div className="flex items-center gap-2 mb-3 pt-2">
+                      <Globe className="h-5 w-5 text-[#3D1A8C]" />
+                      <span className="text-xs uppercase tracking-wider font-bold text-[#6B6878]">
+                        Direct Website Guest
+                      </span>
+                    </div>
+
+                    <div className="mb-4">
+                      <span className="text-[11px] uppercase tracking-wider font-semibold text-[#6B6878] block mb-1">
+                        What the Customer Sees Online:
+                      </span>
+                      <div className="text-3xl sm:text-4xl font-display font-bold text-[#1C1C2E]">
+                        {formatPrice(rates.directGross)}
+                      </div>
+                      <span className="text-[11px] text-[#6B6878]">
+                        Per room / night on your official website booking engine
+                      </span>
+                    </div>
+
+                    <div className="bg-[#F7F6F4] p-3.5 border border-[#DDDAE8] space-y-2 text-xs mb-4">
+                      <div className="flex justify-between text-[#6B6878]">
+                        <span>Base Rate:</span>
+                        <span className="font-semibold text-[#1C1C2E]">{formatPrice(rates.rack)}</span>
+                      </div>
+                      <div className="flex justify-between text-[#6B6878]">
+                        <span>Payment Gateway ({gatewayFeePct}%):</span>
+                        <span className="text-rose-600 font-medium">-{formatPrice(rates.directFee)}</span>
+                      </div>
+                      <div className="pt-2 border-t border-[#DDDAE8] flex justify-between font-bold text-[#1C1C2E]">
+                        <span>Hotel Pockets (Net):</span>
+                        <span className="text-emerald-700 text-sm">{formatPrice(rates.directNet)}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="pt-3 border-t border-[#DDDAE8] text-[11px] text-[#6B6878]">
+                    <strong className="text-[#3D1A8C]">Strategy:</strong> Advertise "Best Rate Guarantee" + perks (free airport shuttle or early check-in).
+                  </div>
+                </div>
+
+                {/* ── CARD 2: BOOKING.COM / OTA GUEST ── */}
+                <div className="bg-white border border-[#DDDAE8] p-6 shadow-sm relative flex flex-col justify-between hover:border-[#7B5EA7] transition-colors">
+                  <div className="absolute -top-3 left-6 bg-[#1C1C2E] text-white text-[10px] uppercase font-bold tracking-widest px-3 py-0.5">
+                    Retail OTA • Marked Up (+{otaMarkupPct}%)
+                  </div>
+
+                  <div>
+                    <div className="flex items-center gap-2 mb-3 pt-2">
+                      <Building2 className="h-5 w-5 text-[#1C1C2E]" />
+                      <span className="text-xs uppercase tracking-wider font-bold text-[#6B6878]">
+                        Booking.com / Expedia Customer
+                      </span>
+                    </div>
+
+                    <div className="mb-4">
+                      <span className="text-[11px] uppercase tracking-wider font-semibold text-[#6B6878] block mb-1">
+                        What the Traveler Sees on OTAs:
+                      </span>
+                      <div className="text-3xl sm:text-4xl font-display font-bold text-[#1C1C2E]">
+                        {formatPrice(rates.otaGross)}
+                      </div>
+                      <span className="text-[11px] text-[#6B6878]">
+                        Rate to list in your OTA Channel Manager / Extranet
+                      </span>
+                    </div>
+
+                    <div className="bg-[#F7F6F4] p-3.5 border border-[#DDDAE8] space-y-2 text-xs mb-4">
+                      <div className="flex justify-between text-[#6B6878]">
+                        <span>Base Rate + {otaMarkupPct}% Markup:</span>
+                        <span className="font-semibold text-[#1C1C2E]">+{formatPrice(rates.otaGross - rates.rack)}</span>
+                      </div>
+                      <div className="flex justify-between text-[#6B6878]">
+                        <span>OTA Commission ({otaCommissionPct}%):</span>
+                        <span className="text-rose-600 font-medium">-{formatPrice(rates.otaFee)}</span>
+                      </div>
+                      <div className="pt-2 border-t border-[#DDDAE8] flex justify-between font-bold text-[#1C1C2E]">
+                        <span>Hotel Pockets (Net):</span>
+                        <span className="text-emerald-700 text-sm">{formatPrice(rates.otaNet)}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="pt-3 border-t border-[#DDDAE8] text-[11px] text-[#6B6878]">
+                    <strong className="text-[#1C1C2E]">Notice:</strong> By adding {otaMarkupPct}%, you protect your property from paying OTA fees out of your base revenue.
+                  </div>
+                </div>
+
+                {/* ── CARD 3: TOUR OPERATOR / DMC ── */}
+                <div className="bg-white border border-[#DDDAE8] p-6 shadow-sm relative flex flex-col justify-between hover:border-[#7B5EA7] transition-colors">
+                  <div className="absolute -top-3 left-6 bg-[#7B5EA7] text-white text-[10px] uppercase font-bold tracking-widest px-3 py-0.5">
+                    B2B Wholesale • -{stoDiscountPct}% Contract
+                  </div>
+
+                  <div>
+                    <div className="flex items-center gap-2 mb-3 pt-2">
+                      <Users className="h-5 w-5 text-[#7B5EA7]" />
+                      <span className="text-xs uppercase tracking-wider font-bold text-[#6B6878]">
+                        Tour Operator / DMC Contract
+                      </span>
+                    </div>
+
+                    <div className="mb-4">
+                      <span className="text-[11px] uppercase tracking-wider font-semibold text-[#6B6878] block mb-1">
+                        What You Send / Invoice the Operator:
+                      </span>
+                      <div className="text-3xl sm:text-4xl font-display font-bold text-[#3D1A8C]">
+                        {formatPrice(rates.stoNet)}{" "}
+                        <span className="text-xs font-sans uppercase font-bold text-[#7B5EA7] tracking-wider">
+                          Net
+                        </span>
+                      </div>
+                      <span className="text-[11px] text-[#6B6878]">
+                        Confidential STO wholesale room rate per night
+                      </span>
+                    </div>
+
+                    <div className="bg-[#F7F6F4] p-3.5 border border-[#DDDAE8] space-y-2 text-xs mb-4">
+                      <div className="flex justify-between text-[#6B6878]">
+                        <span>Contracted STO Discount:</span>
+                        <span className="font-semibold text-[#7B5EA7]">-{stoDiscountPct}% (-{formatPrice(rates.stoDiscountAmount)})</span>
+                      </div>
+                      <div className="flex justify-between text-[#6B6878]">
+                        <span>Tour Operator Selling Price (RRP):</span>
+                        <span className="font-semibold text-[#1C1C2E]">{formatPrice(rates.stoGross)}</span>
+                      </div>
+                      <div className="pt-2 border-t border-[#DDDAE8] flex justify-between font-bold text-[#1C1C2E]">
+                        <span>Hotel Invoices / Receives:</span>
+                        <span className="text-emerald-700 text-sm">{formatPrice(rates.stoNet)}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="pt-3 border-t border-[#DDDAE8] text-[11px] text-[#6B6878]">
+                    <strong className="text-[#7B5EA7]">Wholesale Integrity:</strong> Tour operators can comfortably package at {formatPrice(rates.stoGross)} without being undercut.
+                  </div>
+                </div>
 
               </div>
+            </div>
+
+            {/* Step 3: Comparative Matrix Table */}
+            <div className="bg-white border border-[#DDDAE8] p-6 shadow-sm mb-10">
+              <div className="flex items-center justify-between mb-4">
+                <div>
+                  <span className="eyebrow block mb-1">Channel Yield Ledger</span>
+                  <h3 className="font-display text-xl text-[#1C1C2E] font-semibold">
+                    Complete Rate Comparison Matrix
+                  </h3>
+                </div>
+                <span className="text-xs text-[#6B6878]">Per Room Night Sold</span>
+              </div>
+
+              <div className="overflow-x-auto">
+                <table className="w-full text-left text-xs">
+                  <thead>
+                    <tr className="border-b border-[#DDDAE8] bg-[#F7F6F4] text-[#6B6878] uppercase tracking-wider text-[10px]">
+                      <th className="py-3 px-4 font-semibold">Audience / Channel</th>
+                      <th className="py-3 px-4 font-semibold">Listing / Quoted Price</th>
+                      <th className="py-3 px-4 font-semibold">Rule Applied</th>
+                      <th className="py-3 px-4 font-semibold">Friction / Deduction</th>
+                      <th className="py-3 px-4 font-semibold">Hotel Pockets (Net)</th>
+                      <th className="py-3 px-4 font-semibold text-right">Margin Kept</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-[#DDDAE8]/60">
+                    {/* Direct */}
+                    <tr className="hover:bg-[#F7F6F4]/60">
+                      <td className="py-3.5 px-4 font-bold text-[#1C1C2E]">
+                        Direct Website Customer
+                      </td>
+                      <td className="py-3.5 px-4 text-base font-bold text-[#3D1A8C]">
+                        {formatPrice(rates.directGross)}
+                      </td>
+                      <td className="py-3.5 px-4 text-[#6B6878]">
+                        Base Published Rack Rate
+                      </td>
+                      <td className="py-3.5 px-4 text-rose-600">
+                        {gatewayFeePct}% Card Fee ({formatPrice(rates.directFee)})
+                      </td>
+                      <td className="py-3.5 px-4 font-bold text-emerald-700 text-sm">
+                        {formatPrice(rates.directNet)}
+                      </td>
+                      <td className="py-3.5 px-4 text-right font-bold text-[#1C1C2E]">
+                        {rates.directRetention.toFixed(1)}%
+                      </td>
+                    </tr>
+
+                    {/* Booking.com */}
+                    <tr className="hover:bg-[#F7F6F4]/60">
+                      <td className="py-3.5 px-4 font-bold text-[#1C1C2E]">
+                        Booking.com / Expedia Customer
+                      </td>
+                      <td className="py-3.5 px-4 text-base font-bold text-[#1C1C2E]">
+                        {formatPrice(rates.otaGross)}
+                      </td>
+                      <td className="py-3.5 px-4 text-[#6B6878]">
+                        +{otaMarkupPct}% Markup over Rack Rate
+                      </td>
+                      <td className="py-3.5 px-4 text-rose-600">
+                        {otaCommissionPct}% OTA Comm. ({formatPrice(rates.otaFee)})
+                      </td>
+                      <td className="py-3.5 px-4 font-bold text-emerald-700 text-sm">
+                        {formatPrice(rates.otaNet)}
+                      </td>
+                      <td className="py-3.5 px-4 text-right font-bold text-[#1C1C2E]">
+                        {rates.otaRetention.toFixed(1)}%
+                      </td>
+                    </tr>
+
+                    {/* Tour Operator */}
+                    <tr className="hover:bg-[#F7F6F4]/60">
+                      <td className="py-3.5 px-4 font-bold text-[#1C1C2E]">
+                        Tour Operator / Safari DMC
+                      </td>
+                      <td className="py-3.5 px-4 text-base font-bold text-[#7B5EA7]">
+                        {formatPrice(rates.stoNet)} Net
+                      </td>
+                      <td className="py-3.5 px-4 text-[#6B6878]">
+                        -{stoDiscountPct}% Wholesale STO Discount
+                      </td>
+                      <td className="py-3.5 px-4 text-rose-600">
+                        Wholesale Discount ({formatPrice(rates.stoDiscountAmount)})
+                      </td>
+                      <td className="py-3.5 px-4 font-bold text-emerald-700 text-sm">
+                        {formatPrice(rates.stoNet)}
+                      </td>
+                      <td className="py-3.5 px-4 text-right font-bold text-[#1C1C2E]">
+                        {rates.stoRetention.toFixed(1)}%
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Step 4: Optional Monthly Room Nights Volume Simulator */}
+            <div className="bg-white border border-[#DDDAE8] p-6 shadow-sm mb-12">
+              <div className="flex items-center justify-between">
+                <div>
+                  <div className="flex items-center gap-2">
+                    <TrendingUp className="h-4 w-4 text-[#3D1A8C]" />
+                    <h3 className="font-display text-lg font-semibold text-[#1C1C2E]">
+                      Monthly Volume & Commission Leakage Simulator
+                    </h3>
+                  </div>
+                  <p className="text-xs text-[#6B6878] mt-0.5">
+                    See total monthly revenue and commission paid based on room nights sold.
+                  </p>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => setShowVolumeModel(!showVolumeModel)}
+                  className="px-3.5 py-1.5 text-xs font-semibold border border-[#DDDAE8] hover:bg-[#F7F6F4] text-[#3D1A8C] transition-colors"
+                >
+                  {showVolumeModel ? "Hide Simulator" : "Expand Simulator"}
+                </button>
+              </div>
+
+              {showVolumeModel && (
+                <div className="mt-6 pt-6 border-t border-[#DDDAE8] space-y-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    <div>
+                      <label className="text-[11px] uppercase tracking-wider font-bold text-[#6B6878] block mb-1">
+                        Monthly Room Nights Sold
+                      </label>
+                      <input
+                        type="number"
+                        min={10}
+                        step={25}
+                        value={monthlyRoomNights}
+                        onChange={(e) => setMonthlyRoomNights(parseInt(e.target.value) || 0)}
+                        className="w-full py-2 px-3 bg-[#F7F6F4] border border-[#DDDAE8] text-sm font-bold"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="text-[11px] uppercase tracking-wider font-bold text-[#6B6878] block mb-1">
+                        Direct Web Share ({directSharePct}%)
+                      </label>
+                      <input
+                        type="range"
+                        min={0}
+                        max={100}
+                        value={directSharePct}
+                        onChange={(e) => {
+                          const val = parseInt(e.target.value);
+                          setDirectSharePct(val);
+                          if (val + otaSharePct > 100) {
+                            setOtaSharePct(100 - val);
+                          }
+                        }}
+                        className="w-full accent-[#3D1A8C]"
+                      />
+                      <span className="text-[10px] text-[#6B6878]">
+                        {volumeData.directNights.toFixed(0)} room nights direct
+                      </span>
+                    </div>
+
+                    <div>
+                      <label className="text-[11px] uppercase tracking-wider font-bold text-[#6B6878] block mb-1">
+                        OTA Share ({otaSharePct}%)
+                      </label>
+                      <input
+                        type="range"
+                        min={0}
+                        max={100 - directSharePct}
+                        value={otaSharePct}
+                        onChange={(e) => setOtaSharePct(parseInt(e.target.value))}
+                        className="w-full accent-[#3D1A8C]"
+                      />
+                      <span className="text-[10px] text-[#6B6878]">
+                        Remaining Tour Operator STO share: {volumeData.stoSharePct}%
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 bg-[#F7F6F4] p-5 border border-[#DDDAE8]">
+                    <div>
+                      <span className="text-[10px] uppercase tracking-wider font-bold text-[#6B6878] block">
+                        Total Net Revenue (To Hotel)
+                      </span>
+                      <span className="text-2xl font-bold font-display text-emerald-700">
+                        {formatPrice(volumeData.totalNetRevenue)}
+                      </span>
+                    </div>
+
+                    <div>
+                      <span className="text-[10px] uppercase tracking-wider font-bold text-[#6B6878] block">
+                        Total Channel Deductions / Fees
+                      </span>
+                      <span className="text-2xl font-bold font-display text-rose-600">
+                        -{formatPrice(volumeData.totalDeductions)}
+                      </span>
+                    </div>
+
+                    <div>
+                      <span className="text-[10px] uppercase tracking-wider font-bold text-[#6B6878] block">
+                        Direct Revenue Retention
+                      </span>
+                      <span className="text-2xl font-bold font-display text-[#3D1A8C]">
+                        {rates.directRetention.toFixed(1)}%
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
 
           </div>
@@ -1022,10 +956,10 @@ export default function RateParityCalculatorPage() {
             <div className="max-w-3xl mb-12">
               <span className="eyebrow block mb-2">Hospitality Advisory Framework</span>
               <h2 className="font-display text-3xl md:text-4xl text-[#1C1C2E] font-semibold mb-4">
-                The Mechanics of Channel Yield & Rate Integrity
+                The 3 Golden Rules of Hotel Rate Distribution
               </h2>
               <p className="text-[#6B6878] text-base leading-relaxed">
-                Operating a hotel, safari camp, or beachfront resort in East Africa requires balancing three distinct market forces. When distribution strategy breaks down, properties suffer severe margin leakage and damaged B2B partner relationships.
+                Whether you manage a boutique hotel in Nairobi, a coastal beach resort in Watamu, or a safari camp in Samburu, setting the correct percentages between direct, OTA, and STO rates is critical.
               </p>
             </div>
 
@@ -1036,13 +970,13 @@ export default function RateParityCalculatorPage() {
                   01
                 </div>
                 <h3 className="font-display text-xl text-[#1C1C2E] font-semibold mb-3">
-                  OTA Commission Friction & NetRevPAR
+                  Never Let OTAs Undercut Tour Operators
                 </h3>
                 <p className="text-sm text-[#6B6878] leading-relaxed mb-4">
-                  OTAs provide indisputable global billboard visibility, but commissions between 15% and 25%+ significantly compress operating margins. Many properties inadvertently treat OTA gross revenue as earnings without factoring cost of acquisition.
+                  Tour operators package your hotel with multi-day safaris and transport. If a traveler discovers a lower price on Booking.com than what the operator quoted using their STO rate, the operator loses credibility and stops promoting your lodge.
                 </p>
                 <div className="text-xs font-semibold text-[#3D1A8C] pt-3 border-t border-[#DDDAE8]">
-                  Key Metric: NetRevPAR vs Gross RevPAR
+                  Rule: OTA Listed Price &gt; STO Wholesale Net
                 </div>
               </div>
 
@@ -1051,13 +985,13 @@ export default function RateParityCalculatorPage() {
                   02
                 </div>
                 <h3 className="font-display text-xl text-[#1C1C2E] font-semibold mb-3">
-                  Contracted STO Wholesale Protection
+                  Mark Up OTAs to Offset 15%-25% Commission
                 </h3>
                 <p className="text-sm text-[#6B6878] leading-relaxed mb-4">
-                  In East Africa's safari circuit (Masai Mara, Samburu, Serengeti, Amboseli), inbound tour operators generate high-length-of-stay package bookings. If OTAs display lower retail rates than an operator's wholesale net, wholesale partners will drop your property.
+                  OTAs are lead-generation engines, not cheap booking portals. If your base rack rate is $200 and Booking.com takes 18%, listing at $236 (+18%) guarantees that after commissions, you still net your required base revenue.
                 </p>
                 <div className="text-xs font-semibold text-[#7B5EA7] pt-3 border-t border-[#DDDAE8]">
-                  Key Rule: Preserve STO Rate Floor
+                  Rule: Add +X% Markup for Extranet Rates
                 </div>
               </div>
 
@@ -1066,13 +1000,13 @@ export default function RateParityCalculatorPage() {
                   03
                 </div>
                 <h3 className="font-display text-xl text-[#1C1C2E] font-semibold mb-3">
-                  Fenced Direct Booking Advantages
+                  Guarantee the Best Price Direct
                 </h3>
                 <p className="text-sm text-[#6B6878] leading-relaxed mb-4">
-                  Strict rate parity agreements govern public broadcast rates. However, modern revenue leaders use private fenced channels (members' clubs, corporate negotiated rates, WhatsApp booking engines, value-add inclusions) to drive direct conversions compliantly.
+                  When direct website bookers see that booking directly with you is cheaper or includes superior perks (free breakfast, flexible cancellation, late checkout), your direct conversion rate surges, saving thousands in commission leakage.
                 </p>
                 <div className="text-xs font-semibold text-[#1C1C2E] pt-3 border-t border-[#DDDAE8]">
-                  Key Strategy: Value-Add Parity Defense
+                  Rule: Direct Website = Most Attractive Deal
                 </div>
               </div>
 
@@ -1086,7 +1020,7 @@ export default function RateParityCalculatorPage() {
             <div className="text-center mb-12">
               <span className="eyebrow block mb-2">Frequently Asked Questions</span>
               <h2 className="font-display text-3xl md:text-4xl text-[#1C1C2E] font-semibold">
-                Rate Parity, Contracts & Channel Strategy
+                Rate Parity, Contracts & Pricing Architecture
               </h2>
             </div>
 
@@ -1132,11 +1066,11 @@ export default function RateParityCalculatorPage() {
               </span>
 
               <h2 className="font-display text-3xl md:text-5xl font-semibold mb-6 leading-tight">
-                Unlock Missing Revenue Across Your Distribution Channels
+                Need Help Restructuring Your Hotel Distribution Rates?
               </h2>
 
               <p className="text-[17px] text-[#DDDAE8] max-w-2xl mx-auto mb-10 leading-relaxed">
-                Creek Oxley conducts exhaustive distribution audits for independent hotels, lodge operators, and safari hospitality groups across Kenya and East Africa. Let's fix your channel economics.
+                Creek Oxley audits commercial contracts, channel managers, and wholesale STO rate sheets for hotels, safari lodges, and luxury villas across Kenya and East Africa.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
