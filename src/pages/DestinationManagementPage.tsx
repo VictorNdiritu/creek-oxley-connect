@@ -74,7 +74,7 @@ const DestinationManagementPage = () => {
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Our Properties</h2>
           <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Explore the exclusive hospitality destinations managed and promoted by Creek Oxley DMC.
+            Explore the hospitality destinations currently managed and promoted by Creek Oxley DMC, alongside selected past success stories.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -121,8 +121,8 @@ const DestinationManagementPage = () => {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">Warwick Hotel</h3>
-                <p className="text-gray-600 mb-4">Nanyuki, Kenya — A distinguished highland property.</p>
-                <span className="inline-flex items-center text-teal-700 font-medium">Explore <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
+                <p className="text-gray-600 mb-4">Nanyuki, Kenya - Past project and successful turnaround.</p>
+                <span className="inline-flex items-center text-teal-700 font-medium">Read the success story <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
               </div>
             </Link>
 
