@@ -60,10 +60,9 @@ const Footer = () => {
               <li><Link to="/smart-staffing" className={linkCls}>Smart Staffing</Link></li>
               <li><Link to="/rate-parity-calculator" className={linkCls}>Rate Parity Calculator</Link></li>
               <li><Link to="/dmc/watamu" className={linkCls}>Kilulu Villa - Watamu</Link></li>
-              <li><Link to="/dmc/samburu" className={linkCls}>Samburu Elephant Lodge</Link></li>
               <li><Link to="/dmc/lodwar" className={linkCls}>Luxora Hotel - Lodwar</Link></li>
-              <li><Link to="/dmc/nanyuki" className={linkCls}>Warwick Hotel - Nanyuki</Link></li>
               <li><Link to="/dmc/nairobi" className={linkCls}>TradeMark Hotel - Nairobi</Link></li>
+              <li><Link to="/dmc/nanyuki" className={linkCls}>Warwick Turnaround Story</Link></li>
             </ul>
           </div>
 

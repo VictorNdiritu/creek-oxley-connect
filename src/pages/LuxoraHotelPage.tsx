@@ -141,7 +141,7 @@ const LuxoraHotelPage = () => {
                 As part of the Creek Oxley <Link to="/destination-management" className="text-teal-700 hover:underline font-semibold">Destination Management</Link> portfolio, Luxora Hotel receives comprehensive support in international marketing, trade show representation, and brand development. Our team connects the property with tour operators, corporate travel managers, and NGO logistics coordinators across the globe.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Explore our other managed properties including <Link to="/dmc/watamu" className="text-teal-700 hover:underline font-semibold">Kilulu Villa in Watamu</Link>, <Link to="/dmc/samburu" className="text-teal-700 hover:underline font-semibold">Samburu Elephant Lodge</Link>, <Link to="/dmc/nanyuki" className="text-teal-700 hover:underline font-semibold">Warwick Hotel in Nanyuki</Link>, and <Link to="/dmc/nairobi" className="text-teal-700 hover:underline font-semibold">TradeMark Hotel in Nairobi</Link>.
+                Explore our other managed properties, including <Link to="/dmc/watamu" className="text-teal-700 hover:underline font-semibold">Kilulu Villa in Watamu</Link> and <Link to="/dmc/nairobi" className="text-teal-700 hover:underline font-semibold">TradeMark Hotel in Nairobi</Link>. Our completed engagements include the <Link to="/dmc/nanyuki" className="text-teal-700 hover:underline font-semibold">Warwick Hotel turnaround in Nanyuki</Link>.
               </p>
             </div>
           </div>

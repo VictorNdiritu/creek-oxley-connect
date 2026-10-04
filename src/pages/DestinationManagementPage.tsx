@@ -11,7 +11,7 @@ import { MapPin, Calendar, Users, Building, ArrowRight } from "lucide-react";
 import poolImage from "@/assets/new dmc watamu images/WhatsApp Image 2026-02-14 at 18.41.32 (3).jpeg";
 import samburuImage from "@/assets/samburu-ribbon-cutting.jpg";
 import luxoraImage from "@/assets/luxora hotel photos/hero-hotel.jpg";
-import warwickImage from "@/assets/warwick hotel photos/Outside view, with swimming pool.jpeg";
+import warwickImage from "@/assets/warwick-hotel.jpg.asset.json";
 import trademarkPoolImage from "@/assets/Trademark Hotel Africa - Pool.jpg";
 
 const DestinationManagementPage = () => {
@@ -74,7 +74,7 @@ const DestinationManagementPage = () => {
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Our Properties</h2>
           <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Explore the exclusive hospitality destinations managed and promoted by Creek Oxley DMC.
+            Explore the hospitality destinations currently managed and promoted by Creek Oxley DMC, alongside selected past success stories.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -86,18 +86,6 @@ const DestinationManagementPage = () => {
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">Kilulu Luxury Island Villa</h3>
                 <p className="text-gray-600 mb-4">Watamu, Kenya — A 372 m² luxury sanctuary on the Kenyan coast.</p>
-                <span className="inline-flex items-center text-teal-700 font-medium">Explore <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
-              </div>
-            </Link>
-
-            {/* Samburu Elephant Lodge */}
-            <Link to="/dmc/samburu" className="group block bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
-              <div className="aspect-video overflow-hidden">
-                <img src={samburuImage} alt="Samburu Elephant Lodge opening ceremony" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">Samburu Elephant Lodge</h3>
-                <p className="text-gray-600 mb-4">Samburu, Kenya — An exclusive wildlife lodge experience.</p>
                 <span className="inline-flex items-center text-teal-700 font-medium">Explore <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
               </div>
             </Link>
@@ -114,18 +102,6 @@ const DestinationManagementPage = () => {
               </div>
             </Link>
 
-            {/* Warwick Hotel - Nanyuki */}
-            <Link to="/dmc/nanyuki" className="group block bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
-              <div className="aspect-video overflow-hidden">
-                <img src={warwickImage} alt="Warwick Hotel exterior with pool in Nanyuki" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">Warwick Hotel</h3>
-                <p className="text-gray-600 mb-4">Nanyuki, Kenya — A distinguished highland property.</p>
-                <span className="inline-flex items-center text-teal-700 font-medium">Explore <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
-              </div>
-            </Link>
-
             {/* TradeMark Hotel - Nairobi */}
             <Link to="/dmc/nairobi" className="group block bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
               <div className="aspect-video overflow-hidden">
@@ -137,6 +113,31 @@ const DestinationManagementPage = () => {
                 <span className="inline-flex items-center text-teal-700 font-medium">Explore <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
               </div>
             </Link>
+          </div>
+
+          <div className="max-w-6xl mx-auto mt-20 border-t border-gray-200 pt-12">
+            <p className="text-sm uppercase tracking-wide text-creekoxley font-medium mb-3">Completed Engagements</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">Past Projects & Success Stories</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <Link to="/dmc/nanyuki" className="group grid sm:grid-cols-2 border border-gray-200 bg-white overflow-hidden">
+                <img src={warwickImage} alt="Warwick Hotel exterior with pool in Nanyuki" className="h-full min-h-52 w-full object-cover" loading="lazy" />
+                <div className="p-6">
+                  <p className="text-sm uppercase tracking-wide text-creekoxley mb-3">Successful Turnaround</p>
+                  <h3 className="text-xl font-semibold mb-3">Warwick Hotel</h3>
+                  <p className="text-gray-600 mb-5">A completed management engagement in Nanyuki.</p>
+                  <span className="inline-flex items-center text-creekoxley font-medium">Read the story <ArrowRight className="ml-2 h-4 w-4" /></span>
+                </div>
+              </Link>
+              <Link to="/dmc/samburu" className="group grid sm:grid-cols-2 border border-gray-200 bg-white overflow-hidden">
+                <img src={samburuImage} alt="Samburu Elephant Lodge" className="h-full min-h-52 w-full object-cover" loading="lazy" />
+                <div className="p-6">
+                  <p className="text-sm uppercase tracking-wide text-creekoxley mb-3">Past Project</p>
+                  <h3 className="text-xl font-semibold mb-3">Samburu Elephant Lodge</h3>
+                  <p className="text-gray-600 mb-5">A completed hospitality engagement in Samburu.</p>
+                  <span className="inline-flex items-center text-creekoxley font-medium">View past project <ArrowRight className="ml-2 h-4 w-4" /></span>
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

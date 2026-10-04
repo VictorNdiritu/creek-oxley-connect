@@ -2,10 +2,9 @@ import React from "react";
 import SEOHead from "@/components/SEOHead";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Mail, Building, Mountain, Compass, Star, Users } from "lucide-react";
-import warwickHeroImage from "@/assets/warwick hotel photos/Outside view, with swimming pool.jpeg";
+import { MapPin, ArrowRight, CheckCircle, Target, Eye, Settings, Handshake } from "lucide-react";
+import warwickHeroImage from "@/assets/warwick-hotel.jpg.asset.json";
 
 const WarwickHotelPage = () => {
   const faqSchema = {
@@ -15,7 +14,7 @@ const WarwickHotelPage = () => {
       {
         "@type": "Question",
         "name": "Where is Warwick Hotel located?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Warwick Hotel is located in Nanyuki, Laikipia County, Kenya — at the foothills of Mount Kenya, one of Africa's most iconic peaks." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Warwick Hotel is located in Nanyuki, Laikipia County, Kenya, at the foothills of Mount Kenya." }
       },
       {
         "@type": "Question",
@@ -24,13 +23,13 @@ const WarwickHotelPage = () => {
       },
       {
         "@type": "Question",
-        "name": "How do I book at Warwick Hotel Nanyuki?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Contact Creek Oxley DMC at +254 110 463 062 or email dmc@creekoxley.com for reservations and corporate rates." }
+        "name": "What work did Creek Oxley complete at Warwick Hotel?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Creek Oxley completed a successful hospitality turnaround engagement at Warwick Hotel, supporting stronger operations, market positioning and property performance." }
       },
       {
         "@type": "Question",
-        "name": "Is Creek Oxley the management company for Warwick Hotel?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes, Creek Oxley's DMC division provides international marketing, brand management, and hospitality consulting services for Warwick Hotel Nanyuki." }
+        "name": "Does Creek Oxley currently manage Warwick Hotel?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Creek Oxley's management engagement ended after the successful completion of the Warwick Hotel turnaround. The property is presented here as a past project and success story." }
       }
     ]
   };
@@ -38,8 +37,8 @@ const WarwickHotelPage = () => {
   return (
     <>
       <SEOHead
-        title="Warwick Hotel Nanyuki | Creek Oxley DMC Kenya"
-        description="Warwick Hotel in Nanyuki, Laikipia County — a distinguished highland hospitality property at the foothills of Mount Kenya. Managed by Creek Oxley DMC for business and leisure travelers."
+        title="Warwick Hotel Turnaround Success Story | Creek Oxley"
+        description="See how Creek Oxley completed a successful turnaround engagement at Warwick Hotel Nanyuki, strengthening operations, positioning and property performance."
         canonical="https://creekoxley.com/dmc/nanyuki"
       />
       <div className="min-h-screen bg-white">
@@ -53,7 +52,7 @@ const WarwickHotelPage = () => {
               alt="Warwick Hotel exterior with swimming pool in Nanyuki"
               className="absolute inset-0 w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
+            <div className="absolute inset-0 bg-ink/70" />
 
             <div className="absolute bottom-0 left-0 right-0 p-6 md:p-12">
               <div className="container mx-auto">
@@ -65,11 +64,11 @@ const WarwickHotelPage = () => {
                   <span className="text-white">Nanyuki</span>
                 </nav>
                 <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-3">
-                  Warwick Hotel
+                  Warwick Hotel Turnaround
                 </h1>
                 <div className="flex items-center gap-2 mt-4 text-white/80">
                   <MapPin className="h-5 w-5" />
-                  <span>Nanyuki, Kenya</span>
+                  <span>Past Project / Nanyuki, Kenya</span>
                 </div>
               </div>
             </div>
@@ -80,15 +79,16 @@ const WarwickHotelPage = () => {
         <section className="py-16 md:py-20">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">A Distinguished Highland Property</h2>
+              <p className="eyebrow mb-4">Past Project / Success Story</p>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">A successful hospitality turnaround</h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 Warwick Hotel is a distinguished hospitality property located in Nanyuki, a vibrant town at the foothills of Mount Kenya in Laikipia County. Known for its temperate climate, stunning highland scenery, and proximity to world-class wildlife conservancies, Nanyuki has become one of Kenya's most sought-after destinations for both business and leisure travelers.
               </p>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Under the management of Creek Oxley's Destination Management Company (DMC) division, Warwick Hotel is positioned to serve the growing demand for quality accommodation in the Mount Kenya region. The hotel caters to safari enthusiasts, corporate retreat groups, military personnel stationed at nearby BATUK, and travelers exploring the stunning Laikipia plateau.
+                Creek Oxley was engaged to support a turnaround at Warwick Hotel. The work focused on strengthening the property's operating foundations, sharpening its market position and helping the business move toward more sustainable performance.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Nanyuki's strategic location along the Nairobi-Isiolo highway makes it easily accessible while offering the tranquility and natural beauty that urban Kenya cannot match. Warwick Hotel provides the perfect base for exploring this remarkable region.
+                The engagement was completed successfully, and Creek Oxley no longer manages Warwick Hotel. We retain this page as a record of our past work and the practical turnaround experience we bring to underperforming hospitality properties.
               </p>
             </div>
           </div>
@@ -98,51 +98,51 @@ const WarwickHotelPage = () => {
         <section className="py-16 md:py-20 bg-gray-50">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-900">Why Warwick Hotel Nanyuki</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-900">Turnaround priorities</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div className="text-center">
                   <div className="h-14 w-14 bg-teal-700/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Mountain className="h-7 w-7 text-teal-700" />
+                    <Target className="h-7 w-7 text-teal-700" />
                   </div>
-                  <h3 className="font-semibold text-lg mb-2">Mount Kenya Views</h3>
-                  <p className="text-gray-600">Set against the majestic backdrop of Africa's second-highest peak.</p>
+                  <h3 className="font-semibold text-lg mb-2">Property Positioning</h3>
+                  <p className="text-gray-600">Clarifying the hotel's place in the Nanyuki hospitality market.</p>
                 </div>
                 <div className="text-center">
                   <div className="h-14 w-14 bg-teal-700/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Compass className="h-7 w-7 text-teal-700" />
+                    <Eye className="h-7 w-7 text-teal-700" />
                   </div>
-                  <h3 className="font-semibold text-lg mb-2">Safari Gateway</h3>
-                  <p className="text-gray-600">Easy access to Ol Pejeta Conservancy, Lewa Downs, and Mount Kenya National Park.</p>
+                  <h3 className="font-semibold text-lg mb-2">Market Visibility</h3>
+                  <p className="text-gray-600">Strengthening how the property reached relevant business and leisure guests.</p>
                 </div>
                 <div className="text-center">
                   <div className="h-14 w-14 bg-teal-700/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Star className="h-7 w-7 text-teal-700" />
+                    <Settings className="h-7 w-7 text-teal-700" />
                   </div>
-                  <h3 className="font-semibold text-lg mb-2">Highland Comfort</h3>
-                  <p className="text-gray-600">Enjoy the cool climate and serene atmosphere of Laikipia County.</p>
+                  <h3 className="font-semibold text-lg mb-2">Operating Discipline</h3>
+                  <p className="text-gray-600">Supporting clearer systems and more consistent day-to-day execution.</p>
                 </div>
                 <div className="text-center">
                   <div className="h-14 w-14 bg-teal-700/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="h-7 w-7 text-teal-700" />
+                    <Handshake className="h-7 w-7 text-teal-700" />
                   </div>
-                  <h3 className="font-semibold text-lg mb-2">Corporate & Groups</h3>
-                  <p className="text-gray-600">Ideal for corporate retreats, team-building events, and group travel.</p>
+                  <h3 className="font-semibold text-lg mb-2">Sustainable Handover</h3>
+                  <p className="text-gray-600">Completing the engagement after a successful turnaround and transition.</p>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* DMC Management */}
+        {/* Completed engagement */}
         <section className="py-16 md:py-20">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Creek Oxley DMC Partnership</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">The engagement is complete</h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Creek Oxley's <Link to="/destination-management" className="text-teal-700 hover:underline font-semibold">DMC division</Link> provides Warwick Hotel with international visibility through trade show representation, digital marketing campaigns, and tour operator partnerships. Our proven approach to hospitality brand management ensures the property reaches the right audiences worldwide.
+                Creek Oxley's work with Warwick Hotel concluded after the successful turnaround. We do not currently manage or represent the property, and booking enquiries should be directed to Warwick Hotel itself.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Discover our full portfolio of managed properties: <Link to="/dmc/watamu" className="text-teal-700 hover:underline font-semibold">Kilulu Villa in Watamu</Link>, <Link to="/dmc/samburu" className="text-teal-700 hover:underline font-semibold">Samburu Elephant Lodge</Link>, <Link to="/dmc/lodwar" className="text-teal-700 hover:underline font-semibold">Luxora Hotel in Lodwar</Link>, and <Link to="/dmc/nairobi" className="text-teal-700 hover:underline font-semibold">TradeMark Hotel in Nairobi</Link>.
+                If your hotel, lodge or resort is underperforming, explore our <Link to="/hotel-turnaround" className="text-teal-700 hover:underline font-semibold">hotel turnaround service</Link> or request a confidential property assessment.
               </p>
             </div>
           </div>
@@ -156,43 +156,36 @@ const WarwickHotelPage = () => {
               <div className="space-y-6">
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <h3 className="font-semibold text-lg mb-2 text-gray-900">Where is Warwick Hotel located?</h3>
-                  <p className="text-gray-600">Warwick Hotel is located in Nanyuki, Laikipia County, Kenya — at the foothills of Mount Kenya, one of Africa's most iconic peaks.</p>
+                  <p className="text-gray-600">Warwick Hotel is located in Nanyuki, Laikipia County, Kenya, at the foothills of Mount Kenya.</p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <h3 className="font-semibold text-lg mb-2 text-gray-900">What makes Nanyuki a popular destination?</h3>
                   <p className="text-gray-600">Nanyuki is a gateway to Mount Kenya, home to the British Army Training Unit Kenya (BATUK), numerous wildlife conservancies, and a thriving tourism and agricultural economy.</p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h3 className="font-semibold text-lg mb-2 text-gray-900">How do I book at Warwick Hotel Nanyuki?</h3>
-                  <p className="text-gray-600">Contact Creek Oxley DMC at +254 110 463 062 or email dmc@creekoxley.com for reservations and corporate rates.</p>
+                  <h3 className="font-semibold text-lg mb-2 text-gray-900">What work did Creek Oxley complete at Warwick Hotel?</h3>
+                  <p className="text-gray-600">Creek Oxley completed a successful turnaround engagement focused on operations, positioning and property performance.</p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h3 className="font-semibold text-lg mb-2 text-gray-900">Is Creek Oxley the management company for Warwick Hotel?</h3>
-                  <p className="text-gray-600">Yes, Creek Oxley's DMC division provides international marketing, brand management, and hospitality consulting services for Warwick Hotel Nanyuki.</p>
+                  <h3 className="font-semibold text-lg mb-2 text-gray-900">Does Creek Oxley currently manage Warwick Hotel?</h3>
+                  <p className="text-gray-600">No. Creek Oxley's management engagement ended after the successful completion of the turnaround.</p>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Contact */}
+        {/* Owner CTA */}
         <section className="py-16 md:py-20">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-6 text-gray-900">Get in Touch</h2>
-              <p className="text-gray-600 mb-6">Planning a visit to Nanyuki or seeking a corporate retreat venue? Contact the Creek Oxley DMC team.</p>
+              <h2 className="text-3xl font-bold mb-6 text-gray-900">Is your property underperforming?</h2>
+              <p className="text-gray-600 mb-6">Talk to Creek Oxley about a confidential property assessment and practical turnaround plan.</p>
               <div className="bg-gray-50 p-8 rounded-lg">
-                <div className="flex items-center justify-center gap-2 mb-3">
-                  <Phone className="h-5 w-5 text-teal-700" />
-                  <a href="tel:+254110463062" className="text-gray-700 hover:text-teal-700">+254 110 463 062</a>
-                </div>
-                <div className="flex items-center justify-center gap-2 mb-6">
-                  <Mail className="h-5 w-5 text-teal-700" />
-                  <a href="mailto:dmc@creekoxley.com" className="text-gray-700 hover:text-teal-700">dmc@creekoxley.com</a>
-                </div>
-                <Button className="bg-teal-700 hover:bg-teal-800 text-white">
-                  <Link to="/contact" className="text-white">Contact Creek Oxley</Link>
-                </Button>
+                <CheckCircle className="h-8 w-8 text-teal-700 mx-auto mb-4" />
+                <Link to="/hotel-turnaround" className="btn-primary gap-2">
+                  Explore Hotel Turnaround <ArrowRight className="h-4 w-4" />
+                </Link>
               </div>
             </div>
           </div>
