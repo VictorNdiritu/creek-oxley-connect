@@ -187,14 +187,8 @@ const PreCheckInPage = () => {
                         <option value="Kilulu Villa, Watamu">
                           Kilulu Villa, Watamu
                         </option>
-                        <option value="Samburu Elephant Lodge, Samburu">
-                          Samburu Elephant Lodge, Samburu
-                        </option>
                         <option value="Luxora Hotel, Lodwar">
                           Luxora Hotel, Lodwar
-                        </option>
-                        <option value="Warwick Hotel, Nanyuki">
-                          Warwick Hotel, Nanyuki
                         </option>
                         <option value="TradeMark Hotel, Nairobi">
                           TradeMark Hotel, Nairobi

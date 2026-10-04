@@ -3,8 +3,8 @@ import SEOHead from "@/components/SEOHead";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
-import { MapPin, ArrowRight, CheckCircle } from "lucide-react";
-import warwickHeroImage from "@/assets/warwick hotel photos/Outside view, with swimming pool.jpeg";
+import { MapPin, ArrowRight, CheckCircle, Target, Eye, Settings, Handshake } from "lucide-react";
+import warwickHeroImage from "@/assets/warwick-hotel.jpg.asset.json";
 
 const WarwickHotelPage = () => {
   const faqSchema = {
@@ -102,28 +102,28 @@ const WarwickHotelPage = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div className="text-center">
                   <div className="h-14 w-14 bg-teal-700/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Mountain className="h-7 w-7 text-teal-700" />
+                    <Target className="h-7 w-7 text-teal-700" />
                   </div>
                   <h3 className="font-semibold text-lg mb-2">Property Positioning</h3>
                   <p className="text-gray-600">Clarifying the hotel's place in the Nanyuki hospitality market.</p>
                 </div>
                 <div className="text-center">
                   <div className="h-14 w-14 bg-teal-700/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Compass className="h-7 w-7 text-teal-700" />
+                    <Eye className="h-7 w-7 text-teal-700" />
                   </div>
                   <h3 className="font-semibold text-lg mb-2">Market Visibility</h3>
                   <p className="text-gray-600">Strengthening how the property reached relevant business and leisure guests.</p>
                 </div>
                 <div className="text-center">
                   <div className="h-14 w-14 bg-teal-700/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Star className="h-7 w-7 text-teal-700" />
+                    <Settings className="h-7 w-7 text-teal-700" />
                   </div>
                   <h3 className="font-semibold text-lg mb-2">Operating Discipline</h3>
                   <p className="text-gray-600">Supporting clearer systems and more consistent day-to-day execution.</p>
                 </div>
                 <div className="text-center">
                   <div className="h-14 w-14 bg-teal-700/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="h-7 w-7 text-teal-700" />
+                    <Handshake className="h-7 w-7 text-teal-700" />
                   </div>
                   <h3 className="font-semibold text-lg mb-2">Sustainable Handover</h3>
                   <p className="text-gray-600">Completing the engagement after a successful turnaround and transition.</p>

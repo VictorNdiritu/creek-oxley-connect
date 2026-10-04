@@ -142,7 +142,7 @@ const TradeMarkHotelPage = () => {
                 As the flagship urban property in Creek Oxley's <Link to="/destination-management" className="text-teal-700 hover:underline font-semibold">Destination Management</Link> portfolio, TradeMark Hotel receives comprehensive marketing support including global trade show representation, digital campaigns, and corporate travel partnerships. Our <Link to="/services" className="text-teal-700 hover:underline font-semibold">consulting expertise</Link> ensures the property maintains the highest standards of hospitality management.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Explore our other managed properties: <Link to="/dmc/watamu" className="text-teal-700 hover:underline font-semibold">Kilulu Villa in Watamu</Link>, <Link to="/dmc/samburu" className="text-teal-700 hover:underline font-semibold">Samburu Elephant Lodge</Link>, <Link to="/dmc/lodwar" className="text-teal-700 hover:underline font-semibold">Luxora Hotel in Lodwar</Link>, and <Link to="/dmc/nanyuki" className="text-teal-700 hover:underline font-semibold">Warwick Hotel in Nanyuki</Link>.
+                Explore our other managed properties: <Link to="/dmc/watamu" className="text-teal-700 hover:underline font-semibold">Kilulu Villa in Watamu</Link> and <Link to="/dmc/lodwar" className="text-teal-700 hover:underline font-semibold">Luxora Hotel in Lodwar</Link>. Our completed engagements include the <Link to="/dmc/nanyuki" className="text-teal-700 hover:underline font-semibold">Warwick Hotel turnaround in Nanyuki</Link>.
               </p>
             </div>
           </div>
