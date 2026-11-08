@@ -25,6 +25,8 @@ import OnlineBookingChannelsArticlePage from "./pages/OnlineBookingChannelsArtic
 import KenyaHealthInsuranceArticlePage from "./pages/KenyaHealthInsuranceArticlePage";
 import HRStrategyArticlePage from "./pages/HRStrategyArticlePage";
 import HotelOutsourcingArticlePage from "./pages/HotelOutsourcingArticlePage";
+import BusinessManagementConsultingArticlePage from "./pages/BusinessManagementConsultingArticlePage";
+import PrivateEquityPortfolioManagementArticlePage from "./pages/PrivateEquityPortfolioManagementArticlePage";
 import DestinationManagementPage from "./pages/DestinationManagementPage";
 import WatamuVillaPage from "./pages/WatamuVillaPage";
 import SamburuLodgeDmcPage from "./pages/SamburuLodgeDmcPage";
@@ -90,6 +92,8 @@ const App = () => (
             <Route path="/blog/kenya-travel-health-insurance-requirements" element={<KenyaHealthInsuranceArticlePage />} />
             <Route path="/blog/hr-strategy-business-growth" element={<HRStrategyArticlePage />} />
             <Route path="/blog/hotel-management-outsourcing" element={<HotelOutsourcingArticlePage />} />
+            <Route path="/blog/business-management-consulting" element={<BusinessManagementConsultingArticlePage />} />
+            <Route path="/blog/private-equity-portfolio-company-management" element={<PrivateEquityPortfolioManagementArticlePage />} />
             <Route path="/destination-management" element={<DestinationManagementPage />} />
             <Route path="/dmc" element={<DestinationManagementPage />} />
             <Route path="/dmc/watamu" element={<WatamuVillaPage />} />

@@ -64,6 +64,8 @@ const routes = [
   '/blog/hr-strategy-business-growth',
   '/blog/hotel-management-outsourcing',
   '/blog/kenya-travel-health-insurance-requirements',
+  '/blog/business-management-consulting',
+  '/blog/private-equity-portfolio-company-management',
 ];
 
 console.log('Pre-rendering script (documentation only)');

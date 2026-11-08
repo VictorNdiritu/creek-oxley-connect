@@ -23,7 +23,7 @@ const BusinessManagementConsultingArticlePage = () => (
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
             <div className="mb-8">
-              <Button variant="ghost" className="text-creekoxley hover:bg-creekoxley/10">
+              <Button asChild variant="ghost" className="text-creekoxley hover:bg-creekoxley/10">
                 <Link to="/blog" className="flex items-center gap-2 text-creekoxley">
                   <ArrowLeft className="h-4 w-4" />
                   Back to Blog
@@ -76,7 +76,7 @@ const BusinessManagementConsultingArticlePage = () => (
             <section className="bg-creekoxley/5 p-8 mt-12">
               <h2 className="text-2xl font-bold text-creekoxley mb-4">Improve how your business runs</h2>
               <p className="text-gray-700 mb-6">Talk with Creek Oxley about strengthening your management, leadership, systems and operations.</p>
-              <Button className="bg-creekoxley hover:bg-creekoxley-medium text-white">
+              <Button asChild className="bg-creekoxley hover:bg-creekoxley-medium text-white">
                 <Link to="/contact" className="text-white">Talk to Creek Oxley</Link>
               </Button>
             </section>

@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useCallback } from "react";
 import SEOHead from "@/components/SEOHead";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -102,12 +102,12 @@ export default function RateParityCalculatorPage() {
   const activeCurrency = CURRENCIES[currencyKey] || CURRENCIES.USD;
   const currencySymbol = currencyKey === "CUSTOM" ? customSymbol.trim() + " " : activeCurrency.symbol;
 
-  const formatPrice = (value: number) => {
+  const formatPrice = useCallback((value: number) => {
     return `${currencySymbol}${value.toLocaleString("en-US", {
       minimumFractionDigits: 2,
       maximumFractionDigits: 2,
     })}`;
-  };
+  }, [currencySymbol]);
 
   // ── Rate Calculations ──
   const rates = useMemo(() => {
