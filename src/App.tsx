@@ -34,6 +34,8 @@ import LuxoraHotelPage from "./pages/LuxoraHotelPage";
 import WarwickHotelPage from "./pages/WarwickHotelPage";
 import TradeMarkHotelPage from "./pages/TradeMarkHotelPage";
 import PreCheckInPage from "./pages/PreCheckInPage";
+import StayMeetPage from "./pages/StayMeetPage";
+import StayMeetPropertyPage from "./pages/StayMeetPropertyPage";
 import SmartStaffingPage from "./pages/SmartStaffingPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import TermsPage from "./pages/TermsPage";
@@ -102,6 +104,8 @@ const App = () => (
             <Route path="/dmc/nanyuki" element={<WarwickHotelPage />} />
             <Route path="/dmc/nairobi" element={<TradeMarkHotelPage />} />
             <Route path="/dmc/pre-check-in" element={<PreCheckInPage />} />
+            <Route path="/dmc/stay-meet" element={<StayMeetPage />} />
+            <Route path="/dmc/stay-meet/:slug" element={<StayMeetPropertyPage />} />
             <Route path="/smart-staffing" element={<SmartStaffingPage />} />
 
             {/* Hospitality Campaign Landing Pages */}

@@ -74,6 +74,8 @@ const WatamuVillaPage = () => {
                 <nav className="text-sm text-white/70 mb-4">
                   <Link to="/destination-management" className="hover:text-white transition-colors">DMC</Link>
                   <span className="mx-2">/</span>
+                  <Link to="/dmc/stay-meet#luxury-stays" className="hover:text-white transition-colors">Stay &amp; Meet · Luxury Stays</Link>
+                  <span className="mx-2">/</span>
                   <span className="text-white">Watamu</span>
                 </nav>
                 <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-3">
@@ -348,7 +350,7 @@ const WatamuVillaPage = () => {
                  </div>
                  <p className="text-gray-600 mb-6">Email: dmc@creekoxley.com</p>
                 <Button className="bg-teal-700 hover:bg-teal-800 text-white px-8 py-6 text-lg">
-                  <Link to="/contact" className="text-white">Enquire Now</Link>
+                  <Link to="/dmc/stay-meet?type=stay&property=kilulu-luxury-island-villa#enquire" className="text-white">Enquire About Accommodation</Link>
                 </Button>
               </div>
             </div>

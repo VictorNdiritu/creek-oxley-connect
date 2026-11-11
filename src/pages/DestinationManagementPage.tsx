@@ -69,6 +69,38 @@ const DestinationManagementPage = () => {
         </div>
       </section>
 
+      {/* Stay & Meet */}
+      <section className="bg-ink text-white">
+        <div className="container-x py-16 md:py-20 grid grid-cols-12 gap-x-0 gap-y-10 md:gap-x-8 lg:gap-x-14 items-center">
+          <div className="col-span-12 md:col-span-6">
+            <p className="eyebrow mb-4 !text-[#C9B8E8]">New · Stay &amp; Meet</p>
+            <h2 className="font-display text-[36px] md:text-[48px] leading-[1.05] !text-white">
+              Stay Better. Meet Better. <em className="italic">Explore More.</em>
+            </h2>
+            <p className="mt-6 text-[17px] text-[#DDDAE8] leading-[1.75] max-w-xl">
+              Luxury hotels and private villas including Kilulu Luxury Island Villa, the growing
+              Creek Motels collection, and conference venues, all with direct enquiries through Creek Oxley.
+            </p>
+            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+              <Link to="/dmc/stay-meet" className="inline-flex items-center justify-center bg-white text-ink px-8 py-[14px] text-[14px] font-medium hover:bg-[#DDDAE8] transition-colors">
+                Explore Stay &amp; Meet <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+              <Link to="/dmc/watamu" className="inline-flex items-center justify-center border border-white/40 px-8 py-[13px] text-[14px] font-medium text-white hover:bg-white/10 transition-colors">
+                Kilulu Luxury Island Villa
+              </Link>
+            </div>
+          </div>
+          <div className="col-span-12 md:col-span-6 md:col-start-8 grid grid-cols-3 gap-3 h-64 md:h-80">
+            <Link to="/dmc/stay-meet#luxury-stays" className="relative group overflow-hidden col-span-2 row-span-1">
+              <img src={poolImage} alt="Kilulu Luxury Island Villa pool overlooking the Indian Ocean in Watamu" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+            </Link>
+            <Link to="/dmc/stay-meet#conferences-events" className="relative group overflow-hidden">
+              <img src={trademarkPoolImage} alt="TradeMark Hotel Africa rooftop pool in Nairobi" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Properties Section */}
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 md:px-6">
@@ -77,19 +109,7 @@ const DestinationManagementPage = () => {
             Explore the hospitality destinations currently managed and promoted by Creek Oxley DMC, alongside selected past success stories.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Kilulu Villa - Watamu */}
-            <Link to="/dmc/watamu" className="group block bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
-              <div className="aspect-video overflow-hidden">
-                <img src={poolImage} alt="Kilulu Luxury Island Villa pool overlooking the Indian Ocean in Watamu" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-teal-700 transition-colors">Kilulu Luxury Island Villa</h3>
-                <p className="text-gray-600 mb-4">Watamu, Kenya — A 372 m² luxury sanctuary on the Kenyan coast.</p>
-                <span className="inline-flex items-center text-teal-700 font-medium">Explore <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
-              </div>
-            </Link>
-
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Luxora Hotel - Lodwar */}
             <Link to="/dmc/lodwar" className="group block bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
               <div className="aspect-video overflow-hidden">

@@ -76,6 +76,10 @@ const Navbar = () => {
               </span>
               <div className="dropdown-menu hidden absolute py-2">
                 <Link to="/dmc" className="block px-5 py-2.5 text-[14px] text-body-ink hover:bg-bone hover:text-creekoxley">Destination Management</Link>
+                <Link to="/dmc/stay-meet" className="block pl-9 pr-5 py-2 text-[13px] text-body-ink hover:bg-bone hover:text-creekoxley font-medium">Stay &amp; Meet</Link>
+                <Link to="/dmc/stay-meet#luxury-stays" className="block pl-12 pr-5 py-1.5 text-[12.5px] text-muted-ink hover:bg-bone hover:text-creekoxley">Luxury Stays</Link>
+                <Link to="/dmc/stay-meet#creek-motels" className="block pl-12 pr-5 py-1.5 text-[12.5px] text-muted-ink hover:bg-bone hover:text-creekoxley">Creek Motels</Link>
+                <Link to="/dmc/stay-meet#conferences-events" className="block pl-12 pr-5 py-1.5 text-[12.5px] text-muted-ink hover:bg-bone hover:text-creekoxley">Conferences &amp; Events</Link>
                 <Link to="/smart-staffing" className="block px-5 py-2.5 text-[14px] text-body-ink hover:bg-bone hover:text-creekoxley">Smart Staffing</Link>
               </div>
             </div>
@@ -151,6 +155,7 @@ const Navbar = () => {
 
             {[
               ["Destination Management", "/dmc"],
+              ["Stay & Meet", "/dmc/stay-meet"],
               ["Smart Staffing", "/smart-staffing"],
               ["Insights", "/blog"],
               ["Contact", "/contact"],

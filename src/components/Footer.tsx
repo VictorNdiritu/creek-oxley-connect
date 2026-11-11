@@ -57,6 +57,7 @@ const Footer = () => {
             <div className={headCls}>Divisions</div>
             <ul className="space-y-3">
               <li><Link to="/dmc" className={linkCls}>Destination Management</Link></li>
+              <li><Link to="/dmc/stay-meet" className={linkCls}>Stay &amp; Meet</Link></li>
               <li><Link to="/smart-staffing" className={linkCls}>Smart Staffing</Link></li>
               <li><Link to="/rate-parity-calculator" className={linkCls}>Rate Parity Calculator</Link></li>
               <li><Link to="/dmc/watamu" className={linkCls}>Kilulu Villa - Watamu</Link></li>
