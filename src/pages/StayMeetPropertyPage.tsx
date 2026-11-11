@@ -83,7 +83,7 @@ const StayMeetPropertyPage = () => {
               </div>
             </div>
             <div className="col-span-12 lg:col-span-6 aspect-[4/3] overflow-hidden group">
-              <PropertyImage property={property} />
+              <PropertyImage property={property} category={property.categories[0]} />
             </div>
           </div>
         </section>
@@ -155,6 +155,51 @@ const StayMeetPropertyPage = () => {
               </div>
             </section>
           ))}
+
+        {/* Gallery */}
+        {property.gallery && property.gallery.length > 0 && (
+          <section className="bg-white">
+            <div className="container-x section-pad">
+              <p className="eyebrow mb-4">Gallery</p>
+              <h2 className="font-display text-[32px] md:text-[40px] text-creekoxley mb-12">
+                A look at {property.name.replace(/,.*$/, "")}
+              </h2>
+              {Array.from(new Set(property.gallery.map((g) => g.group))).map((group) => {
+                const imgs = property.gallery!.filter((g) => g.group === group);
+                const n = imgs.length;
+                const cols =
+                  n === 1
+                    ? "grid-cols-1"
+                    : n === 2 || n === 4
+                    ? "grid-cols-2"
+                    : "grid-cols-2 lg:grid-cols-3";
+                return (
+                  <div key={group} className="mb-12 last:mb-0">
+                    <h3 className="eyebrow mb-4 pb-3 border-b border-rule">{group}</h3>
+                    <div className={`grid ${cols} gap-3 md:gap-4`}>
+                      {imgs.map((g) => (
+                        <div
+                          key={g.src}
+                          className={`overflow-hidden bg-bone ${
+                            n === 1 ? "aspect-[4/3] md:aspect-[16/7]" : "aspect-[4/3]"
+                          }`}
+                        >
+                          <img
+                            src={g.src}
+                            alt={g.alt}
+                            loading="lazy"
+                            decoding="async"
+                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+        )}
 
         <EnquirySection
           key={property.slug}

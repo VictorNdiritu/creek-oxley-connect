@@ -46,6 +46,7 @@ const routes = [
   '/dmc/stay-meet',
   '/dmc/stay-meet/tribe-hotel-nairobi',
   '/dmc/stay-meet/creek-motels-lodwar',
+  '/dmc/stay-meet/creek-motels-nanyuki',
   '/dmc/stay-meet/kongoni-camp-nanyuki',
   '/smart-staffing',
   '/hotel-performance',

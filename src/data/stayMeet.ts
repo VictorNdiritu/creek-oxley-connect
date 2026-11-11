@@ -16,12 +16,39 @@ import kiluluPool from "@/assets/new dmc watamu images/WhatsApp Image 2026-02-14
 import trademarkPool from "@/assets/Trademark Hotel Africa - Pool.jpg";
 import luxoraHero from "@/assets/luxora hotel photos/hero-hotel.jpg";
 
+// Tribe Hotel
+import tribeExterior from "@/assets/stay-meet/tribe/tribe-hotel-exterior-pool.webp";
+import tribeRoom from "@/assets/stay-meet/tribe/tribe-deluxe-room.webp";
+import tribeLobby from "@/assets/stay-meet/tribe/tribe-lobby-lounge.webp";
+import tribeAtrium from "@/assets/stay-meet/tribe/tribe-atrium-lounge.webp";
+import tribeBoardroom from "@/assets/stay-meet/tribe/tribe-boardroom.webp";
+import tribeConference from "@/assets/stay-meet/tribe/tribe-conference-room.webp";
+
+// Kongoni Camp
+import kongoniBathroom from "@/assets/stay-meet/kongoni/kongoni-room-bathroom.webp";
+import kongoniRoom1 from "@/assets/stay-meet/kongoni/kongoni-room-1.webp";
+import kongoniRoom2 from "@/assets/stay-meet/kongoni/kongoni-room-2.webp";
+import kongoniRoom3 from "@/assets/stay-meet/kongoni/kongoni-room-3.webp";
+import kongoniConference from "@/assets/stay-meet/kongoni/kongoni-conference-room.webp";
+
+// Creek Motels — Lodwar uses the Luxora room photography
+import motelRoomDeluxe from "@/assets/luxora hotel photos/deluxe-double.jpg";
+import motelRoomSingle from "@/assets/luxora hotel photos/superior-single.jpg";
+import motelRoomDouble from "@/assets/luxora hotel photos/Superior Double .png";
+
 export type CategoryId = "luxury" | "motel" | "conference";
 
 export interface PropertyDetail {
   label: string;
   /** Leave undefined until confirmed — the UI shows "Details on request". */
   value?: string;
+}
+
+export interface GalleryImage {
+  src: string;
+  alt: string;
+  /** Heading the image is grouped under on the profile page. */
+  group: string;
 }
 
 export interface Property {
@@ -35,6 +62,10 @@ export interface Property {
   href?: string;
   image?: string;
   imageAlt?: string;
+  /** Per-category card/hero photo (falls back to `image`). */
+  cardImage?: Partial<Record<CategoryId, { src: string; alt: string }>>;
+  /** Profile-page photo gallery, grouped by `group`. */
+  gallery?: GalleryImage[];
   /** Profile-page intro paragraphs (verified copy only). */
   intro?: string[];
   /** Profile-page detail slots, per category. */
@@ -96,6 +127,24 @@ export const properties: Property[] = [
         "A premium destination for conferencing, corporate events and delegate accommodation in Nairobi.",
     },
     sister: "trademark-hotel-nairobi",
+    cardImage: {
+      luxury: {
+        src: tribeExterior,
+        alt: "Tribe Hotel exterior and pool courtyard at dusk in Nairobi",
+      },
+      conference: {
+        src: tribeBoardroom,
+        alt: "Boardroom-style meeting room at Tribe Hotel, Nairobi",
+      },
+    },
+    gallery: [
+      { group: "Accommodation & experience", src: tribeExterior, alt: "Tribe Hotel exterior and pool courtyard at dusk in Nairobi" },
+      { group: "Accommodation & experience", src: tribeRoom, alt: "Deluxe room with large bed and sitting area at Tribe Hotel" },
+      { group: "Accommodation & experience", src: tribeLobby, alt: "Lounge seating area seen from above at Tribe Hotel" },
+      { group: "Accommodation & experience", src: tribeAtrium, alt: "Atrium lounge with feature seating at Tribe Hotel" },
+      { group: "Conference & events", src: tribeBoardroom, alt: "Boardroom-style meeting room at Tribe Hotel" },
+      { group: "Conference & events", src: tribeConference, alt: "Conference room with u-shaped table layout at Tribe Hotel" },
+    ],
     intro: [
       "Tribe Hotel is a premium luxury accommodation option in Nairobi, represented by Creek Oxley within the Luxury Stays portfolio.",
       "Tribe Hotel and TradeMark Hotel are sister properties. Each keeps its own distinct profile, and both are available for accommodation, corporate stays and conferencing enquiries through Creek Oxley.",
@@ -153,12 +202,44 @@ export const properties: Property[] = [
     name: "Creek Motels, Lodwar",
     location: "Lodwar, Kenya",
     categories: ["motel"],
+    image: motelRoomDeluxe,
+    imageAlt: "Guest room interior at Creek Motels, Lodwar",
+    gallery: [
+      { group: "Rooms", src: motelRoomDeluxe, alt: "Guest room with double bed and seating area at Creek Motels, Lodwar" },
+      { group: "Rooms", src: motelRoomSingle, alt: "Guest room with bed and bedside lighting at Creek Motels, Lodwar" },
+      { group: "Rooms", src: motelRoomDouble, alt: "Guest room with double bed at Creek Motels, Lodwar" },
+    ],
     blurb: {
       motel:
         "Comfortable, convenient and professionally managed accommodation in Lodwar.",
     },
     intro: [
-      "Creek Motels, Lodwar is the first property in the Creek Motels collection — quality accommodation built around comfort, convenience, accessibility and value for money.",
+      "Creek Motels, Lodwar is part of the Creek Motels collection — quality accommodation built around comfort, convenience, accessibility and value for money.",
+      "Full property information and room details are being finalised. In the meantime, enquire with Creek Oxley and our team will respond directly.",
+    ],
+    details: {
+      motel: [
+        { label: "Room categories" },
+        { label: "Accommodation features" },
+        { label: "Amenities & facilities" },
+        { label: "Location & directions" },
+        { label: "Guest experience" },
+        { label: "Rates" },
+      ],
+    },
+    suitedTo: ["Comfort", "Convenience", "Accessibility", "Value for money"],
+  },
+  {
+    slug: "creek-motels-nanyuki",
+    name: "Creek Motels, Nanyuki",
+    location: "Nanyuki, Kenya",
+    categories: ["motel"],
+    blurb: {
+      motel:
+        "Comfortable, convenient and professionally managed accommodation in Nanyuki.",
+    },
+    intro: [
+      "Creek Motels, Nanyuki is part of the Creek Motels collection — quality accommodation built around comfort, convenience, accessibility and value for money.",
       "Full property information, photography and room details are being finalised. In the meantime, enquire with Creek Oxley and our team will respond directly.",
     ],
     details: {
@@ -193,6 +274,15 @@ export const properties: Property[] = [
     name: "Kongoni Camp",
     location: "Nanyuki, Kenya",
     categories: ["conference"],
+    image: kongoniConference,
+    imageAlt: "Conference room set up with tables and chairs at Kongoni Camp, Nanyuki",
+    gallery: [
+      { group: "Accommodation", src: kongoniRoom1, alt: "Guest room with double bed and armchairs at Kongoni Camp" },
+      { group: "Accommodation", src: kongoniRoom2, alt: "Guest room with double bed and seating at Kongoni Camp" },
+      { group: "Accommodation", src: kongoniRoom3, alt: "Guest room with sitting area and window at Kongoni Camp" },
+      { group: "Accommodation", src: kongoniBathroom, alt: "Guest room bathroom with twin basins at Kongoni Camp" },
+      { group: "Conference & events", src: kongoniConference, alt: "Conference room set up with tables and chairs at Kongoni Camp" },
+    ],
     blurb: {
       conference:
         "A destination for corporate retreats, workshops, seminars and events in Nanyuki.",

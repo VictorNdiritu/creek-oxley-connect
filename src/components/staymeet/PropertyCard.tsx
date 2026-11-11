@@ -12,18 +12,25 @@ import {
 /** Flat brand panel used until real photography is supplied. */
 export const PropertyImage = ({
   property,
+  category,
   className = "",
   tone = "light",
 }: {
   property: Property;
+  category?: CategoryId;
   className?: string;
   tone?: "light" | "dark";
 }) => {
-  if (property.image) {
+  const photo =
+    (category && property.cardImage?.[category]) ||
+    (property.image
+      ? { src: property.image, alt: property.imageAlt ?? `${property.name}, ${property.location}` }
+      : undefined);
+  if (photo) {
     return (
       <img
-        src={property.image}
-        alt={property.imageAlt ?? `${property.name}, ${property.location}`}
+        src={photo.src}
+        alt={photo.alt}
         className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 ${className}`}
         loading="lazy"
         decoding="async"
@@ -74,7 +81,7 @@ const PropertyCard = ({ property, category, tone = "light" }: Props) => {
       }`}
     >
       <Link to={href} className="block aspect-[4/3] overflow-hidden" aria-label={`Explore ${property.name}`}>
-        <PropertyImage property={property} tone={tone} />
+        <PropertyImage property={property} category={category} tone={tone} />
       </Link>
       <div className="flex flex-col flex-1 p-6 md:p-7">
         <p className={`eyebrow mb-3 ${dark ? "!text-[#C9B8E8]" : ""}`}>{cat.title}</p>
